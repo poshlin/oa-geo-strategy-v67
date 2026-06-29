@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>編輯說明 · 橘子蘋果 GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="index.html">總覽</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="編輯說明.html" class="active">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="index.html">總覽</a> › 編輯說明</div>
+  <h1><span class="num">📖</span>編輯說明 · 給組員的使用手冊</h1>
+  <p class="task-tagline">這份戰略網頁主要是給 Posh、COO、和兩位組員（數位廣告投手 / 多媒體影音製作人）+ 電銷組長使用。任何人都可以隨時開檔案編輯。本頁說明：哪些可以改、怎麼改、改完怎麼讓其他人看到。</p>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>誰可以改什麼？</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>角色</th><th>可以改</th><th>不要改</th></tr>
+    <tr><td><strong>Posh</strong></td><td>全部</td><td>—</td></tr>
+    <tr><td><strong>COO</strong></td><td>任務 5 / 10 / 11 內容、所有任務的「主責」「狀態」「進度」「備註」</td><td>「為什麼做」的核心論述（涉及策略方向、應跟 Posh 討論）</td></tr>
+    <tr><td><strong>數位廣告投手</strong></td><td>任務 1 / 2 / 3 / 4 / 7 / 8 / 11 細節、所有任務的「主責」「狀態」「進度」「備註」</td><td>主責規則（不是所有任務都由你執行）</td></tr>
+    <tr><td><strong>多媒體影音製作人</strong></td><td>任務 6 / 9 細節、自己負責任務的「主責」「狀態」「進度」「備註」</td><td>整體策略框架</td></tr>
+    <tr><td><strong>電銷組長</strong></td><td>任務 5 Tier 4-A 跨縣市 MOU 細節、自己負責任務的「進度」「備註」</td><td>整體預算</td></tr>
+  </table></div>
+  <div class="hint-box"><strong>原則：</strong>小範圍的調整（時程、進度、備註、主責人）可以自己改 + 寫入修改記錄。大範圍（策略方向、預算 ±20% 以上、刪掉整個任務）必須先跟 Posh 討論。</div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">📂</span><h2>檔案怎麼開？</h2></div>
+
+  <h3 style="font-size:16px;margin:12px 0 8px;color:var(--ink);">推薦工具（任選）</h3>
+  <ul>
+    <li><strong>VS Code</strong>（免費下載、最推薦）：<a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></li>
+    <li><strong>Sublime Text</strong>（免費試用）</li>
+    <li><strong>Mac 內建「文字編輯」app</strong>（最簡單、但沒語法 highlight）</li>
+    <li><strong>不要</strong>用 Word、Pages、Google Docs 開 HTML（會破壞格式）</li>
+  </ul>
+
+  <h3 style="font-size:16px;margin:16px 0 8px;color:var(--ink);">步驟</h3>
+  <ol>
+    <li>在 Finder 找到 <code>Documents/oa-geo-strategy-v6.7/</code> 資料夾</li>
+    <li>進去 <code>tasks/</code> 資料夾、看你要改的任務檔（例如 <code>01-wikipedia.html</code>）</li>
+    <li>右鍵 → 開啟方式 → 選 VS Code（或其他文字編輯器）</li>
+    <li>找到 <code>&lt;!-- ✏️ 可改 --&gt;</code> 標記的段落、直接改文字</li>
+    <li>存檔（Cmd+S）</li>
+    <li>回到瀏覽器、按 Cmd+R 重新整理就看得到</li>
+  </ol>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">✏️</span><h2>哪些可以改？</h2></div>
+  <ul>
+    <li>✅ HTML 內標有 <code>&lt;!-- ✏️ 可改 --&gt;</code> 的段落（純文字）</li>
+    <li>✅ 表格內的文字 / 數字</li>
+    <li>✅ 任務上的主責下拉（綠色追蹤區、自動儲存）</li>
+    <li>✅ 進度滑桿（綠色追蹤區、自動儲存）</li>
+    <li>✅ 備註欄（綠色追蹤區、自動儲存）</li>
+    <li>✅ 修改記錄區（橘色虛線框）</li>
+  </ul>
+
+  <h3 style="font-size:16px;margin:16px 0 8px;color:var(--ink);">🚫 不要改</h3>
+  <ul>
+    <li>❌ <code>&lt;style&gt;</code> 區段的 CSS（會壞掉）</li>
+    <li>❌ <code>&lt;script&gt;</code> 區段的 JavaScript</li>
+    <li>❌ <code>shared/</code> 資料夾內的檔案（styles.css / state.js）</li>
+    <li>❌ <code>&lt;a href="..."&gt;</code> 內的連結（會跳錯地方）</li>
+    <li>❌ <code>&lt;img src="..."&gt;</code> 圖片來源</li>
+  </ul>
+
+  <div class="hint-box warn"><strong>口訣：</strong>看得懂的中文就可以改、看不懂的英文 / 符號不要碰。改之前 Cmd+D 複製一份備份。</div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">🔄</span><h2>進度共享（Google Drive）</h2></div>
+
+  <p>每個任務頁的綠色區塊有 <strong>主責 / 狀態 / 進度 / 備註</strong>、會自動存在你電腦的瀏覽器裡。但其他人看不到、需要手動分享。</p>
+
+  <h3 style="font-size:16px;margin:16px 0 8px;color:var(--ink);">分享步驟</h3>
+  <ol>
+    <li>在任務頁綠色區塊下方按「💾 下載狀態（給其他人）」</li>
+    <li>會下載一個 <code>oa-geo-state-2026-XX-XX.json</code> 檔</li>
+    <li>把這個檔上傳到 <strong>Google Drive 共享資料夾</strong>（建議叫「GEO 戰略進度」）</li>
+    <li>其他人從 Google Drive 下載最新的 JSON 檔</li>
+    <li>在任務頁綠色區塊下方按「📂 載入他人狀態」、選剛下載的 JSON 檔</li>
+    <li>頁面會自動重整、顯示最新進度</li>
+  </ol>
+
+  <div class="hint-box">
+    <strong>建議節奏：</strong>每週開會前一天、由 Posh 下載最新狀態、組員根據 Posh 的版本載入、避免衝突。如果同一週多人都改了、以 Posh 那份為準。
+  </div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📊</span><h2>Dashboard 怎麼用？</h2></div>
+  <p>點 <a href="dashboard.html">Dashboard 頁</a> 可以一覽全 11 任務的進度、誰負責、狀態、最後更新日。Posh 主要看這頁掌握全局。</p>
+  <ul>
+    <li>🟢 完成的任務會變淡、底色轉綠</li>
+    <li>🔴 卡住的任務會紅色標記</li>
+    <li>📝 有備註的任務會在卡片下方顯示</li>
+    <li>點任務卡片 → 跳到該任務細節頁</li>
+  </ul>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">⚠️</span><h2>常見問題</h2></div>
+
+  <h3 style="font-size:15px;margin:12px 0 6px;">Q：我改了但其他人看不到？</h3>
+  <p style="margin-bottom:14px;">A：狀態存在你電腦的瀏覽器、別人看不到。要按「下載狀態」→ 上傳 Google Drive → 對方下載 → 載入。</p>
+
+  <h3 style="font-size:15px;margin:12px 0 6px;">Q：我換電腦看不到進度？</h3>
+  <p style="margin-bottom:14px;">A：同上、需要從 Google Drive 載入。或在原電腦下載 JSON → 新電腦載入。</p>
+
+  <h3 style="font-size:15px;margin:12px 0 6px;">Q：我改壞了怎麼辦？</h3>
+  <p style="margin-bottom:14px;">A：① 沒存檔就 Cmd+Z 還原 ② 存檔了但網頁顯示怪、找 Posh 求救 ③ 進度狀態壞了、按「🗑 重置全部狀態」回到預設</p>
+
+  <h3 style="font-size:15px;margin:12px 0 6px;">Q：可以加新任務嗎？</h3>
+  <p style="margin-bottom:14px;">A：先跟 Posh 討論。要動 state.js + 加新 HTML、不是改改文字就好。</p>
+
+  <h3 style="font-size:15px;margin:12px 0 6px;">Q：怎麼列印 / 匯 PDF？</h3>
+  <p>A：在瀏覽器按 Cmd+P → 另存為 PDF。每個任務頁都可以單獨列印。</p>
+</section>
+
+<div class="footer">
+  <p>📖 編輯說明 · 橘子蘋果 GEO v6.7 · 2026/06/27<br>
+  <strong style="color:var(--oa-orange);">遇到問題、直接問 Posh 或 Claude。</strong></p>
+</div>
+
+</div>
+
+</body>
+</html>

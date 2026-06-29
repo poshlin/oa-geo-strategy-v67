@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 9 · 影片 4 軌 + Medium 重啟 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 9</div>
+  <h1><span class="num">9</span>影片 4 軌 + Medium 重啟</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥈 高 CP 支援</span>
+    <span class="badge b-geo">GEO +4~6</span>
+    <span class="badge b-budget">30 萬/年</span>
+    <span class="badge b-time">月度持續</span>
+  </div>
+  <p class="task-tagline">基於 280 支影片真實數據（89% 廣告 / 11% 自然）：🥇 自然 GEO 軌（議題反差 + 操作指南）月 2 支 🥈 搜尋長尾軌 月 1 支 🥉 廣告投放軌 月 1-2 支 4 Shorts 軌 週 1-2 支。組員拍 + 外包剪輯。廢除家庭專訪。</p>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：外包剪輯廠評選中、學員家長拍攝排期）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">📊</span><h2>280 支影片實證數據（顛覆認知）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>指標</th><th>數值</th><th>佔比</th></tr>
+    <tr><td>總觀看</td><td class="num">3,860,301</td><td>100%</td></tr>
+    <tr><td>廣告觀看</td><td class="num">3,432,369</td><td><strong>89%</strong></td></tr>
+    <tr><td>自然觀看</td><td class="num">427,932</td><td>11%</td></tr>
+    <tr><td>搜尋觀看</td><td class="num">59,695</td><td>1.5%</td></tr>
+    <tr><td>推薦+瀏覽觀看</td><td class="num">51,684</td><td>1.3%</td></tr>
+  </table></div>
+  <div class="hint-box warn"><strong>顛覆：</strong>「教養心理爆款」全部廣告撐（廣告佔 89-91%）、不是自然 GEO 資產、是「好的廣告投放素材」。</div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">🏆</span><h2>真正的自然爆款 4 大公式</h2></div>
+  <div class="scards">
+    <div class="scard"><h4>🥇 議題反差 / 問題型標題</h4><p>「私校 vs 公立」「不用學寫程式當工程師」「Google 面試要等半年」</p></div>
+    <div class="scard"><h4>🥈 操作 / 教學指南</h4><p>「麥塊教育版下載安裝」「Anydesk 安裝說明」「Ozobot 平板模式」— 搜尋長尾</p></div>
+    <div class="scard"><h4>🥉 科普 / 知識點</h4><p>「micro:bit」「寶可夢遊戲設計原理」「迷因幣」「防駭」</p></div>
+    <div class="scard"><h4>4 趣味反差</h4><p>「公司的貓咪」「科普搶票機器人」</p></div>
+  </div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">🎬</span><h2>4 軌制策略</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>軌道</th><th>月度頻率</th><th>內容公式</th><th>目標</th></tr>
+    <tr><td>🥇 自然 GEO 軌</td><td>月 2 支長片 5-10 分</td><td>議題反差 + 操作指南</td><td>LLM 抓 + 搜尋導流</td></tr>
+    <tr><td>🥈 搜尋長尾軌</td><td>月 1 支長片</td><td>APCS 怎麼準備 / 孩子要不要學 X</td><td>YT 搜尋資產</td></tr>
+    <tr><td>🥉 廣告投放軌</td><td>月 1-2 支短片</td><td>教養心理短片 + 招生短片</td><td>FB / YT 廣告轉換</td></tr>
+    <tr><td>4 Shorts 自然觸及軌</td><td>週 1-2 支 60 秒</td><td>知識點 + 趣味反差</td><td>試煉 viral</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">💎</span><h2>真正的搜尋資產 TOP 5（黃金 GEO）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>影片</th><th>搜尋觀看</th><th>為什麼是黃金</th></tr>
+    <tr><td><strong>不用學寫程式就能成為工程師</strong></td><td class="num">14,749</td><td>程式職涯反差</td></tr>
+    <tr><td>APCS 黃昱嘉清大錄取</td><td class="num">9,194</td><td>升學 + 明星學員</td></tr>
+    <tr><td>私校 vs 公立</td><td class="num">3,753</td><td>家長教育選擇</td></tr>
+    <tr><td>Google 英國面試</td><td class="num">1,772</td><td>程式職涯故事</td></tr>
+    <tr><td>Minecraft 也能學程式</td><td class="num">1,394</td><td>課程具體名稱</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">📈</span><h2>SEO / AEO / GEO 100 分做法</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>動作</th><th>為什麼</th></tr>
+    <tr><td>官網「橘蘋觀點」blog 主力</td><td>自家域名 SEO 累積、Schema 完整</td></tr>
+    <tr><td><strong>Medium 重啟</strong>（月 2-4 篇）</td><td>CEO 文章已被學術引用、是沉睡資產</td></tr>
+    <tr><td>YT 描述完整 SEO 化</td><td>含關鍵字 + transcript 摘要 + 課程連結</td></tr>
+    <tr><td>手動精校字幕</td><td>Whisper 自動字幕錯誤多</td></tr>
+    <tr><td>影片轉 1500-2500 字文字稿放 blog</td><td>同主題 YT + blog 互相引用</td></tr>
+    <tr><td>VideoObject + Article Schema</td><td>LLM 結構化</td></tr>
+    <tr><td>YT 跟 blog 雙向嵌入</td><td>站內結構強化</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算（30 萬、採納 CEO「外包剪輯」建議）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>項目</th><th>NT$/年</th></tr>
+    <tr><td>外包剪輯（4 支長片 × 12 月 = 48 支 × 5-8K）</td><td class="num">25-38 萬</td></tr>
+    <tr><td>影音設備耗材</td><td class="num">2-3 萬</td></tr>
+    <tr><td>字幕精校</td><td class="num">1-2 萬</td></tr>
+    <tr><td>Schema 化 + 部落格文字稿</td><td class="num">0-2 萬</td></tr>
+    <tr><th>合計</th><th class="num">30 萬</th></tr>
+  </table></div>
+  <p style="margin-top:10px;">月度產能 4 長片 + 4-8 短片 = 年 60-100 支、組員 100% 拍攝、不剪輯。</p>
+</section>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🚫</span><h2>廢除的概念</h2></div>
+  <ul>
+    <li>❌ <strong>「家庭專訪」</strong>（去家裡拍）：CP 差、時間衝突、用戶質疑成立、過去 2 支沒爆</li>
+    <li>❌ 過多 CEO 個人短影音（已驗證自然流量低、33 支廣告才有觀看）</li>
+  </ul>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="08-kol.html" class="prev">上一任務：合規 KOL 業配</a>
+  <a href="10-awards.html" class="next">下一任務：產業獎項</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('09');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>

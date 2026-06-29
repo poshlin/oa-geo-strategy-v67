@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 7 · Local Citation 品保協會曝光 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 7</div>
+  <h1><span class="num">7</span>Local Citation 品保協會曝光</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥉 加碼補位</span>
+    <span class="badge b-geo">GEO +3~5</span>
+    <span class="badge b-budget">2-6 萬/年</span>
+    <span class="badge b-time">第一季 + 持續維護</span>
+  </div>
+  <p class="task-tagline">不加地方協會（網站陽春無會員列表 CP 低）。聚焦：① 已有的「補教業品保協會」（古亭 + 竹北 2018/2022 已加入）官網徽章曝光 + 業務話術 + FAQ ② 補齊立案教室加入（由實體推、Posh 不主導）③ 8-12 個免費目錄補列。</p>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
+  <p>橘蘋已是「中華民國補教業品保協會」會員（古亭會員編號 020589 / 2018、竹北 060329 / 2022）、官網有公開會員列表可查、家長履保協會徽章可直接放官網。<strong>這是已有但沒被善用的招生轉換工具</strong>。</p>
+  <p>用戶質疑（成立）：地方協會（北市 nacet、新北 tcea 等）網站陽春、無會員列表、加入零 GEO 加分、CEO 不會買單。<strong>結論：不加地方協會、只加全國級</strong>。</p>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">🚀</span><h2>P1 · 零成本、業績影響最大（必做）</h2></div>
+  <div class="scards">
+    <div class="scard"><h4>1 · 官網全面曝光品保徽章</h4><p>首頁信任區 + 各課程頁 + 結帳頁 + FAQ 頁</p></div>
+    <div class="scard"><h4>2 · FAQ 補品保 Q&A</h4><p>首頁 / 各課程頁 / 結帳頁、範本見編輯說明</p></div>
+    <div class="scard"><h4>3 · GBP 各立案教室描述加品保</h4><p>組員配合</p></div>
+    <div class="scard"><h4>4 · 業務話術 + 試聽簡報加品保</h4><p>內部培訓、5 頁手冊</p></div>
+  </div>
+  <div class="hint-box"><strong>業績影響：</strong>家長最怕「補習班倒了預付學費沒了」。加入<strong>履保 / 品保協會</strong>後、官網可放「品保協會會員、學費履約保證」徽章 → 直接拉抬轉換率。</div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">🏢</span><h2>P2 · 補齊立案教室加入品保協會（由實體推、Posh 不主導）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>教室</th><th>會員狀態</th><th>會員編號</th><th>入會日期</th></tr>
+    <tr><td>古亭</td><td>✅ 已加入</td><td>020589</td><td>2018/07/12</td></tr>
+    <tr><td>新竹竹北</td><td>✅ 已加入</td><td>060329</td><td>2022/04/11</td></tr>
+    <tr><td>板橋</td><td>🟡 待實體推</td><td>—</td><td>—</td></tr>
+    <tr><td>新店</td><td>🟡 待實體推</td><td>—</td><td>—</td></tr>
+    <tr><td>台中北屯</td><td>🟡 待實體推</td><td>—</td><td>—</td></tr>
+    <tr><td>台南東寧西</td><td>🟡 待實體推</td><td>—</td><td>—</td></tr>
+    <tr><td>高雄左營</td><td>🔴 立案完成後</td><td>—</td><td>—</td></tr>
+  </table></div>
+  <p style="margin-top:10px;"><strong>用戶決定：</strong>由實體教室自行推動申請、Posh / 行銷部不介入（屬教室營運層面）。</p>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">📂</span><h2>8-12 個免費目錄補列</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>類別</th><th>目錄</th><th>狀態</th></tr>
+    <tr><td>教育類入口</td><td>iTmonth.org.tw</td><td>✅ 已列</td></tr>
+    <tr><td>政府平台</td><td>北市酷課雲 cooc.tp.edu.tw</td><td>✅ 已列</td></tr>
+    <tr><td>政府目錄</td><td>bsb.edu.tw 教育部短期補習班系統</td><td>✅ 立案自動列入</td></tr>
+    <tr><td>政府目錄</td><td>各縣市教育局立案查詢</td><td>✅ 立案自動列入</td></tr>
+    <tr><td>政府二次彙整</td><td>teach.datagove.com 台灣補習班名錄</td><td>✅ 自動</td></tr>
+    <tr><td>體驗預訂</td><td>Niceday.tw（古亭 + 竹北已列、可補其他立案）</td><td>🔵 待補</td></tr>
+    <tr><td>教育類</td><td>104 教育網 / 亞洲教育網 / 全國教育網</td><td>🔵 待補</td></tr>
+    <tr><td>親子 / 兒童</td><td>BabyHome / MamiBuy / 媽媽寶寶 黃頁</td><td>🔵 待補</td></tr>
+    <tr><td>本地商家</td><td>iyp 黃頁 / 518 商家 / Maps.me / OpenStreetMap</td><td>🔵 待補</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算 + KPI</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>項目</th><th>NT$/年</th></tr>
+    <tr><td>P1 官網 / GBP / FB / 業務曝光</td><td class="num">0</td></tr>
+    <tr><td>P2 補齊品保協會 4-5 教室（由實體推、不在 Posh 預算）</td><td class="num">2-5 萬</td></tr>
+    <tr><td>8-12 個免費目錄補列</td><td class="num">0-1 萬</td></tr>
+    <tr><td>NAP 一致性檢查</td><td class="num">0</td></tr>
+    <tr><th>合計</th><th class="num">2-6 萬</th></tr>
+  </table></div>
+  <h3 style="font-size:15px;margin:14px 0 6px;">KPI</h3>
+  <ul>
+    <li>✅ 6 立案教室 100% 加入品保協會（含已加入 2 個）</li>
+    <li>✅ 官網 5 處放品保徽章（首頁 + 課程頁 × 3 + 結帳頁）</li>
+    <li>✅ FAQ / 各課程 FAQ 100% 補品保 Q&A</li>
+    <li>✅ 8-12 個免費目錄補列完成</li>
+    <li>✅ NAP 一致性年度 95% 以上</li>
+  </ul>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="06-gbp.html" class="prev">上一任務：GBP 完整化</a>
+  <a href="08-kol.html" class="next">下一任務：合規 KOL 業配 Miula 模式</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('07');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>

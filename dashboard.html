@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard · 橘子蘋果 GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+<div class="deco deco-3"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="index.html">總覽</a>
+  <a href="dashboard.html" class="active">Dashboard</a>
+  <a href="編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap">
+
+<div class="task-hero">
+  <div class="crumb"><a href="index.html">總覽</a> › Dashboard</div>
+  <h1><span class="num">📊</span>進度 Dashboard</h1>
+  <p class="task-tagline">一覽全 11 任務的最新狀態。點任意任務卡片進入細節頁。狀態 / 主責 / 進度 / 備註自動同步（存在瀏覽器）。要跟其他人分享請按下方「下載狀態」放 Google Drive。</p>
+</div>
+
+<!-- 統計列 -->
+<div class="dash-stats">
+  <div class="dash-stat"><div class="dash-stat-num" id="dash-total-progress">0%</div><div class="dash-stat-label">整體進度</div></div>
+  <div class="dash-stat"><div class="dash-stat-num green" id="dash-done-count">0</div><div class="dash-stat-label">已完成</div></div>
+  <div class="dash-stat"><div class="dash-stat-num blue" id="dash-inprogress-count">0</div><div class="dash-stat-label">進行中</div></div>
+  <div class="dash-stat"><div class="dash-stat-num red" id="dash-stuck-count">0</div><div class="dash-stat-label">卡住</div></div>
+  <div class="dash-stat"><div class="dash-stat-num" id="dash-notstarted-count">0</div><div class="dash-stat-label">未開始</div></div>
+</div>
+
+<!-- 狀態管理動作 -->
+<div class="state-track">
+  <h2>🔄 狀態同步</h2>
+  <p style="opacity:0.9;font-size:13px;margin-bottom:14px;">每週開會前由 Posh 下載最新狀態、放 Google Drive 共享資料夾。組員根據 Posh 的版本載入、確保大家看到同一份。</p>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<!-- 任務卡片網格 -->
+<h2 style="font-size:22px;font-weight:900;margin:32px 0 18px;color:var(--ink);">📋 11 任務狀態</h2>
+<div class="dash-grid" id="dash-grid"></div>
+
+<div class="footer">
+  <p>🍊 Dashboard · 橘子蘋果 GEO v6.7 · 2026/06/27<br>
+  <strong style="color:var(--oa-orange);">不確定怎麼用、點上方「編輯說明」</strong></p>
+</div>
+
+</div>
+
+<script src="shared/state.js"></script>
+<script>
+  initDashboard();
+  renderStateActions();
+</script>
+</body>
+</html>

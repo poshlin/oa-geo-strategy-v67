@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>橘子蘋果 GEO 100 戰略 · v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 暖色系明亮配色 */
+  --bg:#FFF8EE;
+  --bg2:#FFEFD9;
+  --paper:#FFFFFF;
+  --paper-soft:#FFFAF2;
+  --ink:#1A1A2E;
+  --ink-soft:#4A4A6A;
+  --mute:#8B8BA7;
+  --dim:#B5B5C8;
+
+  --oa-orange:#FF6B35;
+  --oa-orange-soft:#FFA07A;
+  --oa-yellow:#FFB627;
+  --oa-red:#E63946;
+  --hope:#34C759;
+  --trust:#007AFF;
+  --magic:#A370F7;
+  --gold:#FFD700;
+  --pink:#FF85C0;
+
+  --shadow-sm:0 2px 8px rgba(255,107,53,0.08);
+  --shadow-md:0 8px 24px rgba(255,107,53,0.12);
+  --shadow-lg:0 16px 40px rgba(255,107,53,0.18);
+  --shadow-pop:0 20px 60px rgba(255,107,53,0.25);
+
+  --radius-sm:10px;
+  --radius:18px;
+  --radius-lg:28px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans TC','Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei',sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(255,182,39,0.15) 0%, transparent 35%),
+    radial-gradient(circle at 85% 30%, rgba(255,107,53,0.10) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(52,199,89,0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, rgba(163,112,247,0.08) 0%, transparent 40%);
+  background-attachment:fixed;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* 漂浮裝飾球 */
+.deco{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(40px);opacity:0.6;}
+.deco-1{width:300px;height:300px;top:-100px;right:-80px;background:radial-gradient(circle,var(--oa-yellow),transparent 70%);animation:float-1 20s ease-in-out infinite;}
+.deco-2{width:250px;height:250px;bottom:20%;left:-100px;background:radial-gradient(circle,var(--oa-orange-soft),transparent 70%);animation:float-2 25s ease-in-out infinite;}
+.deco-3{width:200px;height:200px;top:60%;right:5%;background:radial-gradient(circle,var(--hope),transparent 70%);animation:float-3 22s ease-in-out infinite;opacity:0.4;}
+@keyframes float-1{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(40px,60px) scale(1.1);}66%{transform:translate(-30px,30px) scale(0.95);}}
+@keyframes float-2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(50px,-40px) scale(1.15);}}
+@keyframes float-3{0%,100%{transform:translate(0,0);}50%{transform:translate(-40px,50px);}}
+
+/* Nav */
+.nav{
+  position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:100;
+  background:rgba(255,255,255,0.85);backdrop-filter:blur(20px) saturate(180%);
+  border:1px solid rgba(255,107,53,0.15);border-radius:100px;
+  padding:8px 14px;display:flex;gap:4px;align-items:center;
+  box-shadow:var(--shadow-md);
+  max-width:calc(100vw - 40px);overflow-x:auto;
+}
+.nav-logo{
+  font-weight:900;font-size:13px;padding:6px 12px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;white-space:nowrap;letter-spacing:0.5px;
+}
+.nav a{
+  color:var(--ink-soft);text-decoration:none;font-size:13px;font-weight:600;
+  padding:8px 14px;border-radius:100px;white-space:nowrap;
+  transition:all 0.2s ease;
+}
+.nav a:hover{
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;transform:scale(1.05);
+}
+
+.wrap{max-width:1280px;margin:0 auto;padding:100px 24px 80px;position:relative;z-index:1;}
+
+/* Hero */
+.hero{
+  background:var(--paper);
+  border-radius:var(--radius-lg);
+  padding:60px 50px;margin-bottom:60px;
+  box-shadow:var(--shadow-lg);
+  position:relative;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.8);
+  opacity:0;transform:translateY(30px);
+  animation:reveal 0.8s 0.2s ease forwards;
+}
+.hero::before{
+  content:"";position:absolute;top:-50%;right:-20%;width:600px;height:600px;
+  background:conic-gradient(from 0deg,var(--oa-yellow),var(--oa-orange),var(--pink),var(--oa-yellow));
+  border-radius:50%;filter:blur(80px);opacity:0.25;
+  animation:rotate 30s linear infinite;
+}
+@keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.hero > *{position:relative;z-index:1;}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;padding:8px 18px;border-radius:100px;
+  font-size:12px;font-weight:800;letter-spacing:1.5px;
+  box-shadow:var(--shadow-sm);
+  animation:pulse-glow 3s ease-in-out infinite;
+}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,0.4);}50%{box-shadow:0 0 0 12px rgba(255,107,53,0);}}
+
+.hero h1{
+  font-size:48px;font-weight:900;margin:24px 0 18px;line-height:1.2;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--oa-orange) 50%,var(--oa-red) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:200% 200%;
+  animation:gradient-shift 8s ease infinite;
+  letter-spacing:-0.5px;
+}
+@keyframes gradient-shift{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+
+.hero-sub{color:var(--ink-soft);font-size:16px;max-width:820px;line-height:1.8;}
+
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:36px;}
+.stat{
+  background:linear-gradient(135deg,var(--paper),var(--paper-soft));
+  border:2px solid transparent;
+  background-clip:padding-box;
+  border-radius:var(--radius);padding:20px;
+  position:relative;overflow:hidden;
+  transition:all 0.3s ease;cursor:default;
+}
+.stat::before{
+  content:"";position:absolute;inset:0;border-radius:var(--radius);padding:2px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  opacity:0;transition:opacity 0.3s ease;
+}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.stat:hover::before{opacity:1;}
+.stat-num{
+  font-size:32px;font-weight:900;line-height:1;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;letter-spacing:-1px;
+}
+.stat-label{font-size:12px;color:var(--mute);margin-top:8px;font-weight:600;}
+
+/* Sections */
+section{margin-bottom:80px;position:relative;}
+.section-h{display:flex;align-items:center;gap:14px;margin-bottom:8px;flex-wrap:wrap;}
+.section-emoji{
+  font-size:36px;display:inline-block;
+  animation:bounce-soft 3s ease-in-out infinite;
+}
+@keyframes bounce-soft{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.section-h h2{font-size:30px;font-weight:900;color:var(--ink);letter-spacing:-0.5px;}
+.section-h .tag{
+  font-size:11px;font-weight:700;letter-spacing:1px;
+  background:linear-gradient(135deg,var(--hope),var(--trust));
+  color:#fff;padding:5px 12px;border-radius:100px;
+  text-transform:uppercase;
+}
+.section-intro{color:var(--ink-soft);font-size:15px;margin-bottom:28px;max-width:900px;line-height:1.8;}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+@keyframes reveal{to{opacity:1;transform:translateY(0);}}
+
+/* Task cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px;}
+.task-card{
+  background:var(--paper);border-radius:var(--radius);padding:24px;
+  display:flex;flex-direction:column;gap:14px;
+  box-shadow:var(--shadow-sm);
+  border-top:5px solid;
+  transition:all 0.3s ease;
+  position:relative;overflow:hidden;
+  cursor:default;
+}
+.task-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:0;
+  background:linear-gradient(180deg,rgba(255,107,53,0.04),transparent);
+  transition:height 0.3s ease;z-index:0;
+}
+.task-card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:var(--shadow-lg);
+}
+.task-card:hover::before{height:100%;}
+.task-card > *{position:relative;z-index:1;}
+
+.task-card.priority-1{border-top-color:var(--gold);}
+.task-card.priority-2{border-top-color:var(--hope);}
+.task-card.priority-3{border-top-color:var(--trust);}
+.task-card.priority-4{border-top-color:var(--magic);}
+
+.task-head{display:flex;gap:14px;align-items:flex-start;}
+.task-num{
+  width:42px;height:42px;line-height:42px;text-align:center;
+  border-radius:14px;font-weight:900;font-size:18px;color:#fff;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  flex-shrink:0;box-shadow:var(--shadow-sm);
+  transition:transform 0.3s ease;
+}
+.task-card:hover .task-num{transform:rotate(-6deg) scale(1.08);}
+.task-card.priority-1 .task-num{background:linear-gradient(135deg,var(--gold),var(--oa-orange));}
+.task-card.priority-2 .task-num{background:linear-gradient(135deg,var(--hope),#1ABC9C);}
+.task-card.priority-3 .task-num{background:linear-gradient(135deg,var(--trust),var(--magic));}
+.task-card.priority-4 .task-num{background:linear-gradient(135deg,var(--magic),var(--pink));}
+
+.task-title{font-size:17px;font-weight:800;color:var(--ink);line-height:1.4;flex:1;}
+.task-badges{display:flex;gap:6px;flex-wrap:wrap;}
+.badge{padding:5px 11px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.3px;}
+.b-geo{background:rgba(52,199,89,0.15);color:#22A356;}
+.b-budget{background:rgba(255,182,39,0.18);color:#C88E00;}
+.b-owner{background:rgba(0,122,255,0.13);color:var(--trust);}
+.task-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.7;}
+.task-meta{font-size:12px;color:var(--mute);padding-top:12px;border-top:1px dashed rgba(255,107,53,0.2);font-weight:500;}
+
+/* Gantt */
+.gantt-wrap{
+  background:var(--paper);border-radius:var(--radius);padding:24px;
+  box-shadow:var(--shadow-sm);overflow-x:auto;
+}
+.gantt-row{display:grid;grid-template-columns:180px repeat(8,minmax(70px,1fr));gap:3px;align-items:center;margin-bottom:6px;}
+.gantt-head{
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;font-weight:800;font-size:11px;padding:8px 6px;border-radius:8px;text-align:center;letter-spacing:0.5px;
+}
+.gantt-label{
+  color:var(--ink);font-size:13px;padding:8px 12px;font-weight:700;
+  background:var(--bg2);border-radius:8px;
+}
+.gantt-cell{height:28px;background:rgba(232,232,240,0.5);border-radius:6px;transition:transform 0.2s ease;}
+.gantt-cell:hover{transform:scaleY(1.15);}
+.gantt-cell.active{
+  background:linear-gradient(90deg,var(--oa-yellow),var(--oa-orange));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.3);
+  animation:slide-in 1s ease forwards;transform-origin:left;
+}
+.gantt-cell.heavy{
+  background:linear-gradient(90deg,var(--oa-orange),var(--oa-red));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+.gantt-cell.maint{
+  background:linear-gradient(90deg,var(--hope),#1ABC9C);
+  opacity:0.65;
+}
+@keyframes slide-in{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+.gantt-legend{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);font-weight:600;}
+.gantt-legend span{display:flex;align-items:center;gap:6px;}
+.legend-dot{display:inline-block;width:14px;height:14px;border-radius:4px;}
+
+/* Budget summary cards (新) */
+.budget-summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;max-width:900px;margin-left:auto;margin-right:auto;}
+
+/* Budget table (新版、寬版置中) */
+.budget-table-wrap{
+  max-width:900px;margin:0 auto;
+  background:var(--paper);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);overflow:hidden;
+}
+.budget-tbl{
+  width:100%;border-collapse:collapse;font-size:14px;
+}
+.budget-tbl thead th{
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;font-weight:800;padding:16px 14px;
+  text-align:center;letter-spacing:0.5px;font-size:13px;
+}
+.budget-tbl thead th.left{text-align:left;padding-left:24px;}
+.budget-tbl tbody td{
+  padding:14px 14px;text-align:center;
+  border-bottom:1px solid rgba(255,107,53,0.08);
+  vertical-align:middle;
+}
+.budget-tbl tbody tr:last-child td{border-bottom:none;}
+.budget-tbl tbody tr:hover td{background:rgba(255,182,39,0.06);}
+.budget-tbl .bt-task{text-align:left;padding-left:24px;font-weight:700;}
+.budget-tbl .bt-task a:hover{color:var(--oa-orange) !important;}
+.budget-tbl .bt-num{
+  display:inline-block;width:24px;height:24px;line-height:24px;
+  text-align:center;background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  color:#fff;border-radius:6px;font-size:12px;font-weight:900;
+  margin-right:8px;vertical-align:middle;
+}
+.budget-tbl .bt-input{white-space:nowrap;}
+.budget-tbl .bt-input input{
+  width:90px;text-align:center;padding:8px 6px;
+  border:2px solid rgba(255,107,53,0.15);border-radius:10px;
+  font-family:inherit;font-weight:800;font-size:16px;
+  color:var(--oa-orange);background:#fff;transition:all 0.2s ease;
+}
+.budget-tbl .bt-input input.max{color:var(--oa-red);}
+.budget-tbl .bt-input input:focus{
+  outline:none;border-color:var(--oa-orange);
+  background:rgba(255,107,53,0.05);
+  box-shadow:0 0 0 4px rgba(255,107,53,0.12);
+}
+.budget-tbl .bt-unit{font-size:12px;color:var(--mute);margin-left:4px;font-weight:600;}
+.budget-tbl .bt-geo{font-size:12px;color:var(--hope);font-weight:700;}
+.budget-tbl tfoot .bt-total td{
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;font-weight:900;font-size:16px;padding:18px 14px;
+  text-align:center;letter-spacing:0.5px;
+}
+.budget-tbl tfoot .bt-total td.left{text-align:left;padding-left:24px;}
+.budget-tbl tfoot .bt-total td span{
+  background:rgba(255,255,255,0.25);padding:4px 14px;border-radius:8px;
+  display:inline-block;min-width:60px;
+}
+
+@media (max-width:680px){
+  .budget-tbl{font-size:12px;}
+  .budget-tbl thead th, .budget-tbl tbody td{padding:10px 6px;}
+  .budget-tbl .bt-task{padding-left:10px;}
+  .budget-tbl .bt-num{width:20px;height:20px;line-height:20px;font-size:10px;margin-right:4px;}
+  .budget-tbl .bt-input input{width:60px;font-size:13px;padding:6px 4px;}
+}
+.bsc-card{
+  background:var(--paper);border-radius:var(--radius);padding:20px 18px;
+  box-shadow:var(--shadow-sm);text-align:center;
+  border-top:5px solid var(--mute);
+  transition:all 0.3s ease;
+}
+.bsc-card.highlight{border-top-color:var(--oa-orange);background:linear-gradient(180deg,rgba(255,107,53,0.08),#fff);}
+.bsc-card.geo{border-top-color:var(--hope);background:linear-gradient(180deg,rgba(52,199,89,0.08),#fff);}
+.bsc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.bsc-label{font-size:12px;color:var(--mute);font-weight:700;letter-spacing:0.5px;}
+.bsc-num{font-size:36px;font-weight:900;margin:6px 0 2px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.bsc-card.geo .bsc-num{background:linear-gradient(135deg,var(--hope),#1ABC9C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.bsc-unit{font-size:12px;color:var(--mute);font-weight:600;}
+
+/* Budget plans (legacy, 保留以防其他地方有用) */
+.budget-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;}
+.budget-plan{
+  background:var(--paper);border-radius:var(--radius);padding:28px 26px;
+  position:relative;box-shadow:var(--shadow-sm);
+  transition:all 0.3s ease;border:2px solid transparent;
+}
+.budget-plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.budget-plan.recommended{
+  background:linear-gradient(135deg,#fff,var(--bg2));
+  border:2px solid var(--oa-orange);
+  transform:scale(1.02);box-shadow:var(--shadow-md);
+}
+.budget-plan.recommended:hover{transform:scale(1.04) translateY(-4px);box-shadow:var(--shadow-pop);}
+.budget-plan.recommended::after{
+  content:"⭐ 推薦";position:absolute;top:-14px;right:24px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  color:#fff;padding:6px 16px;font-size:12px;font-weight:800;border-radius:100px;
+  box-shadow:var(--shadow-md);
+  animation:bounce-soft 2s ease-in-out infinite;
+}
+.budget-name{font-size:13px;color:var(--mute);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.budget-amount{
+  font-size:36px;font-weight:900;margin:8px 0 4px;letter-spacing:-1px;
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.budget-amount small{font-size:14px;color:var(--mute);font-weight:600;-webkit-text-fill-color:var(--mute);}
+.budget-geo{
+  display:inline-block;background:rgba(52,199,89,0.15);color:#22A356;
+  padding:6px 14px;border-radius:100px;font-size:13px;font-weight:700;margin-bottom:18px;
+}
+.budget-tasks{font-size:13px;color:var(--ink-soft);line-height:2;}
+
+/* CEO Pitch */
+.pitch{
+  background:linear-gradient(135deg,#fff,var(--paper-soft));
+  border-radius:var(--radius-lg);padding:44px;
+  box-shadow:var(--shadow-md);
+  position:relative;overflow:hidden;
+}
+.pitch::before{
+  content:"📣";position:absolute;top:24px;right:32px;font-size:80px;opacity:0.08;
+  animation:bounce-soft 3s infinite;
+}
+.pitch h3{color:var(--oa-orange);font-size:22px;margin-bottom:18px;font-weight:900;display:flex;align-items:center;gap:10px;}
+.pitch-body{font-size:14.5px;line-height:1.95;color:var(--ink);}
+.pitch-body strong{color:var(--oa-red);font-weight:800;}
+.pitch-body ul{margin:14px 0 20px 0;list-style:none;}
+.pitch-body li{padding:8px 0 8px 32px;position:relative;}
+.pitch-body li::before{content:"✓";position:absolute;left:0;top:8px;color:#fff;background:linear-gradient(135deg,var(--hope),#1ABC9C);width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;font-weight:900;font-size:13px;}
+.pitch-quote{
+  border-left:5px solid var(--oa-orange);padding:20px 28px;
+  background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(255,182,39,0.05));
+  border-radius:0 var(--radius) var(--radius) 0;
+  margin:24px 0;font-size:15px;color:var(--ink-soft);font-style:italic;
+  position:relative;
+}
+.pitch-quote::before{
+  content:"❝";position:absolute;top:-8px;left:18px;font-size:48px;color:var(--oa-orange);opacity:0.4;font-family:Georgia;
+}
+
+/* Matrix */
+.matrix-wrap{background:var(--paper);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);overflow-x:auto;}
+.matrix-grid{
+  display:grid;grid-template-columns:120px repeat(8,minmax(80px,1fr));gap:4px;font-size:12px;
+}
+.matrix-cell.pending-row{opacity:0.7;}
+.matrix-cell.matrix-row-head{transition:all 0.2s ease;}
+.matrix-cell.matrix-row-head:hover{transform:scale(1.03);background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));color:#fff;cursor:pointer;}
+.matrix-cell{
+  background:var(--bg);padding:10px 6px;text-align:center;border-radius:8px;font-weight:600;
+  transition:all 0.2s ease;
+}
+.matrix-cell:hover{transform:scale(1.05);box-shadow:var(--shadow-sm);}
+.matrix-head{
+  background:linear-gradient(135deg,var(--oa-orange),var(--oa-yellow));
+  color:#fff;font-weight:800;font-size:11px;letter-spacing:0.5px;
+}
+.matrix-row-head{background:var(--bg2);color:var(--ink);font-weight:800;font-size:12px;}
+.m-lead{background:linear-gradient(135deg,var(--oa-orange),var(--oa-red));color:#fff;font-weight:800;}
+.m-exec{background:linear-gradient(135deg,var(--trust),#5856D6);color:#fff;font-weight:700;}
+.m-support{background:linear-gradient(135deg,var(--hope),#1ABC9C);color:#fff;}
+.m-review{background:linear-gradient(135deg,var(--magic),var(--pink));color:#fff;}
+
+.matrix-legend{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:13px;color:var(--ink-soft);line-height:1.7;}
+.matrix-legend strong{color:var(--ink);}
+
+/* Quick wins */
+.qw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.qw{
+  background:var(--paper);border-radius:var(--radius);padding:22px;
+  box-shadow:var(--shadow-sm);position:relative;overflow:hidden;
+  transition:all 0.3s ease;
+  border-left:5px solid var(--hope);
+}
+.qw:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.qw::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,var(--hope),var(--trust));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;
+}
+.qw:hover::before{transform:scaleX(1);}
+.qw-when{
+  display:inline-block;background:linear-gradient(135deg,var(--hope),#1ABC9C);
+  color:#fff;padding:4px 12px;border-radius:100px;
+  font-size:11px;font-weight:800;letter-spacing:1px;
+}
+.qw-title{font-size:16px;font-weight:800;margin:10px 0 8px;color:var(--ink);}
+.qw-detail{font-size:13px;color:var(--ink-soft);line-height:1.7;}
+.qw-cost{font-size:12px;color:var(--oa-orange);margin-top:12px;font-weight:700;}
+
+/* Limits */
+.limits-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.limits-col{
+  background:var(--paper);border-radius:var(--radius);padding:28px;
+  box-shadow:var(--shadow-sm);transition:all 0.3s ease;
+  border-top:5px solid;
+}
+.limits-col:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.limits-col.dont{border-top-color:var(--oa-red);}
+.limits-col.do{border-top-color:var(--hope);}
+.limits-col h4{font-size:18px;margin-bottom:14px;font-weight:800;display:flex;align-items:center;gap:8px;}
+.limits-col.dont h4{color:var(--oa-red);}
+.limits-col.do h4{color:#1A7F37;}
+.limits-col ul{list-style:none;padding:0;}
+.limits-col li{
+  font-size:13.5px;padding:9px 0 9px 28px;color:var(--ink-soft);
+  position:relative;line-height:1.6;
+  border-bottom:1px dashed rgba(200,200,210,0.5);
+}
+.limits-col li:last-child{border-bottom:none;}
+.limits-col.dont li::before{
+  content:"✕";position:absolute;left:0;top:9px;width:20px;height:20px;
+  background:rgba(230,57,70,0.12);color:var(--oa-red);
+  border-radius:50%;text-align:center;line-height:20px;font-weight:900;font-size:12px;
+}
+.limits-col.do li::before{
+  content:"✓";position:absolute;left:0;top:9px;width:20px;height:20px;
+  background:rgba(52,199,89,0.15);color:#22A356;
+  border-radius:50%;text-align:center;line-height:20px;font-weight:900;font-size:12px;
+}
+
+/* GEO Progress visualization · v2 雙段條 */
+.geo-bar{
+  background:var(--paper);border-radius:var(--radius);padding:32px 28px 28px;
+  box-shadow:var(--shadow-sm);margin-bottom:32px;
+}
+.geo-bar-title{font-size:16px;font-weight:800;margin-bottom:36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.geo-bar-title small{font-size:12px;color:var(--mute);font-weight:500;}
+.geo-progress{
+  height:44px;background:rgba(232,232,240,0.55);border-radius:100px;
+  position:relative;overflow:visible;box-shadow:inset 0 2px 6px rgba(0,0,0,0.05);
+}
+/* 已達成段 0-60 */
+.geo-achieved{
+  position:absolute;top:0;left:0;height:100%;width:0;
+  background:linear-gradient(90deg,#8B8BA7,#A370F7);
+  border-radius:100px 0 0 100px;
+  animation:fill-achieved 1.4s 0.3s cubic-bezier(.16,1,.3,1) forwards;
+  display:flex;align-items:center;justify-content:flex-start;padding-left:20px;
+  color:#fff;font-weight:800;font-size:13px;letter-spacing:0.5px;
+}
+@keyframes fill-achieved{to{width:60%;}}
+
+/* 衝刺段 60-92（漸層 + 閃光） */
+.geo-target{
+  position:absolute;top:0;left:60%;height:100%;width:0;
+  background:linear-gradient(90deg,var(--oa-orange),var(--oa-yellow),var(--hope));
+  animation:fill-target 1.4s 1.5s cubic-bezier(.16,1,.3,1) forwards;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:900;font-size:14px;letter-spacing:0.5px;
+  box-shadow:0 4px 16px rgba(255,107,53,0.45);
+  overflow:hidden;opacity:0;
+}
+.geo-target::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),transparent);
+  animation:shimmer 2s 3s infinite;
+}
+@keyframes fill-target{to{width:32%;opacity:1;}}
+@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(200%);}}
+
+/* 標記點：現況 60 + 目標 88-95 */
+.geo-marker{
+  position:absolute;top:-32px;transform:translateX(-50%);
+  font-size:11px;color:var(--ink);font-weight:800;
+  background:#fff;padding:5px 11px;border-radius:8px;
+  box-shadow:var(--shadow-sm);white-space:nowrap;
+  opacity:0;animation:fade-in 0.5s 2.7s ease forwards;
+  z-index:2;
+}
+.geo-marker.current{border:2px solid var(--magic);color:var(--magic);}
+.geo-marker.target{border:2px solid var(--hope);color:#22A356;animation-delay:2.9s;}
+.geo-marker::after{
+  content:"";position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);
+  width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;
+  border-top:6px solid #fff;
+}
+@keyframes fade-in{to{opacity:1;}}
+
+.geo-marks{display:flex;justify-content:space-between;margin-top:10px;font-size:11px;color:var(--mute);position:relative;}
+.geo-marks .highlight{color:#22A356;font-weight:800;}
+.geo-marks .current{color:var(--magic);font-weight:800;}
+
+.geo-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin-top:18px;font-weight:600;}
+.geo-legend span{display:flex;align-items:center;gap:6px;}
+.geo-legend i{display:inline-block;width:14px;height:14px;border-radius:4px;}
+
+/* Footer */
+.footer{
+  margin-top:80px;padding:40px;text-align:center;
+  background:linear-gradient(135deg,var(--paper),var(--bg2));
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.footer h4{font-size:18px;color:var(--oa-orange);margin-bottom:10px;font-weight:800;}
+.footer p{font-size:13px;color:var(--ink-soft);line-height:1.8;}
+
+/* Responsive */
+@media (max-width:760px){
+  .wrap{padding:90px 16px 60px;}
+  .hero{padding:36px 24px;}
+  .hero h1{font-size:32px;}
+  .section-h h2{font-size:24px;}
+  .section-emoji{font-size:28px;}
+  .nav{top:12px;}
+  .limits-grid{grid-template-columns:1fr;}
+  .matrix-grid{grid-template-columns:60px repeat(7,minmax(70px,1fr));font-size:10px;}
+  .matrix-cell{padding:8px 4px;}
+  .gantt-row{grid-template-columns:120px repeat(8,minmax(50px,1fr));}
+  .gantt-label{font-size:11px;}
+  .pitch{padding:28px 22px;}
+  .pitch-body{font-size:13.5px;}
+}
+</style>
+</head>
+<body>
+
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+<div class="deco deco-3"></div>
+
+<div class="nav">
+  <span class="nav-logo">橘子蘋果 GEO v6.7</span>
+  <a href="index.html" class="active">總覽</a>
+  <a href="dashboard.html">📊 Dashboard</a>
+  <a href="編輯說明.html">📖 編輯說明</a>
+  <a href="#tasks">11 任務</a>
+  <a href="#budget">預算</a>
+  <a href="#pitch">提案</a>
+</div>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-eyebrow">✨ v6.7 終極定案 · 2026/06/27</span>
+  <h1>橘子蘋果 GEO 100 分<br>業界第一話語權戰略</h1>
+  <p class="hero-sub">
+    11 任務 × 24 個月 × 預算 253-292 萬/年。基於 14 年品牌資產、HolonIQ 2023 Taiwan EdTech 50（跟 BenQ / AVer 同級）、iLink 通訊翟本瑞獨立深度報導、5 篇學術論文真實引用、2,244 條 4.9★ GBP 評論、CEO 自身台師大碩士論文等真實數據規劃。避開論壇口碑年約、週末租場 GBP、純業配稿 3 大陷阱。
+  </p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">+67~107</div><div class="stat-label">GEO 加分區間</div></div>
+    <div class="stat"><div class="stat-num">253-292萬</div><div class="stat-label">CP 最高方案 NT$/年</div></div>
+    <div class="stat"><div class="stat-num">11</div><div class="stat-label">任務數</div></div>
+    <div class="stat"><div class="stat-num">24</div><div class="stat-label">月時程</div></div>
+    <div class="stat"><div class="stat-num">88-95</div><div class="stat-label">預期 GEO 終分</div></div>
+  </div>
+</section>
+
+<!-- GEO PROGRESS BAR -->
+<section class="reveal">
+  <div class="geo-bar">
+    <div class="geo-bar-title">
+      <span>📊 GEO 進度視覺化</span>
+      <small>14 年累積基準 ~60 → v6.7 衝刺 88-95</small>
+    </div>
+    <div class="geo-progress">
+      <div class="geo-achieved">14 年累積 60</div>
+      <div class="geo-target">+28~35 衝刺區</div>
+      <div class="geo-marker current" style="left:60%;">📍 現況 ~60</div>
+      <div class="geo-marker target" style="left:92%;">🎯 目標 88-95</div>
+    </div>
+    <div class="geo-marks">
+      <span>0</span><span>25</span><span>50</span><span class="current">60 現況</span><span class="highlight">88-95 目標</span><span>100</span>
+    </div>
+    <div class="geo-legend">
+      <span><i style="background:linear-gradient(90deg,#8B8BA7,#A370F7);"></i> 14 年累積基準（已達成）</span>
+      <span><i style="background:linear-gradient(90deg,var(--oa-orange),var(--oa-yellow),var(--hope));"></i> v6.7 衝刺區（24 個月內）</span>
+      <span><i style="background:rgba(232,232,240,0.6);border:1px solid rgba(0,0,0,0.05);"></i> 未達成空間</span>
+    </div>
+  </div>
+</section>
+
+<!-- TASKS -->
+<section id="tasks" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">🎯</span>
+    <h2>11 任務全圖</h2>
+    <span class="tag">v6.7 修正後</span>
+  </div>
+  <p class="section-intro">🥇 = 80/20 關鍵任務、🥈 = 高 CP 支援、🥉 = 加碼補位。<strong style="color:var(--oa-orange);">點任務卡片進入細節頁</strong> — 含完整流程圖、SOP、KPI、可調主責 / 進度 / 備註。</p>
+
+  <div class="cards">
+
+    <a class="task-card priority-1" href="tasks/01-wikipedia.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">1</div>
+        <div class="task-title">🥇 Wikipedia 條目建立</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +8~13</span>
+        <span class="badge b-budget">$0</span>
+        <span class="badge b-owner">組員 DIY</span>
+      </div>
+      <div class="task-desc">補 3-6 篇獨立深度報導後 AfC 投稿。雙模板揭露合規（2026/1/13 政策升級後）。可用來源：今周刊 2015、T 客邦 2016、iLink 翟本瑞 2023、5 篇學術引用、HolonIQ 2023、北市教育局 MOU、NTU CSIE。</div>
+      <div class="task-meta">時程：6-12 月、悲觀 6 個月補 2-3 篇來源後通過</div>
+    </a>
+
+    <a class="task-card priority-1" href="tasks/02-pr-records.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">2</div>
+        <div class="task-title">🥇 PR 子 B：記者主動採訪</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +5~8</span>
+        <span class="badge b-budget">50-80 萬</span>
+        <span class="badge b-owner">數位廣告投手</span>
+      </div>
+      <div class="task-desc">不簽 PR 公司年約。4 主題 pitch 給今周刊 / 親子天下 / 遠見 / Cheers / INSIDE 編輯：① 賴岳林矽谷故事 ② 綠茶老師 APCS 戰績 ③ 14 年沿革 ④ 馬來西亞分校國際擴張。</div>
+      <div class="task-meta">目標：年 3-6 篇真實獨立深度報導、補 Wiki 缺口</div>
+    </a>
+
+    <a class="task-card priority-2" href="tasks/03-parents-bloggers.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">3</div>
+        <div class="task-title">🥈 真實家長社群 + 親子部落格</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +5~8</span>
+        <span class="badge b-budget">50 萬</span>
+        <span class="badge b-owner">數位投手 + 多媒體</span>
+      </div>
+      <div class="task-desc">3A：家長平台 UGC 引擎（5 個自動觸發點：升階段 / 認證通過 / 老師上傳作品 / 下載證書 / 季作品集）+ 線上化季度活動（數位徽章 / 跨班大賽 / 年度頒獎）+ 6 大鼓勵評論工具包。3B：13 位親子 KOL 接洽 + 試媒體簽 + 強制揭露。</div>
+      <div class="task-meta">第一年試水溫 15 萬、滾動全年 40 萬 + 3A 10 萬</div>
+    </a>
+
+    <a class="task-card priority-2" href="tasks/04-paid-reports.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">4</div>
+        <div class="task-title">🥈 PR 子 A：付費深度報導</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +3~5</span>
+        <span class="badge b-budget">35 萬</span>
+        <span class="badge b-owner">數位廣告投手</span>
+      </div>
+      <div class="task-desc">不純做業配（LLM 降權）、改付費深度報導。4 季主題輪播：Q1 AI 時代家長必修、Q2 APCS 真實影響、Q3 馬來西亞分校國際擴張、Q4 選手班訓練紀實。教育垂直 50% + 科技 30% + 商業財經 15% + 新聞稿 5%。</div>
+      <div class="task-meta">年 17 篇分散發稿、主題可由組員調整</div>
+    </a>
+
+    <a class="task-card priority-1" href="tasks/05-authority.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">5</div>
+        <div class="task-title">🥇 話語權工程</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +25~40</span>
+        <span class="badge b-budget">25 萬</span>
+        <span class="badge b-owner">COO 對外 + Posh 推</span>
+      </div>
+      <div class="task-desc">避開 CEO「學校合作 = 低毛利」雷區。4 Tier：① 北市酷課雲確認 + iLink 二次運用 + 政府背書專區 ② iLink 深化 + 翟本瑞 AI 示範基地 + 數發部倡議（董事長提案）③ 顧問北商北科 / CEO 台師大教研所 / COO 台大 EiMBA ④ 跨縣市 MOU（電銷組長漸進、不開發新校用課程）。</div>
+      <div class="task-meta">24 個月時程、董事長 / CEO / 顧問人脈協調</div>
+    </a>
+
+    <a class="task-card priority-2" href="tasks/06-gbp.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">6</div>
+        <div class="task-title">🥈 GBP 11 直營完整化</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +4</span>
+        <span class="badge b-budget">5 萬</span>
+        <span class="badge b-owner">多媒體 + 各區主任</span>
+      </div>
+      <div class="task-desc">⚠️ 週末租場「絕對不能建獨立 GBP」（補習班法 5-25 萬罰 + Google 政策下架雙重風險）。6 立案教室全推 4 動作：① Services 欄位填 9 大課程 ② Owner Posts 週 1-2 篇 ③ Q&A 主動經營 ④ 教室實照（非 AI）。第一年免代操工具。</div>
+      <div class="task-meta">守 2,244 評論 / 4.9★ 護城河、6 立案：古亭 / 板橋 / 新店 / 竹北 / 北屯 / 東寧西</div>
+    </a>
+
+    <a class="task-card priority-3" href="tasks/07-citation.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">7</div>
+        <div class="task-title">🥉 Local Citation 品保協會曝光</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +3~5</span>
+        <span class="badge b-budget">2-6 萬</span>
+        <span class="badge b-owner">數位廣告投手</span>
+      </div>
+      <div class="task-desc">不加地方協會（網站陽春無會員列表 CP 低）。聚焦：① 已有的「補教業品保協會」（古亭 + 竹北）官網徽章曝光 + 業務話術 + FAQ ② 補齊立案教室加入（由實體推、Posh 不主導）③ 8-12 個免費目錄補列（教育 / 親子 / 本地）。</div>
+      <div class="task-meta">關鍵：「家長履約保證」是已有沒被善用的資產</div>
+    </a>
+
+    <a class="task-card priority-2" href="tasks/08-kol.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">8</div>
+        <div class="task-title">🥈 合規 KOL 業配 Miula 模式</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +6~10</span>
+        <span class="badge b-budget">50 萬</span>
+        <span class="badge b-owner">數位廣告投手</span>
+      </div>
+      <div class="task-desc">已驗證：2023 Miula ROI 13.8x、2021 KOL Radar 大親子網紅 0 成交。✅ 主推：知識型 KOL（Miula 級）50% + 高黏著小網紅 IG 30% + Threads 試水溫 10% + 配套 10%。❌ 避：大型親子網紅 10 萬+、FB 圖文、無折扣碼追蹤。</div>
+      <div class="task-meta">必加折扣碼追蹤、必標 #廣告 #業配 揭露</div>
+    </a>
+
+    <a class="task-card priority-2" href="tasks/09-video.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">9</div>
+        <div class="task-title">🥈 影片 4 軌 + Medium 重啟</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +4~6</span>
+        <span class="badge b-budget">30 萬</span>
+        <span class="badge b-owner">多媒體 + 外包剪輯</span>
+      </div>
+      <div class="task-desc">基於 280 支影片實證（89% 廣告 / 11% 自然）：🥇 自然 GEO 軌（議題反差 + 操作指南）月 2 支 🥈 搜尋長尾軌 月 1 支 🥉 廣告投放軌（教養心理 + 招生）月 1-2 支 4 Shorts 軌 週 1-2 支。組員拍攝 + 外包剪輯產能 3-5x。Medium 重啟（CEO 文章被學術引用）。</div>
+      <div class="task-meta">廢除家庭專訪、爆款公式 = 議題反差 / 操作指南 / 科普 / 趣味</div>
+    </a>
+
+    <a class="task-card priority-3" href="tasks/10-awards.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">10</div>
+        <div class="task-title">🥉 產業獎項 HolonIQ 全曝光</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +1~3</span>
+        <span class="badge b-budget">5-8 萬</span>
+        <span class="badge b-owner">COO 申請</span>
+      </div>
+      <div class="task-desc">🚨 重大發現：HolonIQ 2023 Taiwan EdTech 50 已確認入選（獎盃為證）、跟 BenQ / AVer / ViewSonic 同級、但完全沒被善用。+ 未來教育（遠見天下）+ 教育新創 20+（親子天下）+ 拾穗 + 金舶 + 金塾 + 2018 華人資訊論壇共 7-8 項。重點：全面曝光現有 + 衝 2026 HolonIQ + 未來教育 100。</div>
+      <div class="task-meta">不再參金舶 / 金塾、聚焦教育類權威獎</div>
+    </a>
+
+    <a class="task-card priority-3" href="tasks/11-academic.html" style="text-decoration:none;color:inherit;">
+      <div class="task-head">
+        <div class="task-num">11</div>
+        <div class="task-title">🥉 學術引用 5 篇 + CEO 論文</div>
+      </div>
+      <div class="task-badges">
+        <span class="badge b-geo">GEO +3~5</span>
+        <span class="badge b-budget">1-3 萬</span>
+        <span class="badge b-owner">數位投手 + Posh</span>
+      </div>
+      <div class="task-desc">2026/06/27 驗證後升級。5 篇第三方真實引用（陳雅萍臺中教大最強雙重引用 / 湯惠美臺東 / 蔡崇華台師大 EMBA / 吳弘譯雲科 / 鄭婷云嘉義）。🤯 CEO 束凱文 2023 台師大碩士論文用 205 名橘蘋學員寫動機研究。橘蘋 Medium 帳號是沉睡的學術引用資產。</div>
+      <div class="task-meta">官網設「學術引用」專區 + Wiki 學術區段 + CEO 學術權威定位</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">📅</span>
+    <h2>24 個月時程</h2>
+    <span class="tag">2026 Q3 - 2028 Q2</span>
+  </div>
+  <p class="section-intro">每任務的密度分佈、可看出哪幾季是高強度執行期、哪幾季進入維護。</p>
+
+  <div class="gantt-wrap">
+    <div class="gantt-row">
+      <div></div>
+      <div class="gantt-head">26 Q3</div>
+      <div class="gantt-head">26 Q4</div>
+      <div class="gantt-head">27 Q1</div>
+      <div class="gantt-head">27 Q2</div>
+      <div class="gantt-head">27 Q3</div>
+      <div class="gantt-head">27 Q4</div>
+      <div class="gantt-head">28 Q1</div>
+      <div class="gantt-head">28 Q2</div>
+    </div>
+
+    <div class="gantt-row"><div class="gantt-label">1 Wiki 條目</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">2 PR 子 B</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">3 家長 + 部落格</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">4 PR 子 A 深度</div>
+      <div class="gantt-cell"></div><div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">5 話語權</div>
+      <div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">6 GBP</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">7 Citation</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">8 KOL 業配</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">9 影片 4 軌</div>
+      <div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div><div class="gantt-cell heavy"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">10 獎項曝光</div>
+      <div class="gantt-cell heavy"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell active"></div>
+    </div>
+    <div class="gantt-row"><div class="gantt-label">11 學術引用</div>
+      <div class="gantt-cell active"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell maint"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div><div class="gantt-cell active"></div><div class="gantt-cell maint"></div>
+    </div>
+
+    <div class="gantt-legend">
+      <span><span class="legend-dot" style="background:linear-gradient(90deg,var(--oa-yellow),var(--oa-orange));"></span> 啟動</span>
+      <span><span class="legend-dot" style="background:linear-gradient(90deg,var(--oa-orange),var(--oa-red));"></span> 高強度執行</span>
+      <span><span class="legend-dot" style="background:linear-gradient(90deg,var(--hope),#1ABC9C);opacity:0.65;"></span> 維護期</span>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section id="budget" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">💰</span>
+    <h2>預算明細加總</h2>
+    <span class="tag">可輸入 · 即時計算</span>
+  </div>
+  <p class="section-intro">每個任務的預算上下限可直接修改、合計自動更新。GEO 終分根據總預算自動推估。修改後存在瀏覽器、要分享請按上方「💾 下載狀態」。</p>
+
+  <div id="budget-table-dynamic"></div>
+</section>
+
+<!-- CEO PITCH -->
+<section id="pitch" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">📣</span>
+    <h2>CEO 提案總綱</h2>
+    <span class="tag">業績框架</span>
+  </div>
+  <p class="section-intro">不從 GEO 角度提、從「招生轉換率 + 業績槓桿」角度。CEO 業績導向、必須讓他聽到 ROI。</p>
+
+  <div class="pitch">
+    <h3>🎯 一頁簡報 · 給 CEO</h3>
+    <div class="pitch-body">
+
+      <p><strong>核心論述：</strong>橘子蘋果 14 年累積已有大量被低估的權威資產（HolonIQ 2023 EdTech 50 跟 BenQ 同級、iLink 通訊翟本瑞獨立深度報導、5 篇學術論文真實引用、品保協會履保會員、2,244 條 4.9★ GBP 評論），但 <strong>90% 都沒拿出來用</strong>。提案不是「做新東西」、是 <strong>「把已有的變成招生轉換率工具」+「補強會直接影響家長選擇的 3 個槓桿」</strong>。</p>
+
+      <p style="margin-top:20px;"><strong>3 個業績槓桿（直接影響家長報名）：</strong></p>
+      <ul>
+        <li><strong>權威信任分</strong>：政府 / 國際 / 學術背書放官網 + 業務話術 → 家長從「比較中」選橘蘋（任務 5+10+11、預算 30-35 萬）</li>
+        <li><strong>真實口碑放大</strong>：家長 LINE 群 UGC 自動化 + 親子部落格體驗（合規揭露）+ Miula 模式知識型 KOL（ROI 13.8x 已驗證）→ 家長「猶豫中」被推一把（任務 3+8、預算 100 萬）</li>
+        <li><strong>內容資產 SEO/GEO</strong>：影片 4 軌制 + Medium 重啟（已有文章被學術引用）+ Wiki 條目 + PR 深度報導 → 家長「主動搜尋」找得到橘蘋（任務 1+2+4+9、預算 115-150 萬）</li>
+      </ul>
+
+      <div class="pitch-quote">
+        為什麼現在做？因為 LLM / Google 搜尋持續吞食家長注意力、ChatGPT 推薦哪家補習班會決定 30% 的家長選擇、權威背書是 LLM 引用率的關鍵。HolonIQ 證明我們已是業界前 50、但這個資產在我們官網完全不見、業務不講、Wiki 沒寫 — 對手只要把這個拿走、我們就輸了。
+      </div>
+
+      <p><strong>3 個避雷（已 deep-research 驗證）：</strong></p>
+      <ul>
+        <li>不簽論壇口碑年約（三星寫手門 1,000 萬罰款先例、戰國策 / 貳肆加全踩線）</li>
+        <li>不在週末租場建獨立 GBP（補習班法 5-25 萬罰 + Google 政策下架）</li>
+        <li>不純做業配稿（LLM 對純業配降權、改深度報導）</li>
+      </ul>
+
+      <p style="margin-top:20px;"><strong>3 件不開發、3 件全推：</strong></p>
+      <ul>
+        <li><strong>不開發</strong>新校用課程、新人力（用既有 5 角色）、新代操工具（第一年）</li>
+        <li><strong>全推</strong>權威曝光（任務 5+10+11）、UGC 自動化（任務 3）、內容資產（任務 9）</li>
+      </ul>
+
+      <p style="margin-top:20px;"><strong>第一季可見成果：</strong>HolonIQ 徽章 + 5 篇學術 + iLink + 北市酷課雲 + 拾穗 = 3 個月內官網信任區轉換率拉抬可測量（A/B test）、業務話術升級 + 招生轉換率提升 X%。</p>
+
+      <p style="margin-top:20px;"><strong>預算建議：CP 最高方案 253-292 萬/年</strong>、第一季先投 25%（63-73 萬）驗證、Q2 起根據招生轉換率數據加碼。</p>
+    </div>
+  </div>
+</section>
+
+<!-- MATRIX -->
+<section id="matrix" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">👥</span>
+    <h2>主責分工矩陣</h2>
+    <span class="tag">動態 · 同步指派狀態</span>
+  </div>
+  <p class="section-intro">這個矩陣會根據你在<strong>任務細節頁</strong>或 <strong>Dashboard</strong> 設定的主責動態更新。待定的任務整行空白、已指派的會在對應角色那格顯示「<strong style="color:var(--oa-orange);">主責</strong>」橘紅色。</p>
+
+  <div class="matrix-wrap">
+    <div class="matrix-grid" id="matrix-grid-dynamic"></div>
+
+    <div class="matrix-legend" style="margin-top:18px;">
+      <div><strong>狀態指示：</strong>橘紅色 = 已指派、灰色 — = 待定</div>
+      <div><strong>怎麼改：</strong>點任務名跳細節頁 → 綠色狀態追蹤區改主責</div>
+      <div><strong>同步邏輯：</strong>本地 localStorage、共享請用「下載狀態 → Google Drive → 載入」</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK WINS -->
+<section id="quickwins" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">⚡</span>
+    <h2>90 天快速勝利</h2>
+    <span class="tag">第一季可見</span>
+  </div>
+  <p class="section-intro">用最少資源換最大可見度、累積信任後再加碼。</p>
+
+  <div class="qw-grid">
+
+    <div class="qw">
+      <span class="qw-when">Week 1-2</span>
+      <div class="qw-title">官網信任區大改版</div>
+      <div class="qw-detail">放上 HolonIQ + iLink + STEM.org + ITS + 北市 MOU + 拾穗 + 品保協會 + 5 篇學術引用 + CEO 台師大碩士。</div>
+      <div class="qw-cost">💰 0</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 1-2</span>
+      <div class="qw-title">業務話術升級</div>
+      <div class="qw-detail">7 大背書 + 履保 + CEO 學術 + 業界第 50 強 EdTech、整套寫成 5 頁手冊、給所有顧問。</div>
+      <div class="qw-cost">💰 1 萬印製</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 2-4</span>
+      <div class="qw-title">FAQ 補品保 + 學術 Q&A</div>
+      <div class="qw-detail">首頁 + 9 大課程 + 結帳頁全補。範本在記憶系統。</div>
+      <div class="qw-cost">💰 0</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 2-4</span>
+      <div class="qw-title">GBP 古亭 Services 補全</div>
+      <div class="qw-detail">從目前「線上 + 門市」2 項補到 9 大課程、其他立案教室同步。月度 Owner Posts 排程啟動。</div>
+      <div class="qw-cost">💰 0</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 3-6</span>
+      <div class="qw-title">家長平台 UGC 自動化</div>
+      <div class="qw-detail">Posh 跟工程師口頭討論 5 個自動觸發點。家長平台「結業證書下載頁」內嵌「分享你的故事」CTA。</div>
+      <div class="qw-cost">💰 0 工程內部</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 4-8</span>
+      <div class="qw-title">Wiki 草稿 + 帳號準備</div>
+      <div class="qw-detail">真實帳號編 10 次他條目 + 雙模板 COI 揭露。草稿同時跑 4 主題記者 pitch。</div>
+      <div class="qw-cost">💰 0</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 4-8</span>
+      <div class="qw-title">影片 4 軌啟動</div>
+      <div class="qw-detail">議題反差長片 2 支 + 搜尋長尾長片 1 支 + 廣告投放短片 1 支、外包剪輯廠評選。</div>
+      <div class="qw-cost">💰 5 萬</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 6-12</span>
+      <div class="qw-title">KOL 試水溫</div>
+      <div class="qw-detail">第 1 梯隊 5 位（卡氏一家 + 別讓一姐 + 豆芽媽 + 焦糖綠玫瑰 + Amber 媽咪愛）+ Miula 重啟。必加折扣碼。</div>
+      <div class="qw-cost">💰 15 萬</div>
+    </div>
+
+    <div class="qw">
+      <span class="qw-when">Week 8-12</span>
+      <div class="qw-title">話語權工程啟動</div>
+      <div class="qw-detail">COO 提案董事長動用 iLink / 翟本瑞 / 數發部人脈、申請逢甲 AI 示範基地、CEO 母校台師大教研所合作。</div>
+      <div class="qw-cost">💰 3 萬</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIMITS -->
+<section id="limits" class="reveal">
+  <div class="section-h">
+    <span class="section-emoji">⚖️</span>
+    <h2>鐵則 / 紅線</h2>
+    <span class="tag">不可違反</span>
+  </div>
+
+  <div class="limits-grid">
+    <div class="limits-col dont">
+      <h4>🚫 絕對不能做（已驗證地雷）</h4>
+      <ul>
+        <li>論壇口碑年約（三星寫手門 1,000 萬先例）</li>
+        <li>週末租場建獨立 GBP（補習班法 + Google 雙觸法）</li>
+        <li>純業配稿（LLM 降權）</li>
+        <li>新校用課程設計（CEO 守門紅線）</li>
+        <li>AI 生成橘蘋 logo / 學員照片</li>
+        <li>Roblox AI 課寫 Lua 入門（不是真實內容）</li>
+        <li>AI 思維課寫具體工具名稱（ChatGPT / Midjourney）</li>
+        <li>「跟不上免費再上一次」承諾（虛構）</li>
+        <li>大型親子網紅 10 萬+ 業配（ROI 已驗證低）</li>
+        <li>地方補教協會（網站陽春 CP 太低）</li>
+        <li>家庭專訪（CP 差 + 時間衝突）</li>
+        <li>記者會、假帳號運營</li>
+      </ul>
+    </div>
+
+    <div class="limits-col do">
+      <h4>🌟 必須做（無條件原則）</h4>
+      <ul>
+        <li>所有業配 / 邀稿 / 評論獎勵必須揭露利益關係</li>
+        <li>每次改網頁 Claude 主動提醒信任元素清單</li>
+        <li>HolonIQ + 品保 + 學術引用 + iLink 必出現官網</li>
+        <li>KOL 業配必加折扣碼追蹤實付業績</li>
+        <li>影片字幕必須人工精校（不依賴自動）</li>
+        <li>影片轉文字稿同步放官網 blog</li>
+        <li>VideoObject + Article + FAQPage Schema 標記</li>
+        <li>跨教室 NAP 一致性季度檢查</li>
+        <li>Posh 不接洽 KOL / 不執行對外、只大腦 + 推動</li>
+        <li>對外接洽以 COO 為主、Posh 後勤</li>
+        <li>政府 / 教育合作不要求新校用課程設計</li>
+        <li>用 Claude deep-research 取代組員打電話洽詢</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <h4>🍊 橘子蘋果程式學苑 · GEO 100 分戰略 v6.7</h4>
+  <p>整合自 11 任務深度討論 + 2 輪 deep-research + 5 篇學術論文驗證 + YT 280 支影片實證 + HolonIQ 獎盃確認 + iLink 通訊翟本瑞專文 + 6 個 Citation 平台確認<br>
+  產生於 2026/06/27 · 林保旭（Posh Lin）· 線上事業部 + 行銷部總監<br>
+  <strong style="color:var(--oa-orange);">如需修改任何段落 → 告訴 Claude 哪個 section 改什麼、即時更新</strong></p>
+</div>
+
+</div>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+    }
+  });
+}, {threshold: 0.1, rootMargin:'0px 0px -50px 0px'});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Count-up animation for stats
+function animateCount(el) {
+  const text = el.textContent;
+  const isRange = text.includes('~') || text.includes('-');
+  if (isRange) return; // 範圍數字不做動畫
+  const target = parseInt(text.replace(/[^0-9]/g,''));
+  if (!target) return;
+  const suffix = text.replace(/[0-9]/g,'');
+  let current = 0;
+  const step = Math.ceil(target / 30);
+  const tick = () => {
+    current += step;
+    if (current >= target) { el.textContent = target + suffix; return; }
+    el.textContent = current + suffix;
+    requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCount(entry.target);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.5});
+
+document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+</script>
+
+<!-- 動態（矩陣 + 任務卡片 + 預算） -->
+<script src="shared/state.js"></script>
+<script>
+  renderMatrixGrid();
+  updateTaskCardOwners();
+  renderBudgetTable();
+</script>
+
+</body>
+</html>

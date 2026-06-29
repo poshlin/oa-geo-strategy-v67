@@ -1,0 +1,28 @@
+# 個人狀態檔（不要推上 GitHub、含進度 / 主責 / 備註等個人資料）
+oa-geo-state-*.json
+state-*.json
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 編輯器
+.vscode/
+.idea/
+*.sublime-*
+
+# Node / 套件（如果未來加）
+node_modules/
+.env
+.env.local
+
+# 暫存
+*.bak
+*.tmp
+*.log
+
+# Claude 暫存（如果有）
+.claude/cache/

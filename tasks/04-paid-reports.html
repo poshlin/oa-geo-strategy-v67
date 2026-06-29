@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 4 · PR 子 A 付費深度報導 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 4</div>
+  <h1><span class="num">4</span>PR 子 A · 付費深度報導</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥈 高 CP 支援</span>
+    <span class="badge b-geo">GEO +3~5</span>
+    <span class="badge b-budget">35 萬/年</span>
+    <span class="badge b-time">季度輪播</span>
+  </div>
+  <p class="task-tagline">不純做業配（LLM 對純業配降權）、改付費深度報導。4 季主題輪播、教育垂直 50% + 科技 30% + 商業財經 15% + 新聞稿 5%。</p>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：Q1 主題親子天下排期到 3 月、INSIDE 編輯換人）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
+  <p>純業配稿被 LLM 視為「廣告」、可能降權。深度報導 + 議題型專題對 LLM 友善。橘蘋過去 7 年沒做業配（CEO 提到金舶 / 金塾的工商時報是主辦單位用的、非橘蘋付費）、等於<strong>從零重啟</strong>。</p>
+  <p>不簽 PR 公司年約（戰國策已踩雷、大型公關 60-200 萬 CP 過低）、用混合策略：直接邀編輯 + 媒體自家發稿 + 新聞稿平台 + 任務 2 共用記者池。</p>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📅</span><h2>4 季主題輪播（暫定、組員可調）</h2></div>
+  <!-- ✏️ 可改 -->
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>季</th><th>主題</th><th>推哪家媒體</th></tr>
+    <tr><td>Q1</td><td>AI 時代家長必修：兒童程式教育為什麼成為剛需</td><td>親子天下 + INSIDE + 經濟日報</td></tr>
+    <tr><td>Q2</td><td>APCS 在大學申請的真實影響：14 年第一線觀察</td><td>親子天下 + Cheers + T 客邦</td></tr>
+    <tr><td>Q3</td><td>馬來西亞分校：台灣兒童程式教育的國際輸出</td><td>工商時報 + 數位時代 + 親子天下</td></tr>
+    <tr><td>Q4</td><td>從遊戲到競賽：選手班如何訓練程式選手</td><td>親子天下 + INSIDE + 翻轉教育</td></tr>
+  </table></div>
+  <div class="hint-box">同一主題 3 家媒體不同角度 = LLM 抓多個來源 = GEO 加分</div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">🎬</span><h2>媒體分層（GEO 效益）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Tier</th><th>媒體</th><th>GEO 權威</th><th>佔比</th></tr>
+    <tr><td>🥇 1 教育垂直</td><td>親子天下 / 未來親子 / 翻轉教育</td><td>✅✅✅ 最高</td><td>50%</td></tr>
+    <tr><td>🥈 2 科技教育</td><td>INSIDE / 數位時代 / T 客邦</td><td>✅✅ 高</td><td>30%</td></tr>
+    <tr><td>3 商業財經</td><td>經濟日報 / 工商時報 / Cheers</td><td>⚠️ 中</td><td>15%</td></tr>
+    <tr><td>4 大眾媒體</td><td>SETN / 蘋果新聞網</td><td>❌ 低（LLM 易降權）</td><td>不建議</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">📡</span><h2>PR 管道策略（混合）</h2></div>
+  <div class="scards">
+    <div class="scard"><h4>1 · 直接邀編輯</h4><p>親子天下 / INSIDE / 數位時代、深度文 8-15K/篇</p></div>
+    <div class="scard"><h4>2 · 媒體自家發稿</h4><p>親子天下贊助專欄、月度 5-10K/篇</p></div>
+    <div class="scard"><h4>3 · 新聞稿平台</h4><p>U-PR / EZpr、量補位 1-3K/篇</p></div>
+    <div class="scard"><h4>4 · 任務 2 共用記者池</h4><p>滲透式發稿、0-5K/篇</p></div>
+  </div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI</h2></div>
+  <ul>
+    <li>✅ 年 17 篇分散發稿（10 篇深度 + 8 篇新聞稿）</li>
+    <li>✅ Q1-Q4 4 主題各完成 3 家媒體覆蓋</li>
+    <li>✅ 教育垂直 4 篇均為深度議題文、非純業配</li>
+    <li>✅ 至少 1 篇被親子天下 / 數位時代主動引用（任務 2 信號）</li>
+  </ul>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算明細</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>媒體層</th><th>預算/篇</th><th>篇數/年</th><th>小計</th></tr>
+    <tr><td>教育垂直深度文</td><td class="num">8-12K</td><td class="num">4</td><td class="num">12-15 萬</td></tr>
+    <tr><td>科技教育主題文</td><td class="num">5-10K</td><td class="num">3</td><td class="num">8-12 萬</td></tr>
+    <tr><td>商業財經補位</td><td class="num">5-10K</td><td class="num">2</td><td class="num">4-6 萬</td></tr>
+    <tr><td>新聞稿發稿</td><td class="num">1-3K</td><td class="num">8</td><td class="num">3-5 萬</td></tr>
+    <tr><th>合計</th><th></th><th class="num">17 篇</th><th class="num">30-38 萬</th></tr>
+  </table></div>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="03-parents-bloggers.html" class="prev">上一任務：家長社群 + 部落格</a>
+  <a href="05-authority.html" class="next">下一任務：話語權工程 🥇</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('04');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>

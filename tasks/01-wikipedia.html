@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 1 · Wikipedia 條目建立 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 1</div>
+  <h1><span class="num">1</span>Wikipedia 條目建立</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥇 80/20 關鍵</span>
+    <span class="badge b-geo">GEO +8~13</span>
+    <span class="badge b-budget">預算 $0</span>
+    <span class="badge b-time">時程 6-12 月</span>
+  </div>
+  <!-- ✏️ 可改：任務一句話定位 -->
+  <p class="task-tagline">在中文維基百科建立「橘子蘋果兒童程式學苑」條目、Wiki 條目是 LLM 引用權威來源 No.1、一旦通過、ChatGPT / Claude / Gemini 推薦兒童程式教育時、橘蘋出現機率大幅提升。2026/1/13 升級後採雙模板強制揭露、必須走 AfC 流程。</p>
+</div>
+
+<!-- 進度追蹤元件 -->
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因 / 待解問題（例如：等今周刊記者回信、卡在來源不夠）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
+  <!-- ✏️ 可改：背景論述 -->
+  <p>Wikipedia 是 LLM 訓練資料的<strong>第一級權威來源</strong>。當家長問 ChatGPT「台灣兒童程式教育推薦」、LLM 會優先引用有 Wiki 條目的品牌。同業 Hahow、HiSKIO、VoiceTube 都<strong>沒有中文 Wiki 條目</strong>、PaGamO 有條目但只 2 個來源 + 5 個維護模板（弱）。</p>
+  <p>橘蘋若先建立完整 Wiki 條目、等同搶下 LLM 引用的<strong>排他位置</strong>、競爭對手要追上至少 1-2 年。但是 2026/1/13 升級後 Wiki 對「商業條目」審查極嚴、必須走 AfC + 雙模板揭露、不能找代寫顧問（中文 Wiki 沒有合規顧問市場）。</p>
+
+  <div class="hint-box"><strong>對 Posh 的話：</strong>這個任務沒有預算、但需要組員耐心 + 細心 + 補來源能力。失敗代價 = 對手先做、橘蘋永遠落後。</div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📋</span><h2>執行 SOP（7 步驟）</h2></div>
+
+  <div class="mermaid-wrap">
+    <div class="mermaid">
+flowchart LR
+  A["1️⃣ 帳號準備<br/>5 天"] --> B["2️⃣ COI 雙模板<br/>揭露"]
+  B --> C["3️⃣ 寫草稿<br/>沙盒空間"]
+  C --> D["4️⃣ 撰寫鐵則<br/>避行銷詞"]
+  D --> E["5️⃣ AfC 提交<br/>等待審核"]
+  E --> F{審核結果}
+  F -->|通過| G["7️⃣ 90 天維護<br/>監控 AfD"]
+  F -->|退件| H["6️⃣ 退件處理<br/>補來源不爭執"]
+  H --> E
+  style A fill:#FFB627,color:#fff,stroke:#FF6B35
+  style B fill:#FFB627,color:#fff,stroke:#FF6B35
+  style C fill:#FFB627,color:#fff,stroke:#FF6B35
+  style D fill:#FFB627,color:#fff,stroke:#FF6B35
+  style E fill:#FF6B35,color:#fff,stroke:#E63946
+  style F fill:#A370F7,color:#fff
+  style G fill:#34C759,color:#fff
+  style H fill:#E63946,color:#fff
+    </div>
+  </div>
+
+  <div class="scards">
+    <div class="scard"><h4>Step 1 · 帳號準備（5 天）</h4><p>真實身份帳號 + 編輯 10 次他條目 + 等 4 天 = 自動確認用戶。</p></div>
+    <div class="scard"><h4>Step 2 · COI 揭露</h4><p>用戶頁 + 條目討論頁雙模板揭露（{{Connected contributor}} + {{Paid}}）。2026/1/13 後強制。</p></div>
+    <div class="scard"><h4>Step 3 · 寫草稿</h4><p>沙盒空間寫初稿、仿 TutorABC 條目結構（Infobox + 歷史 + 課程體系 + 教學據點 + 參考來源）。</p></div>
+    <div class="scard"><h4>Step 4 · 撰寫鐵則</h4><p>避免行銷詞、價格、招生資訊、第二人稱。只寫客觀事實 + 引用第三方來源。</p></div>
+    <div class="scard"><h4>Step 5 · AfC 提交</h4><p>草稿底部加 <code>{{subst:submit}}</code>、進入 AfC 審核排隊。</p></div>
+    <div class="scard warn"><h4>Step 6 · 退件處理</h4><p>看回饋、補來源、不爭執、重新提交。預期 2-3 輪。</p></div>
+    <div class="scard green"><h4>Step 7 · 90 天維護</h4><p>通過後 90 天密集監控 AfD（刪除提名）與維護模板掛載。</p></div>
+  </div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">📚</span><h2>來源清單（6 強 + 補位）</h2></div>
+  <!-- ✏️ 可改：來源狀態 -->
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>強度</th><th>來源</th><th>類型</th><th>狀態</th></tr>
+    <tr><td>⭐⭐⭐</td><td>今周刊 2015「這堂程式設計課 網路遊戲當教材」（賴若函）</td><td>獨立記者深度</td><td>✅ 可用</td></tr>
+    <tr><td>⭐⭐⭐</td><td>T 客邦 2016「程式設計將納入國高中課綱」（艾格）</td><td>獨立記者深度</td><td>✅ 可用</td></tr>
+    <tr><td>⭐⭐⭐</td><td>iLink 通訊第 9 期 2023/11/01（翟本瑞、教育部資科司期刊）</td><td>學者深度</td><td>✅ 可用（最強）</td></tr>
+    <tr><td>⭐⭐⭐</td><td>HolonIQ 2023 Taiwan EdTech 50（國際機構認可）</td><td>產業排名</td><td>✅ 可用</td></tr>
+    <tr><td>⭐⭐</td><td>數位時代 Meet 創業小聚 2020（陳詩妤）</td><td>媒體採訪</td><td>⚠️ 邊緣可用</td></tr>
+    <tr><td>⭐⭐</td><td>親子天下 翻轉教育 教育新創 20+ 系列</td><td>媒體報導</td><td>⚠️ 邊緣可用</td></tr>
+    <tr><td>⭐⭐</td><td>5 篇學術論文（陳雅萍 / 湯惠美 / 蔡崇華 / 吳弘譯 / 鄭婷云）</td><td>學術引用</td><td>✅ 可用</td></tr>
+    <tr><td>⭐</td><td>北市教育局 MOU 2020 + 酷課雲列入</td><td>政府背書</td><td>✅ 補位</td></tr>
+    <tr><td>⭐</td><td>NTU CSIE 賴岳林 Seminar 公告</td><td>學術邀請</td><td>✅ 補位</td></tr>
+  </table></div>
+  <div class="hint-box"><strong>策略：</strong>強來源 ≥ 3 篇 + 補位 ≥ 3 篇 = 通過機率高。任務 2 PR 子 B 是為了再加 2-4 篇強來源。</div>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">📅</span><h2>時程預估</h2></div>
+  <div class="scards">
+    <div class="scard green"><h4>樂觀 · 2 個月</h4><p>來源已備 6 篇強、初投即通過。</p></div>
+    <div class="scard"><h4>中立 · 4 個月</h4><p>1-2 輪退件、補來源後通過。</p></div>
+    <div class="scard warn"><h4>悲觀 · 6 個月</h4><p>需補 2-3 篇深度報導（任務 2 配合）才能通過。</p></div>
+  </div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI / 成功指標</h2></div>
+  <ul>
+    <li>✅ 帳號通過自動確認用戶（5 天內）</li>
+    <li>✅ 草稿完成、含 6 個來源</li>
+    <li>✅ AfC 第 1 次提交（Week 8）</li>
+    <li>✅ 條目通過、上中文 Wiki（6-12 月）</li>
+    <li>✅ 90 天內無 AfD 刪除提名</li>
+    <li>✅ 連結被引用：1 年內被 ≥ 1 篇其他 Wiki 條目連回</li>
+  </ul>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">⚠️</span><h2>風險與紅線</h2></div>
+  <ul>
+    <li>❌ 不能找代寫顧問（中文 Wiki 沒合規顧問、被抓黑名單）</li>
+    <li>❌ 不能用公司 IP 直接編輯（要用個人住家 IP）</li>
+    <li>❌ 不能寫行銷詞（「最佳」「領導」「優秀」等被秒退）</li>
+    <li>❌ 不能寫價格 / 招生資訊（觸 WP:NOT 禁忌）</li>
+    <li>⚠️ COI 雙模板強制揭露（2026/1/13 後、未揭露條目可能被秒刪）</li>
+    <li>⚠️ 第三方獨立來源 ≥ 3 篇才有 notability、橘蘋目前 3 篇強 + 補位、勉強過</li>
+  </ul>
+</section>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">👥</span><h2>角色分工建議(參考)</h2></div>
+  <div id="current-owner-display" class="hint-box"></div>
+  <p style="font-size:13px;color:var(--mute);margin:6px 0 14px;">⬇️ 以下為 Claude 規劃時的建議分工、實際指派以上方「目前實際指派」為準。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>位置</th><th>建議擔任 + 負責內容</th></tr>
+    <tr><td><strong>🥇 主責</strong></td><td>帳號準備 + 草稿撰寫 + AfC 提交 + 退件補救 + 90 天維護（建議：組員）</td></tr>
+    <tr><td>🥈 策略審核</td><td>草稿初版審核、確保符合品牌真實數字（建議：Posh）</td></tr>
+    <tr><td>🥉 高層配合（必要時）</td><td>動用 iLink / 翟本瑞 / HolonIQ 等高層證明文件（建議：COO）</td></tr>
+  </table></div>
+</section>
+
+<!-- ✏️ 修改記錄區（每次改完寫一行） -->
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <!-- ✏️ 可改 -->
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<!-- 上下任務導覽 -->
+<nav class="task-bottom-nav">
+  <a href="../index.html" class="prev">回總覽</a>
+  <a href="02-pr-records.html" class="next">下一任務：PR 子 B 記者主動採訪</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('01');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>

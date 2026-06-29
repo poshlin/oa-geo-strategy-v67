@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 10 · 產業獎項 HolonIQ 全曝光 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 10</div>
+  <h1><span class="num">10</span>產業獎項 HolonIQ 全曝光</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥉 加碼補位</span>
+    <span class="badge b-geo">GEO +1~3</span>
+    <span class="badge b-budget">5-8 萬/年</span>
+    <span class="badge b-time">持續</span>
+  </div>
+  <p class="task-tagline">🚨 重大發現：HolonIQ 2023 Taiwan EdTech 50 已確認入選（獎盃實物為證）、跟 BenQ / AVer / ViewSonic / Hahow 同級、但完全沒被善用。+ 6 個其他獎項共 7-8 項、全部低度曝光。重點：全面曝光現有 + 衝 2026 HolonIQ + 未來教育 100。</p>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：等 COO 找出 HolonIQ 獎盃照片、未來教育送件中）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🏆</span><h2>現有獎項盤點（7-8 項）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>獎項</th><th>GEO 含金量</th><th>目前用法</th></tr>
+    <tr><td>🥇 <strong>HolonIQ 2023 Taiwan EdTech 50</strong>（蘋果芽 / Apple Buds, Inc.）</td><td>✅✅✅ 極高</td><td>❌ 完全沒用</td></tr>
+    <tr><td>🥈 未來教育（天下遠見基金會）</td><td>✅✅ 高</td><td>❌ 沒用</td></tr>
+    <tr><td>🥈 教育新創 20+（親子天下）</td><td>✅✅ 高</td><td>⚠️ 偶用</td></tr>
+    <tr><td>🥉 2018 臺北全球華人資訊教育創新論壇</td><td>✅ 中</td><td>❌ 沒用</td></tr>
+    <tr><td>🥉 第三屆品牌金舶獎（2021）</td><td>⚠️ 中</td><td>❌ 沒用</td></tr>
+    <tr><td>🥉 金塾獎（2022）</td><td>⚠️ 中</td><td>❌ 沒用</td></tr>
+    <tr><td>✅ 清寒基金會（拾穗計劃）CSR</td><td>✅ 高（政府背書）</td><td>⚠️ 偶用</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">⭐</span><h2>HolonIQ 含金量分析</h2></div>
+  <ul>
+    <li>主辦：經濟部工業局 + 數位發展部數位產業署 + 資策會</li>
+    <li>評選標準：Market / Product / Team / Capital / Momentum</li>
+    <li>2024 年台灣 23 家入選 East Asia EdTech 150</li>
+    <li><strong>同屆得獎</strong>：BenQ、AVer、ViewSonic、Datavideo、奧圖碼、智高、VoiceTube、Hahow、KaiJet</li>
+    <li>橘蘋跟上市公司同級 — <strong>但官網沒放</strong></li>
+  </ul>
+  <div class="hint-box warn"><strong>⚠️ 注意：</strong>East Asia 150 排除成立 10 年以上 EdTech、橘蘋 2013 成立、Taiwan EdTech 50 規則不同、橘蘋已確認入選 50。</div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>4 軌策略（不是參更多獎、是曝光 + 1-2 衝刺）</h2></div>
+  <div class="scards">
+    <div class="scard"><h4>🥇 確認 HolonIQ 真實入選</h4><p>COO 找獎狀照片、寫進 Wiki / 官網信任區</p></div>
+    <div class="scard"><h4>🥇 既有 7-8 個獎項全面曝光</h4><p>官網信任區 + Wiki 來源 + 業務話術 + 結帳頁徽章</p></div>
+    <div class="scard"><h4>🥈 衝刺 2026/2027 HolonIQ Taiwan EdTech 50</h4><p>COO 送件、預算 3 萬</p></div>
+    <div class="scard"><h4>🥈 衝刺 2026 未來教育臺灣 100</h4><p>COO 送件、預算 1-2 萬</p></div>
+    <div class="scard warn"><h4>❌ 不再參金舶 / 金塾</h4><p>已停、商業類含金量低</p></div>
+  </div>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算（5-8 萬/年）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>項目</th><th>NT$/年</th></tr>
+    <tr><td>HolonIQ 申請費 + 資料準備</td><td class="num">3 萬</td></tr>
+    <tr><td>未來教育 100 申請</td><td class="num">1-2 萬</td></tr>
+    <tr><td>親子天下 / 遠見類補位</td><td class="num">1-2 萬</td></tr>
+    <tr><td>既有獎項曝光素材製作（徽章 / Logo）</td><td class="num">1 萬</td></tr>
+    <tr><th>合計</th><th class="num">5-8 萬</th></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">👥</span><h2>分工 + KPI</h2></div>
+  <ul>
+    <li><strong>COO 主責申請</strong>（過去金舶 / 金塾 / HolonIQ 都是 COO 送件）</li>
+    <li>組員：官網 / 業務話術曝光</li>
+    <li>Posh：策略提案 + 推動、不執行</li>
+  </ul>
+  <h3 style="font-size:15px;margin:14px 0 6px;">KPI</h3>
+  <ul>
+    <li>✅ 7-8 個現有獎項 100% 在官網信任區曝光</li>
+    <li>✅ 確認 HolonIQ 真實入選並寫進 Wiki 來源</li>
+    <li>✅ 年度衝刺 1-2 個新獎項</li>
+  </ul>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="09-video.html" class="prev">上一任務：影片 4 軌</a>
+  <a href="11-academic.html" class="next">下一任務：學術引用</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('10');
+  renderStateActions();
+</script>
+</body>
+</html>

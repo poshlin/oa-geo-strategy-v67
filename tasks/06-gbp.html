@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 6 · GBP 11 直營完整化 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../編輯說明.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 6</div>
+  <h1><span class="num">6</span>GBP 11 直營完整化</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥈 高 CP 支援</span>
+    <span class="badge b-geo">GEO +4</span>
+    <span class="badge b-budget">5 萬/年</span>
+    <span class="badge b-time">第一季衝刺、後續維護</span>
+  </div>
+  <p class="task-tagline">⚠️ 重大法律確認：週末租場「絕對不能建獨立 GBP」（補習班法 5-25 萬罰 + Google 政策下架雙重風險）。6 立案教室全推 4 動作、守 2,244 評論 / 4.9★ 護城河。</p>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：等主任提供教室照片、Owner Posts 素材短缺）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">⚠️</span><h2>法律確認（必讀）</h2></div>
+
+  <h3 style="font-size:15px;margin:10px 0 6px;">週末租場建獨立 GBP — 絕對不能</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>法規 / 政策</th><th>罰則</th></tr>
+    <tr><td>補習及進修教育法第 24 條</td><td>5-25 萬罰鍰 + 命令停辦 + 沒入器材</td></tr>
+    <tr><td>短期補習班設立及管理準則第 13 條</td><td>增設班舍須先核准</td></tr>
+    <tr><td>第 10 條</td><td>立案證書必須登記班舍地址</td></tr>
+    <tr><td>Google GBP 政策 answer/13762416</td><td>暫停或永久下架</td></tr>
+  </table></div>
+
+  <p>實際案例：新北市 2 年查獲 90 家未立案、永和區語文班遭罰 25 萬。</p>
+
+  <h3 style="font-size:15px;margin:14px 0 6px;">GBP 換地址 — 可遷移、評論保留、但有代價</h3>
+  <ul>
+    <li>✅ 評論保留（Google 官方 answer/3098204）</li>
+    <li>⚠️ 強制重新驗證（answer/3039617）</li>
+    <li>⚠️ 操作不當排名重置 2-6 個月、得當 2-4 週</li>
+    <li>❌ 「自動把評論搬到新地點」說法被駁回（不能承諾 CEO）</li>
+  </ul>
+
+  <h3 style="font-size:15px;margin:14px 0 6px;">K-12 評論移除豁免（2025/4/30）</h3>
+  <p>Google 政策對「補教 / 課後輔導 / Online-only」豁免、橘蘋現有 2,244 評論 × 4.9★ 安全。</p>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">🏫</span><h2>11 直營 GBP 策略</h2></div>
+
+  <div class="mermaid-wrap">
+    <div class="mermaid">
+flowchart TB
+  ALL["11 直營教室"] --> CAT{教室類型}
+  CAT -->|6 立案| L["✅ 全建 GBP<br/>+ 4 完整化動作"]
+  CAT -->|4-5 週末租場| W["❌ 不建獨立 GBP"]
+  W --> ALT["3 替代方案"]
+  ALT --> A1["A · 併入最近立案教室<br/>SAB hybrid"]
+  ALT --> A2["B · 學員至立案教室或線上<br/>推薦"]
+  ALT --> A3["C · 業績夠大時申請增設班舍"]
+  style L fill:#34C759,color:#fff
+  style W fill:#E63946,color:#fff
+  style A2 fill:#34C759,color:#fff
+    </div>
+  </div>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>教室</th><th>立案狀態</th><th>GBP 狀態</th></tr>
+    <tr><td>古亭</td><td>✅ 立案</td><td>✅ 已建（旗艦店、Services 待補）</td></tr>
+    <tr><td>板橋</td><td>✅ 立案</td><td>需確認</td></tr>
+    <tr><td>新店</td><td>✅ 立案</td><td>需確認</td></tr>
+    <tr><td>新竹竹北</td><td>✅ 立案</td><td>需確認</td></tr>
+    <tr><td>台中北屯</td><td>✅ 立案</td><td>需確認</td></tr>
+    <tr><td>台南東寧西</td><td>✅ 立案</td><td>需確認</td></tr>
+    <tr><td>高雄左營</td><td>🟡 跑立案中</td><td>立案完成後建</td></tr>
+    <tr><td>其他 4-5 間（士林 / 東湖 / 林口 / 中永和 / 信義）</td><td>🔴 週末租場</td><td>❌ 不建獨立、走方案 B</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>4 動作完整化（已驗證）</h2></div>
+  <div class="scards">
+    <div class="scard"><h4>① Services 欄位填滿</h4><p>9 大課程：玩創 / 麥塊 / Roblox / Scratch / Python / JS / H5 / AI / APCS。古亭目前只填「線上 + 門市」、待全補。</p></div>
+    <div class="scard"><h4>② Owner Posts 週度 1-2 篇</h4><p>素材來自組員、月度排程、互動率 +21%。</p></div>
+    <div class="scard"><h4>③ Q&A 主動經營</h4><p>30 題常見 FAQ 全教室統一、含品保協會 + 學術引用。</p></div>
+    <div class="scard"><h4>④ 教室實照（非 AI）</h4><p>11 教室 + 馬來西亞、各 8-15 張實照、年度更新。</p></div>
+  </div>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算明細（5 萬/年）</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>動作</th><th>工具</th><th>NT$/年</th></tr>
+    <tr><td>11 教室 dashboard 統管</td><td>Google 商家檔案 app（多店切換內建）</td><td class="num">0</td></tr>
+    <tr><td>評論回覆 AI 草稿</td><td>Claude / ChatGPT（已有）</td><td class="num">0</td></tr>
+    <tr><td>Owner Posts 排程</td><td>Google 自家排程</td><td class="num">0</td></tr>
+    <tr><td>評論邀請</td><td>任務 3 家長平台自動觸發</td><td class="num">0</td></tr>
+    <tr><td>實照拍攝 11 教室 + 馬來西亞</td><td>組員</td><td class="num">3-5 萬</td></tr>
+    <tr><td>Q&A 內容撰寫</td><td>行銷部統一寫 30 題 FAQ</td><td class="num">0-1 萬</td></tr>
+    <tr><th>合計</th><th></th><th class="num">5 萬</th></tr>
+  </table></div>
+  <div class="hint-box"><strong>第二年升級條件：</strong>評論成長 &lt; 月 30 篇、主任 / 顧問完全沒在發 Posts、或想開始競品 GBP 自動監控 → 升級工具 10-15 萬/年（Whitespark / 台灣 CooKai）</div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI</h2></div>
+  <ul>
+    <li>✅ 年度 6+1 立案教室 100% 完成 4 項動作</li>
+    <li>✅ Owner Posts 週 1-2 篇（年 50-100 篇）</li>
+    <li>✅ 評論數成長 30-50% / 年（從 2,244 → 3,000-3,400）</li>
+    <li>✅ 4.9★ 維持</li>
+    <li>✅ 古亭 Services 從 2 項補到 9 項</li>
+  </ul>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="05-authority.html" class="prev">上一任務：話語權工程</a>
+  <a href="07-citation.html" class="next">下一任務：Local Citation</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js"></script>
+<script>
+  initTaskPage('06');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>
