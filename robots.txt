@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# 內部戰略文件、請勿索引
