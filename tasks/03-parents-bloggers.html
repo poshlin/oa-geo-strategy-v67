@@ -78,7 +78,47 @@ flowchart LR
     </div>
   </div>
 
-  <div class="hint-box"><strong>關鍵：</strong>Posh 跟工程師<strong>口頭討論</strong>（不寫 brief）家長平台改版 + 結業證書下載頁加「分享你的故事」CTA。</div>
+  <div class="hint-box" style="margin-bottom:14px;">下面把 <strong>5 個自動觸發點</strong>逐一寫清楚「<strong>什麼時候觸發、系統做什麼動作、跳到哪張靈感卡</strong>」。組員照這張表跟工程師口頭討論即可（不寫 brief、見規範）。</div>
+
+  <div class="scards">
+    <div class="scard"><h4>觸發點 1 · 學員升階段時</h4>
+      <p><strong>① 觸發條件：</strong>學員在系統內從某階段（啟蒙 / 深化 / 衝刺）升到下一階段時自動偵測。</p>
+      <p><strong>② 系統動作：</strong>家長平台跳 push 通知「<strong>孩子升級了、分享他的成長</strong>」。</p>
+      <p><strong>③ 跳轉：</strong>點通知 → 跳「分享靈感卡」（見下方證書頁設計、三選一）。</p>
+    </div>
+    <div class="scard"><h4>觸發點 2 · 通過 ITS / APCS 國際認證時</h4>
+      <p><strong>① 觸發條件：</strong>學員通過 ITS 或 APCS 認證、成績登錄系統時。</p>
+      <p><strong>② 系統動作：</strong>自動<strong>寄信</strong>（線上顧問自動化、不需真人）「<strong>孩子拿到國際認證、分享這份榮譽</strong>」。</p>
+      <p><strong>③ 跳轉：</strong>信中 CTA 按鈕 → 靈感卡。</p>
+    </div>
+    <div class="scard"><h4>觸發點 3 · 老師上傳作品時</h4>
+      <p><strong>① 觸發條件：</strong>老師把學員課堂作品上傳到家長平台時。</p>
+      <p><strong>② 系統動作：</strong>推 push「<strong>你最驕傲的作品是哪一個？</strong>」帶作品縮圖。</p>
+      <p><strong>③ 跳轉：</strong>點作品 → 靈感卡（預填該作品名稱）。</p>
+    </div>
+    <div class="scard"><h4>觸發點 4 · 家長下載結業證書時（最關鍵）</h4>
+      <p><strong>① 觸發條件：</strong>家長進到結業證書下載頁、按下載時。</p>
+      <p><strong>② 系統動作：</strong>證書頁<strong>內嵌</strong>「分享你的故事」按鈕區（不是另外 push、而是就在下載頁上、順手完成）。</p>
+      <p><strong>③ 跳轉：</strong>三個分享選項直接在頁面上（設計見下）。</p>
+    </div>
+    <div class="scard"><h4>觸發點 5 · 季度作品集發送時</h4>
+      <p><strong>① 觸發條件：</strong>每季系統自動產生跨班作品集、發送給家長時。</p>
+      <p><strong>② 系統動作：</strong>推送 + 「<strong>點按上見證牆 + 抽月度感謝禮</strong>」。</p>
+      <p><strong>③ 跳轉：</strong>見證牆上稿（公開 + 揭露式合規、見合規鐵則）。</p>
+    </div>
+  </div>
+
+  <h3 style="margin:16px 0 8px;font-size:15px;">🖥 結業證書頁「分享你的故事」按鈕怎麼設計（給工程師的版面）</h3>
+  <div class="hint-box">組員把下面這塊版面口頭描述給工程師即可。核心：<strong>下載證書後、同一頁順手三選一分享</strong>、每個選項都幫家長預填、降低動手門檻。</div>
+  <div class="scard"><h4>證書下載頁版面（觸發點 4 對應）</h4>
+    <p><code>[孩子姓名 結業證書 下載]　[PDF 預覽]</code></p>
+    <p>—————————————————————</p>
+    <p>📣 <strong>您的真實心得對其他家長很有幫助、選一個方式分享：</strong></p>
+    <p>○ <strong>寫 Google Map 評論</strong> → 跳轉 GBP 撰寫頁 + 預填靈感卡（例：「孩子在 OO 教室上了 X 期、最大的改變是…」）</p>
+    <p>○ <strong>發 Threads / FB 短心得</strong> → 開啟發文框 + 預填 <code>#橘子蘋果</code> 標籤</p>
+    <p>○ <strong>上見證牆</strong> → 公開 + 抽月度感謝禮（<strong>揭露式合規</strong>、頁面標明抽獎機制）</p>
+    <p style="font-size:13px;color:var(--mute);margin-top:6px;">⚠️ 靈感卡只提供「填空提示」、<strong>不預寫整段好評</strong>（預寫整段＝假評論、踩三星案紅線）。</p>
+  </div>
 </section>
 
 <section class="sec accent-hope">
@@ -94,32 +134,74 @@ flowchart LR
 <section class="sec accent-trust">
   <div class="sec-h"><span class="sec-emoji">📝</span><h2>3B · 13 位親子 KOL 接洽名單</h2></div>
   <!-- ✏️ 可改：接洽進度 -->
-  <h3 style="margin:10px 0 8px;font-size:15px;">🥇 第一梯隊（強烈推薦 5 位）</h3>
+  <div class="hint-box" style="margin-bottom:12px;">名單由<strong>數位廣告投手主責自接洽</strong>（Posh 專注 SEO/AEO、不親自接 KOL）。藍字都可直接點開 KOL 主頁確認風格與近況再私訊。標「（連結待補）」的表示記憶檔尚無公開連結、接洽前先自行搜尋補上。</div>
+
+  <h3 style="margin:10px 0 8px;font-size:15px;">🥇 第一梯隊（強烈推薦 5 位、優先接洽）</h3>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>KOL</th><th>平台</th><th>子女</th><th>預估費</th><th>接洽狀態</th></tr>
-    <tr><td>卡氏一家</td><td>IG @kandcfamily / 媽咪拜</td><td>女 10 / 男 8</td><td class="num">5-10K</td><td>未接洽</td></tr>
-    <tr><td>別讓一姐不開心</td><td>媽咪拜駐站</td><td>女 9 / 男 6</td><td class="num">5-10K</td><td>未接洽</td></tr>
-    <tr><td>豆芽媽（幼教碩士）</td><td>媽咪拜 / 痞客邦</td><td>女 11 / 男 6</td><td class="num">5-10K</td><td>未接洽</td></tr>
-    <tr><td>焦糖綠玫瑰</td><td>媽咪拜駐站</td><td>女 12</td><td class="num">8-15K</td><td>未接洽</td></tr>
-    <tr><td>Amber 媽咪愛</td><td>FB 15 萬 / IG 12 萬</td><td>不詳</td><td class="num">10-20K</td><td>未接洽</td></tr>
+    <tr><th>KOL</th><th>平台連結</th><th>子女</th><th>為什麼匹配</th><th>預估費</th><th>接洽狀態</th></tr>
+    <tr><td>卡氏一家</td><td><a href="https://www.instagram.com/kandcfamily/" target="_blank" rel="noopener">IG @kandcfamily</a> · <a href="https://mamibuy.com.tw/home/269900" target="_blank" rel="noopener">媽咪拜 269900</a></td><td>女 10 / 男 8</td><td>教育教養型、年齡對位、爸爸視角</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><td>別讓一姐不開心</td><td>媽咪拜駐站（連結待補）</td><td>女 9 / 男 6</td><td>教養專家、爸爸視角、女兒國小</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><td>豆芽媽（幼教碩士）</td><td>媽咪拜駐站 / 痞客邦（連結待補）</td><td>女 11 / 男 6</td><td><strong>幼教碩士</strong>、教育權威</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><td>焦糖綠玫瑰</td><td>媽咪拜駐站（連結待補）</td><td>女 12</td><td>專欄作家、兒童社會議題、高年級</td><td class="num">8-15K</td><td>未接洽</td></tr>
+    <tr><td>Amber 媽咪愛</td><td>FB 15 萬 / IG 12 萬（連結待補）</td><td>不詳</td><td>親子共讀 + 手作、shinekol 2025 排行</td><td class="num">10-20K</td><td>未接洽</td></tr>
   </table></div>
 
   <h3 style="margin:14px 0 8px;font-size:15px;">🥈 第二梯隊（次推薦 5 位）</h3>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>KOL</th><th>強項</th><th>預估費</th><th>接洽狀態</th></tr>
-    <tr><td>豆豆媽咪</td><td>醫藥記者 / 健康節目</td><td class="num">8-15K</td><td>未接洽</td></tr>
-    <tr><td>晴媽咪</td><td>教養專家 / 4 本著作</td><td class="num">8-15K</td><td>未接洽</td></tr>
-    <tr><td>彭凱莉</td><td>食育講師</td><td class="num">5-10K</td><td>未接洽</td></tr>
-    <tr><td>Yun Chou</td><td>IG 互動率 20% 之王</td><td class="num">15-30K</td><td>未接洽</td></tr>
-    <tr><td>婷婷 Tiffany</td><td>痞客邦親子類獲獎</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><th>KOL</th><th>平台連結</th><th>強項</th><th>預估費</th><th>接洽狀態</th></tr>
+    <tr><td>豆豆媽咪（吳霈蓁）</td><td>（連結待補）</td><td>醫藥記者 / 健康節目 /《跟著醫師養小孩》</td><td class="num">8-15K</td><td>未接洽</td></tr>
+    <tr><td>晴媽咪</td><td>（連結待補）</td><td>教養專家、4 本著作（副食品 / 作息 / 食物泥）</td><td class="num">8-15K</td><td>未接洽</td></tr>
+    <tr><td>彭凱莉</td><td>（連結待補）</td><td>食育講師、媒體工作者、3 子</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><td>Yun Chou</td><td>（連結待補）</td><td>IG 互動率 20%（超過 10 萬平均）</td><td class="num">15-30K</td><td>未接洽</td></tr>
+    <tr><td>婷婷（Tiffany）</td><td>痞客邦（連結待補）</td><td>痞客邦金點賞<strong>親子類獲獎</strong>、三寶媽</td><td class="num">5-10K</td><td>未接洽</td></tr>
   </table></div>
 
-  <h3 style="margin:14px 0 8px;font-size:15px;">🥉 第三梯隊（補位）</h3>
+  <h3 style="margin:14px 0 8px;font-size:15px;">🥉 第三梯隊（補位 3 位）</h3>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>KOL</th><th>備註</th><th>接洽狀態</th></tr>
-    <tr><td>三明治爸爸</td><td>已寫過橘蘋 2024/7、可深化合作</td><td>已合作</td></tr>
-    <tr><td>荳迪媽</td><td>媽咪拜 / 痞客邦</td><td>未接洽</td></tr>
-    <tr><td>朱李一家</td><td>IG 互動率 15%+</td><td>未接洽</td></tr>
+    <tr><th>KOL</th><th>平台連結</th><th>備註</th><th>預估費</th><th>接洽狀態</th></tr>
+    <tr><td>三明治爸爸</td><td><a href="https://sandwichfather.pixnet.net/" target="_blank" rel="noopener">痞客邦 sandwichfather</a></td><td><strong>已寫過橘蘋</strong> 2024/7、可深化為揭露式正規合作</td><td class="num">5-10K</td><td>已合作</td></tr>
+    <tr><td>荳迪媽</td><td>媽咪拜 / 痞客邦（連結待補）</td><td>12、11 歲、DIY 手作</td><td class="num">5-10K</td><td>未接洽</td></tr>
+    <tr><td>朱李一家</td><td>IG（連結待補）</td><td>互動率 15%+</td><td class="num">5-10K</td><td>未接洽</td></tr>
+  </table></div>
+
+  <h3 style="margin:14px 0 8px;font-size:15px;">🔗 接洽平台 / 管道</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>管道</th><th>連結</th><th>用途</th></tr>
+    <tr><td>媽咪拜駐站部落客</td><td><a href="https://mamibuy.com.tw/talk/master/?t=blogger" target="_blank" rel="noopener">mamibuy.com.tw/talk/master</a></td><td>可批量找駐站部落客、第一梯隊多數在此</td></tr>
+    <tr><td>試媒體部落客學院</td><td><a href="https://blogger-trymedia.tw/" target="_blank" rel="noopener">blogger-trymedia.tw</a></td><td>5,000+ 部落客接案平台、<strong>已決定簽年費 5 萬</strong></td></tr>
+    <tr><td>直接私訊 IG / FB</td><td>各 KOL 主頁（見上表）</td><td>微網紅直接私訊、投手過去接洽經驗</td></tr>
+    <tr><td>痞客邦親子分類</td><td><a href="https://www.pixnet.net/tags/親子" target="_blank" rel="noopener">pixnet.net 親子標籤</a></td><td>海量素人 / 微網紅補位來源</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📋</span><h2>3B · 邀稿 SOP（6 步、給數位廣告投手）</h2></div>
+  <div class="hint-box" style="margin-bottom:12px;">從「挑對人」到「二次運用」的完整流程。每一步都寫清楚要做什麼、避開什麼。</div>
+  <div class="scards">
+    <div class="scard"><h4>Step 1 · 確認 KOL 類型適配</h4><p><strong>知識 / 才藝分享型優先</strong>（繪本、英文啟蒙、教育）＝適配最高；專業權威型（幼教、治療師）次之。避開純「崩潰育兒日常型」與「高端童裝質感型」。</p></div>
+    <div class="scard"><h4>Step 2 · 評估過往案例</h4><p>翻該 KOL 近期貼文、<strong>避免常接低品質業配</strong>的（一週三篇不同品牌＝讀者信任低）。看有沒有真的帶孩子做、而非純念稿。</p></div>
+    <div class="scard"><h4>Step 3 · 提合作 brief</h4><p>明確給：<strong>1-2 堂免費體驗 + 揭露要求 + 篇數</strong>。報價落在該層級行情（微網紅 3-9K CP 最高）。</p></div>
+    <div class="scard"><h4>Step 4 · 拍攝腳本</h4><p>核心：<strong>孩子真實上課 + 家長真實感受 + 不照念劇本</strong>。只給主題方向與必提重點、不給整段台詞（照念＝假、觸法又沒說服力）。</p></div>
+    <div class="scard warn"><h4>Step 5 · 強制揭露</h4><p>成品<strong>必須</strong>寫明「本文為橘子蘋果程式學苑邀稿體驗」（正確寫法範本見下）。上稿前逐篇檢查揭露字樣、缺一篇都不放行。</p></div>
+    <div class="scard green"><h4>Step 6 · 二次運用</h4><p>取得授權後<strong>官網轉載 + 收進年度案例</strong>、放大單篇邀稿的長尾價值。</p></div>
+  </div>
+
+  <h3 style="margin:16px 0 8px;font-size:15px;">✍️ 強制揭露的正確寫法範本（直接給 KOL）</h3>
+  <div class="scard"><h4>可直接貼給 KOL 的揭露句型</h4>
+    <p>✅ 文章開頭或結尾明顯處擇一標示：</p>
+    <p><code>本文為與橘子蘋果程式學苑的邀稿體驗合作、實際上課心得由本人撰寫。</code></p>
+    <p><code>#橘子蘋果程式學苑 #邀稿體驗 #廠商合作</code></p>
+    <p style="margin-top:6px;">✅ 短影音 / IG 限動：口播或字卡標「<strong>#廣告</strong>」或「<strong>與橘子蘋果合作</strong>」、不可只放在留言區小字。</p>
+    <p style="font-size:13px;color:var(--mute);margin-top:6px;">❌ 錯誤示範：把揭露藏在文末 hashtag 海、或只寫「感謝廠商」不具名——公平會實務認定為<strong>揭露不足</strong>。</p>
+  </div>
+
+  <h3 style="margin:16px 0 8px;font-size:15px;">⚖️ 揭露合規界線表（哪些要標、哪些不用）</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>情境</th><th>要揭露？</th><th>為什麼</th></tr>
+    <tr><td>廠商付錢 / 提供免費課程體驗</td><td>✅ 強制揭露</td><td>公平交易法 21、25 條、罰 5 萬-2,500 萬</td></tr>
+    <tr><td>GBP 評論用優惠換</td><td>⚠️ 嚴格說也算</td><td>不控制主任話術、改用「給工具」推動揭露式</td></tr>
+    <tr><td>家長自費自願寫</td><td>❌ 不需</td><td>無利益關係</td></tr>
+    <tr><td>橘蘋自製學員家庭專訪</td><td>❌ 不需</td><td>廠商自製內容、非第三方推薦</td></tr>
   </table></div>
 </section>
 
@@ -167,6 +249,7 @@ flowchart LR
   <h3>📝 修改記錄</h3>
   <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
   <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
+2026-07-01 · SOP 操作化 + 來源附連結 · Claude / Posh
 </textarea>
 </div>
 
