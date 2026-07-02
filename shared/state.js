@@ -10,15 +10,15 @@ const STATUSES = ['未開始', '進行中', '卡住', '完成'];
 
 const TASK_DEFAULTS = {
   "01": {title:"Wikipedia 條目建立", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+8~13", budget:"$0", budgetMin:0, budgetMax:0},
-  "02": {title:"PR 子 B 記者主動採訪", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+5~8", budget:"50-80 萬", budgetMin:50, budgetMax:80},
-  "03": {title:"真實家長社群 + 親子部落格", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+5~8", budget:"50 萬", budgetMin:50, budgetMax:50},
+  "02": {title:"PR 子 B 記者主動採訪", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+5~8", budget:"≈1 萬", budgetMin:1, budgetMax:1},
+  "03": {title:"真實家長社群 + 親子部落格", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+5~8", budget:"~42 萬", budgetMin:40, budgetMax:42},
   "04": {title:"PR 子 A 付費深度報導", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+3~5", budget:"35 萬", budgetMin:35, budgetMax:35},
-  "05": {title:"話語權工程", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+25~40", budget:"25 萬", budgetMin:20, budgetMax:25},
-  "06": {title:"GBP 11 直營完整化", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4", budget:"5 萬", budgetMin:5, budgetMax:5},
-  "07": {title:"Local Citation 品保協會曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+3~5", budget:"2-6 萬", budgetMin:2, budgetMax:6},
+  "05": {title:"話語權工程", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+25~40", budget:"~15 萬", budgetMin:13, budgetMax:18},
+  "06": {title:"GBP 11 直營完整化", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4", budget:"~2 萬", budgetMin:1, budgetMax:2},
+  "07": {title:"Local Citation 品保協會曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+3~5", budget:"~1 萬", budgetMin:0, budgetMax:1},
   "08": {title:"合規 KOL 業配 Miula 模式", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+6~10", budget:"50 萬", budgetMin:50, budgetMax:50},
-  "09": {title:"影片 4 軌 + Medium 重啟", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4~6", budget:"30 萬", budgetMin:30, budgetMax:30},
-  "10": {title:"產業獎項 HolonIQ 全曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+1~3", budget:"5-8 萬", budgetMin:5, budgetMax:8},
+  "09": {title:"影片 4 軌 + Medium 重啟", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4~6", budget:"~10 萬", budgetMin:3, budgetMax:13},
+  "10": {title:"產業獎項 HolonIQ 全曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+1~3", budget:"5-6 萬", budgetMin:5, budgetMax:6},
   "11": {title:"學術引用 5 篇 + CEO 論文", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+3~5", budget:"1-3 萬", budgetMin:1, budgetMax:3}
 };
 
@@ -312,10 +312,10 @@ function renderBudgetTable(targetId){
   // GEO 終分推估
   function geoEstimate(minV, maxV){
     const avg = (minV + maxV) / 2;
-    if(avg < 50) return '60-75';
-    if(avg < 120) return '75-85';
-    if(avg < 200) return '82-90';
-    if(avg < 290) return '88-95';
+    if(avg < 30) return '60-75';
+    if(avg < 80) return '75-85';
+    if(avg < 140) return '82-90';
+    if(avg < 200) return '88-95';
     return '95-100';
   }
 
@@ -349,7 +349,7 @@ function renderBudgetTable(targetId){
     </div>
     <p style="font-size:13px;color:var(--mute);margin-top:14px;line-height:1.8;text-align:center;">
       💡 <strong>每個數字可直接修改</strong>、合計與 GEO 終分自動更新。修改後存在瀏覽器、要分享請按「💾 下載狀態」上傳 Google Drive。<br>
-      📊 <strong>GEO 終分預估</strong>：&lt; 50 萬 → 60-75 ｜ 50-120 萬 → 75-85 ｜ 120-200 萬 → 82-90 ｜ 200-290 萬 → 88-95 ｜ &gt; 290 萬 → 95-100
+      📊 <strong>GEO 終分預估</strong>（2026-07-01 效率重估校準）：&lt; 30 萬 → 60-75 ｜ 30-80 萬 → 75-85 ｜ 80-140 萬 → 82-90 ｜ 140-200 萬 → 88-95 ｜ &gt; 200 萬 → 95-100
     </p>
   `;
 
