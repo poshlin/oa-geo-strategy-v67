@@ -5,7 +5,7 @@
 
 const STORAGE_KEY = 'oa-geo-v67-state';
 
-const ROLES = ['待定', 'Posh', '主管 / 審核者', '內容整理', '影音整理', '資料補鏈', '高層待確認', '其他'];
+const ROLES = ['待定', 'Posh', 'Trance', 'Jinjin', 'Albert'];
 const STATUSES = ['未開始', '進行中', '卡住', '完成'];
 const HANDOFF_STATUSES = {
   draft: '草稿中',
