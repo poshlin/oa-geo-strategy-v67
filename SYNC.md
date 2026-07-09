@@ -1,7 +1,7 @@
 # SYNC.md — Claude × Codex 共同事實來源（組員協作版）
 
 > 本檔是目前 repo 內「可部署 / 可分享給組員討論」版本的事實來源。完整敏感版已備份在本機，不放在 GitHub Pages 版。
-> 最後更新：**2026-07-06** by Codex。
+> 最後更新：**2026-07-09** by Claude（前版 2026-07-06 by Codex）。
 
 ---
 
@@ -53,6 +53,7 @@
 - `tasks/11-academic.html` 降級為學術來源整理與候選段落；Wiki 與官網上架需審核。
 - `tasks/03 / 06 / 08` 已補政策來源與最後確認日：Google 地圖使用者提供內容政策、全國法規資料庫公平交易法、FTC influencer disclosure guide。
 - `shared/state.js` 改成協作版：角色泛化、預算表不輸出精準數字。
+- （Claude 2026-07-09）`guide.html` 頂部狀態列下方新增一個 hint-box：「協作前先讀 SYNC.md」。原因：讓組員/Claude/Codex 接手前先對齊事實來源。影響：僅新增一段 hint-box（純內容、無 JS/CSS/邏輯變動）、保留 noindex。
 
 ---
 
