@@ -5,21 +5,28 @@
 
 const STORAGE_KEY = 'oa-geo-v67-state';
 
-const ROLES = ['待定', 'Posh', 'COO', '數位廣告投手', '多媒體影音製作人', '電銷組長', '董事長', 'CEO', '顧問', '其他'];
+const ROLES = ['待定', 'Posh', '主管 / 審核者', '內容整理', '影音整理', '資料補鏈', '高層待確認', '其他'];
 const STATUSES = ['未開始', '進行中', '卡住', '完成'];
+const HANDOFF_STATUSES = {
+  draft: '草稿中',
+  research: '僅可資料整理',
+  review: '待 Posh 核准',
+  assignable: '可交辦',
+  assigned: '已交辦'
+};
 
 const TASK_DEFAULTS = {
-  "01": {title:"Wikipedia 條目建立", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+8~13", budget:"$0", budgetMin:0, budgetMax:0},
-  "02": {title:"PR 子 B 記者主動採訪", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+5~8", budget:"≈1 萬", budgetMin:1, budgetMax:1},
-  "03": {title:"真實家長社群 + 親子部落格", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+5~8", budget:"~42 萬", budgetMin:40, budgetMax:42},
-  "04": {title:"PR 子 A 付費深度報導", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+3~5", budget:"35 萬", budgetMin:35, budgetMax:35},
-  "05": {title:"話語權工程", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:1, geo:"+25~40", budget:"~15 萬", budgetMin:13, budgetMax:18},
-  "06": {title:"GBP 11 直營完整化", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4", budget:"~2 萬", budgetMin:1, budgetMax:2},
-  "07": {title:"Local Citation 品保協會曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+3~5", budget:"~1 萬", budgetMin:0, budgetMax:1},
-  "08": {title:"合規 KOL 業配 Miula 模式", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+6~10", budget:"50 萬", budgetMin:50, budgetMax:50},
-  "09": {title:"影片 4 軌 + Medium 重啟", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:2, geo:"+4~6", budget:"~10 萬", budgetMin:3, budgetMax:13},
-  "10": {title:"產業獎項 HolonIQ 全曝光", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+1~3", budget:"5-6 萬", budgetMin:5, budgetMax:6},
-  "11": {title:"學術引用 5 篇 + CEO 論文", owner:"待定", status:"未開始", progress:0, lastUpdate:"", note:"", priority:3, geo:"+3~5", budget:"1-3 萬", budgetMin:1, budgetMax:3}
+  "01": {title:"Wikipedia 條目建立", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響高", budget:"待核", budgetMin:0, budgetMax:0},
+  "02": {title:"PR 子 B 記者主動採訪", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
+  "03": {title:"真實家長社群 + 親子部落格", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
+  "04": {title:"PR 子 A 付費深度報導", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
+  "05": {title:"話語權工程", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響高", budget:"待核", budgetMin:0, budgetMax:0},
+  "06": {title:"GBP 11 直營完整化", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
+  "07": {title:"Local Citation 品保協會曝光", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
+  "08": {title:"合規 KOL 業配", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
+  "09": {title:"影片 4 軌 + Medium 重啟", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
+  "10": {title:"產業獎項 HolonIQ 全曝光", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響補強", budget:"待核", budgetMin:0, budgetMax:0},
+  "11": {title:"學術引用 5 篇 + 創辦人研究", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0}
 };
 
 function loadState(){
@@ -198,6 +205,7 @@ function initDashboard(){
         <span class="status-pill s-${t.status}">${t.status}</span>
       </div>
       <div class="dash-task-title">${t.title}</div>
+      <div class="dash-task-note" style="margin-top:8px;">🔐 交辦權限：${HANDOFF_STATUSES[t.handoffStatus] || t.handoffStatus || '待確認'}</div>
       <div class="pbar"><div class="pbar-fill" style="width:${t.progress}%"></div></div>
       <div class="dash-task-meta">
         <span>📊 ${t.progress}%</span>
@@ -240,7 +248,7 @@ function getTaskShortTitle(title){
     "合規 KOL 業配 Miula 模式":"KOL",
     "影片 4 軌 + Medium 重啟":"影片 4 軌",
     "產業獎項 HolonIQ 全曝光":"獎項",
-    "學術引用 5 篇 + CEO 論文":"學術"
+    "學術引用 5 篇 + 創辦人研究":"學術"
   };
   return map[title] || title;
 }
@@ -272,123 +280,34 @@ function updateTaskCardOwners(){
 }
 
 /* ============================================
-   預算明細加總（動態 · 可輸入）
+   預算控管（組員協作版 · 不公開精準數字）
 ============================================ */
 function renderBudgetTable(targetId){
   const wrap = document.getElementById(targetId || 'budget-table-dynamic');
   if(!wrap) return;
-  const state = loadState();
-
-  let rowsHtml = '';
-  let totalMin = 0, totalMax = 0;
-  // 任務按編號排序（避免 11 跑到最前）
-  const taskIds = Object.keys(state.tasks).sort();
-  taskIds.forEach(id => {
-    const t = state.tasks[id];
-    const min = parseInt(t.budgetMin || 0);
-    const max = parseInt(t.budgetMax || 0);
-    totalMin += min;
-    totalMax += max;
-    rowsHtml += `
-      <tr data-task-id="${id}">
-        <td class="bt-task">
-          <a href="tasks/${id}-${getTaskSlug(id)}.html" style="color:var(--ink);font-weight:700;text-decoration:none;">
-            <span class="bt-num">${parseInt(id)}</span> ${getTaskShortTitle(t.title)}
-          </a>
-        </td>
-        <td class="bt-input">
-          <input type="number" min="0" step="1" value="${min}" data-budget-min="${id}">
-          <span class="bt-unit">萬</span>
-        </td>
-        <td class="bt-input">
-          <input type="number" min="0" step="1" value="${max}" data-budget-max="${id}" class="max">
-          <span class="bt-unit">萬</span>
-        </td>
-        <td class="bt-geo">${t.geo}</td>
-      </tr>
-    `;
-  });
-
-  // GEO 終分推估
-  function geoEstimate(minV, maxV){
-    const avg = (minV + maxV) / 2;
-    if(avg < 30) return '60-75';
-    if(avg < 80) return '75-85';
-    if(avg < 140) return '82-90';
-    if(avg < 200) return '88-95';
-    return '95-100';
-  }
-
   wrap.innerHTML = `
     <div class="budget-summary-cards">
-      <div class="bsc-card"><div class="bsc-label">下限合計</div><div class="bsc-num" id="budget-total-min">${totalMin}</div><div class="bsc-unit">萬 / 年</div></div>
-      <div class="bsc-card highlight"><div class="bsc-label">上限合計</div><div class="bsc-num" id="budget-total-max">${totalMax}</div><div class="bsc-unit">萬 / 年</div></div>
-      <div class="bsc-card geo"><div class="bsc-label">GEO 終分預估</div><div class="bsc-num" id="budget-geo-est">${geoEstimate(totalMin, totalMax)}</div><div class="bsc-unit">分</div></div>
+      <div class="bsc-card"><div class="bsc-label">協作版</div><div class="bsc-num">不公開</div><div class="bsc-unit">精準預算</div></div>
+      <div class="bsc-card highlight"><div class="bsc-label">狀態</div><div class="bsc-num">待核</div><div class="bsc-unit">由 Posh 確認</div></div>
+      <div class="bsc-card geo"><div class="bsc-label">用途</div><div class="bsc-num">控管</div><div class="bsc-unit">交辦風險</div></div>
     </div>
     <div class="budget-table-wrap">
       <table class="budget-tbl">
-        <colgroup>
-          <col style="width:36%;">
-          <col style="width:23%;">
-          <col style="width:23%;">
-          <col style="width:18%;">
-        </colgroup>
         <thead>
-          <tr><th class="left">任務</th><th>下限預算</th><th>上限預算</th><th>GEO 加分</th></tr>
+          <tr><th class="left">類型</th><th>協作版處理</th><th>交辦規則</th></tr>
         </thead>
-        <tbody>${rowsHtml}</tbody>
-        <tfoot>
-          <tr class="bt-total">
-            <td class="left">合計（自動計算）</td>
-            <td><span id="budget-total-min-row">${totalMin}</span> 萬</td>
-            <td><span id="budget-total-max-row">${totalMax}</span> 萬</td>
-            <td>—</td>
-          </tr>
-        </tfoot>
+        <tbody>
+          <tr><td class="left">資料整理</td><td>組員可執行</td><td>補來源、截圖、欄位、缺口表</td></tr>
+          <tr><td class="left">需外部支出</td><td>只標「待核」</td><td>不得自行詢價、承諾、下訂或簽約</td></tr>
+          <tr><td class="left">KOL / PR / 媒體</td><td>先做候選與條件表</td><td>預算與合約需 Posh 確認</td></tr>
+          <tr><td class="left">高層 / 政府 / 學術合作</td><td>先做一頁提案</td><td>不得自行對外接洽</td></tr>
+        </tbody>
       </table>
     </div>
     <p style="font-size:13px;color:var(--mute);margin-top:14px;line-height:1.8;text-align:center;">
-      💡 <strong>每個數字可直接修改</strong>、合計與 GEO 終分自動更新。修改後存在瀏覽器、要分享請按「💾 下載狀態」上傳 Google Drive。<br>
-      📊 <strong>GEO 終分預估</strong>（2026-07-01 效率重估校準）：&lt; 30 萬 → 60-75 ｜ 30-80 萬 → 75-85 ｜ 80-140 萬 → 82-90 ｜ 140-200 萬 → 88-95 ｜ &gt; 200 萬 → 95-100
+      💡 完整預算模型保留於本機完整內部版。協作版只用來確認任務是否可交辦、是否需要審核、是否可能產生外部支出。
     </p>
   `;
-
-  // 綁定 input event
-  wrap.querySelectorAll('input[data-budget-min]').forEach(input => {
-    input.addEventListener('input', () => {
-      const id = input.getAttribute('data-budget-min');
-      const val = parseInt(input.value || 0);
-      const st = loadState();
-      st.tasks[id].budgetMin = val;
-      saveState(st);
-      recalcTotals(wrap);
-    });
-  });
-  wrap.querySelectorAll('input[data-budget-max]').forEach(input => {
-    input.addEventListener('input', () => {
-      const id = input.getAttribute('data-budget-max');
-      const val = parseInt(input.value || 0);
-      const st = loadState();
-      st.tasks[id].budgetMax = val;
-      saveState(st);
-      recalcTotals(wrap);
-    });
-  });
-
-  function recalcTotals(w){
-    let tMin = 0, tMax = 0;
-    const st = loadState();
-    for(const id in st.tasks){
-      tMin += parseInt(st.tasks[id].budgetMin || 0);
-      tMax += parseInt(st.tasks[id].budgetMax || 0);
-    }
-    const setT = (id, val) => { const el = document.getElementById(id); if(el) el.textContent = val; };
-    setT('budget-total-min', tMin);
-    setT('budget-total-max', tMax);
-    setT('budget-total-min-row', tMin + ' 萬');
-    setT('budget-total-max-row', tMax + ' 萬');
-    setT('budget-geo-est', geoEstimate(tMin, tMax));
-  }
 }
 
 /* ============================================
@@ -398,8 +317,8 @@ function renderMatrixGrid(targetId){
   const wrap = document.getElementById(targetId || 'matrix-grid-dynamic');
   if(!wrap) return;
   const state = loadState();
-  const cols = ['Posh','COO','數位廣告投手','多媒體影音製作人','電銷組長','董事長','CEO','顧問'];
-  const colDisplay = {'數位廣告投手':'數位投手','多媒體影音製作人':'多媒體'};
+  const cols = ['Posh','主管 / 審核者','內容整理','影音整理','資料補鏈','高層待確認','其他'];
+  const colDisplay = {'主管 / 審核者':'審核者','內容整理':'內容','影音整理':'影音','資料補鏈':'補鏈','高層待確認':'待高層'};
 
   // CSS grid 設定
   wrap.style.gridTemplateColumns = `120px repeat(${cols.length}, minmax(80px, 1fr))`;

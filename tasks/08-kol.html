@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>任務 8 · 合規 KOL 業配 Miula 模式 · GEO v6.7</title>
+<title>任務 8 · 合規 KOL 業配 · 組員協作版 · GEO v6.7</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -19,6 +19,9 @@
   <span class="nav-logo">GEO v6.7</span>
   <a href="../index.html">總覽</a>
   <a href="../dashboard.html">Dashboard</a>
+  <a href="../evidence.html">證據登錄</a>
+  <a href="../handoff-checklist.html">交辦檢查</a>
+  <a href="../decision-log.html">決策紀錄</a>
   <a href="../guide.html">編輯說明</a>
 </div>
 
@@ -26,14 +29,22 @@
 
 <div class="task-hero">
   <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 8</div>
-  <h1><span class="num">8</span>合規 KOL 業配 Miula 模式</h1>
+  <h1><span class="num">8</span>合規 KOL 業配</h1>
   <div class="task-meta-row">
-    <span class="badge b-priority">🥈 高 CP 支援</span>
-    <span class="badge b-geo">GEO +6~10</span>
-    <span class="badge b-budget">50 萬/年</span>
-    <span class="badge b-time">全年滾動</span>
+    <span class="badge b-priority">🥈 高風險預算任務</span>
+    <span class="badge b-geo">影響 中高</span>
+    <span class="badge b-budget">預算待核</span>
+    <span class="badge b-time">測試後滾動</span>
   </div>
-  <p class="task-tagline">基於 3 份歷史結案實證：2023 Miula ROI 13.8x、2021 KOL Radar 大親子網紅 0 成交、2026 WENK 6 位 IG 微網紅 128 萬曝光。✅ 主推：知識型 KOL（Miula 級）50% + 高黏著小網紅 IG 30% + Threads 試水溫 10% + 配套 10%。</p>
+  <p class="task-tagline">組員協作版保留 KOL 研究、揭露規範、候選名單整理與追蹤表欄位；精準合作金額、內部 ROI、成交數與不合作黑名單已移到本機完整內部版。</p>
+</div>
+
+<div class="handoff-status blocked">
+  <span class="status-mark">0</span>
+  <div>
+    <strong>交辦狀態：待合約紅線與預算上限確認</strong>
+    <p>正式接洽 KOL 前，需先由 Posh 確認預算上限、揭露條款、授權期限、付款條件、追蹤方式與成效判斷表。組員目前只做候選盤點與資料整理。</p>
+  </div>
 </div>
 
 <div class="state-track">
@@ -44,226 +55,117 @@
     <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
     <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
   </div>
-  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：Miula 重啟談中、Threads 廣告設定中）"></textarea>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：等報價表、等合約紅線、等候選名單審核）"></textarea>
   <div class="state-actions" id="state-actions"></div>
 </div>
 
-<section class="sec accent-gold">
-  <div class="sec-h"><span class="sec-emoji">📊</span><h2>3 份歷史結案實證</h2></div>
-
-  <h3 style="font-size:15px;margin:10px 0 6px;">🏆 2023 Miula（公司最強紀錄）</h3>
-  <div class="tbl-wrap"><table class="tbl">
-    <tr><th>指標</th><th>數據</th></tr>
-    <tr><td>投入</td><td class="num">NT$ 39,850（合作 36,750 + 貼文 3,100）</td></tr>
-    <tr><td>折扣碼</td><td>500 元 × 100 配額、用 22 次 × 付款 21 次</td></tr>
-    <tr><td>成交</td><td>21 筆、營業額 NT$ 547,940</td></tr>
-    <tr><td>結構</td><td>新生 12 / 舊生 9、常態 13 / 營隊 8</td></tr>
-    <tr><td><strong>ROI</strong></td><td><strong>13.8x ⭐</strong></td></tr>
-  </table></div>
-  <p style="margin-top:8px;"><strong>為什麼成功：</strong>M 觀點 = 商業財經 / 思考型頻道（不是親子）、觀眾 30-50 歲中產爸媽、Miula 教育論述對位、折扣碼追蹤實付。</p>
-
-  <h3 style="font-size:15px;margin:14px 0 6px;">2021 KOL Radar（10 位、ROI ~1.5x）</h3>
-  <div class="tbl-wrap"><table class="tbl">
-    <tr><th>KOL</th><th>粉絲</th><th>成交</th><th>備註</th></tr>
-    <tr><td>Von Von ⭐</td><td>19,217</td><td>1 + 團購 30 萬</td><td>1.9 萬粉打敗 14 萬粉</td></tr>
-    <tr><td>布布媽咪</td><td>47,420</td><td>2</td><td>次之</td></tr>
-    <tr><td>林叨囡仔</td><td>140,324</td><td>❌ 0</td><td>經費最大、0 成交</td></tr>
-    <tr><td>陳映庄醫師</td><td>118,817</td><td>❌ 0</td><td>大網紅失效</td></tr>
-  </table></div>
-  <p style="margin-top:8px;"><strong>自家結論：</strong>不單押一隻 / 高黏著小網紅有效 / 代理商慎選 / BLOG+YT 方向 / FB 過時。</p>
-
-  <h3 style="font-size:15px;margin:14px 0 6px;">2026 WENK 6 位 IG 微網紅</h3>
-  <p>128 萬曝光 / 25K 互動、ト派媽與小歐巴前進吧最亮眼（互動率 222.65%）、6 位粉絲 5K-1 萬、CP 中等可滾動。</p>
-</section>
-
-<section class="sec accent-hope">
-  <div class="sec-h"><span class="sec-emoji">✅</span><h2>該複製 / 該避開</h2></div>
-
-  <div class="scards">
-    <div class="scard green"><h4>🥇 知識型 KOL（Miula）</h4><p>ROI 13.8x、目標客群精準</p></div>
-    <div class="scard green"><h4>🥈 高黏著小網紅 1-5 萬粉</h4><p>Von Von 1.9 萬粉 + 30 萬團購</p></div>
-    <div class="scard green"><h4>🥉 微網紅 5K-1 萬（WENK 6）</h4><p>觸及成本低</p></div>
-    <div class="scard green"><h4>YouTube + BLOG</h4><p>可持續搜尋（GEO 友善）</p></div>
-    <div class="scard green"><h4>折扣碼追蹤實付</h4><p>業績可驗證</p></div>
-    <div class="scard warn"><h4>❌ 大型親子網紅 10 萬+</h4><p>林叨 14 萬粉 0 成交</p></div>
-    <div class="scard warn"><h4>❌ FB 圖文</h4><p>2026 演算法觸及更低</p></div>
-    <div class="scard warn"><h4>❌ 單押一隻</h4><p>林叨案例</p></div>
-    <div class="scard warn"><h4>❌ 沒折扣碼 / 追蹤</h4><p>業績不可驗證</p></div>
-  </div>
-</section>
-
 <section class="sec accent-orange">
-  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
-  <p>LLM（ChatGPT / Claude / Gemini）在推薦品牌時、會參考<strong>散布在 YouTube 說明欄、部落格、社群貼文</strong>裡的真人推薦內容。KOL 業配同時打三個目標：① <strong>短期</strong>用折扣碼帶實付成交（Miula 已驗證 ROI 13.8x）、② <strong>中長期</strong>在 YouTube / BLOG 留下可被搜尋、可被 LLM 抓取的口碑內容（GEO 友善）、③ 建立第三方提及、間接支援任務 1（Wiki notability）與任務 4（深度報導）。</p>
-  <p>但橘蘋自家 3 份結案數據證明：<strong>不是花愈多錢愈好</strong>。14 萬粉的大型親子網紅（林叨囡仔）0 成交、1.9 萬粉的小網紅（Von Von）反而帶 30 萬團購。這個任務的重點不是「找大網紅」、而是<strong>精準對位、追蹤實付、分散下注</strong>。</p>
-  <div class="hint-box"><strong>對 Posh 的話：</strong>接洽執行依進度追蹤指派、你不介入接洽。你要看的只有一件事——<strong>每一筆業配是否都掛了折扣碼、月底能不能對出實付營業額</strong>。沒折扣碼的業配 = 不可驗證 = 不要做。</div>
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>組員版任務目標</h2></div>
+  <p>KOL 任務的重點不是追求最大曝光，而是建立一套可合規揭露、可追蹤、可複盤的合作流程。組員目前先做「候選名單與資料表」，不要自行議價或承諾合作。</p>
+  <div class="hint-box"><strong>原則：</strong>所有合作都必須能追蹤來源、能檢查揭露、能回收素材授權；不能只看粉絲數或曝光。</div>
 </section>
 
 <section class="sec accent-gold">
-  <div class="sec-h"><span class="sec-emoji">📋</span><h2>KOL 接洽 SOP（6 步驟）</h2></div>
-
+  <div class="sec-h"><span class="sec-emoji">📋</span><h2>KOL 審核前資料 SOP</h2></div>
   <div class="mermaid-wrap">
     <div class="mermaid">
 flowchart LR
-  A["1️⃣ 建候選清單<br/>+ 查數據"] --> B["2️⃣ 開發信<br/>邀約"]
-  B --> C["3️⃣ 談報價<br/>+ 折扣碼"]
-  C --> D["4️⃣ 給素材<br/>+ 揭露規範"]
-  D --> E["5️⃣ 上稿<br/>檢查 #廣告"]
-  E --> F["6️⃣ 對帳<br/>算 ROI"]
-  F -->|ROI 好| G["續約 / 加碼"]
-  F -->|ROI 差| H["結案封存<br/>不再合作"]
-  style A fill:#FFB627,color:#fff,stroke:#FF6B35
-  style B fill:#FFB627,color:#fff,stroke:#FF6B35
-  style C fill:#FFB627,color:#fff,stroke:#FF6B35
-  style D fill:#FFB627,color:#fff,stroke:#FF6B35
-  style E fill:#FF6B35,color:#fff,stroke:#E63946
-  style F fill:#A370F7,color:#fff
-  style G fill:#34C759,color:#fff
-  style H fill:#E63946,color:#fff
+  A["1 建候選清單"] --> B["2 查受眾與互動"]
+  B --> C["3 補官方連結"]
+  C --> D["4 送 Posh 審核"]
+  D --> E["5 合作條件草稿"]
+  E --> F["6 合約與揭露檢查"]
+  F --> G["7 上稿後追蹤欄位"]
     </div>
   </div>
-
-  <div class="hint-box" style="margin-bottom:14px;">下面每一步都寫清楚「<strong>去哪裡做、名詞是什麼意思、怎麼操作</strong>」。第一次接 KOL、照著做即可。藍字都是可直接點的官方連結。</div>
-
-  <div class="scards">
-    <div class="scard"><h4>Step 1 · 建候選清單 + 查數據（別憑感覺找人）</h4>
-      <p><strong>① 從哪找：</strong>先用下方「2026 Miula 級候選名單」的官方頻道連結逐一開來看。要補新人選、可上 <a href="https://www.kolradar.com/" target="_blank" rel="noopener">KOL Radar</a>（橘蘋 2021 用過的網紅數據平台）或 <a href="https://tw.noxinfluencer.com/" target="_blank" rel="noopener">NoxInfluencer</a> 查訂閱數、近期觀看、互動率。</p>
-      <p><strong>② 三個必看數字：</strong>(a)<strong>近 30 天平均觀看</strong>（不是總訂閱、訂閱是虛的）、(b)<strong>互動率</strong>＝（讚+留言）÷觀看、知識型 YT 抓 3% 以上、IG 抓 5% 以上、(c)<strong>觀眾輪廓</strong>是不是 30-50 歲爸媽（頻道留言區、選題就能大致判斷）。</p>
-      <p><strong>③ 對位比粉絲數重要：</strong>Miula 成功的關鍵不是粉絲多、而是<strong>觀眾＝會為小孩教育付費的中產爸媽</strong>。純娛樂、純美妝、粉絲年齡偏低的一律跳過。</p>
-    </div>
-
-    <div class="scard"><h4>Step 2 · 開發信邀約（去哪寄、寫什麼）</h4>
-      <p><strong>① 聯絡方式在哪：</strong>YouTube 頻道「關於」分頁通常有<strong>商業合作 email</strong>；IG 個人簡介或私訊；有些掛在 MCN 經紀公司（例如志祺七七屬<strong>簡訊設計 / 志棋七七團隊</strong>、要走經紀窗口）。</p>
-      <p><strong>② 開發信必備 5 段：</strong>(1) 一句自我介紹（橘子蘋果程式學苑 · 14 年 · 10 萬+ 學員）、(2) 為什麼找他（點名他某支影片的觀點）、(3) 合作形式（口播 / 專題 / 圖文）、(4) 附<strong>折扣碼機制</strong>（讓對方知道要導購）、(5) 問報價與檔期。</p>
-      <p><strong>③ 語氣：</strong>專業、給空間、不要一次逼問全部。第一封信目的只是<strong>拿到報價與意願</strong>。</p>
-    </div>
-
-    <div class="scard"><h4>Step 3 · 談報價 + 設折扣碼（合約寫死揭露義務）</h4>
-      <p><strong>① 報價參考：</strong>微網紅 5K-1 萬粉約 3,000-9,000/篇；小網紅 5-10 萬約上看 1 萬；知識型中大型 KOL 1-30 萬不等（Miula 2023 合作費 36,750）。</p>
-      <p><strong>② 合約三件事寫清楚：</strong>(a) <strong>專屬折扣碼</strong>（見下方「折扣碼追蹤」section）、(b) <strong>必須標 #廣告 / 付費合作</strong>（見下方揭露 section）、(c) 內容上架後<strong>至少保留 6 個月不下架</strong>（GEO 需要長期被搜尋）。</p>
-      <p><strong>③ 分散下注：</strong>單一 KOL 不超過知識型預算的 1/3、避免重演「單押林叨 0 成交」。</p>
-    </div>
-
-    <div class="scard"><h4>Step 4 · 給素材 + 揭露規範（別讓對方亂講）</h4>
-      <p><strong>① 給對方的素材包：</strong>品牌真實數字（14 年 / 10 萬+ 學員 / 500+ 教師 / 40+ 據點 / 12 縣市）、課程正確名稱、專屬折扣碼、可用畫面。</p>
-      <p><strong>② 禁講清單：</strong>不誇大「保證學會 / 第一 / 最強」、不亂寫課程內容（例：Roblox 課不是 Lua 入門、AI 思維課不寫 ChatGPT / Midjourney）、不承諾「免費再上一次」（非真實承諾）。</p>
-      <p><strong>③ 揭露規範一起給：</strong>把下方「#廣告 揭露正確標法」整段複製給 KOL、要求照標。</p>
-    </div>
-
-    <div class="scard warn"><h4>Step 5 · 上稿檢查（沒標 #廣告 = 違法、要退改）</h4>
-      <p><strong>① 上架前先看過：</strong>要求 KOL 上稿前給你看草稿 / 定剪、確認揭露標示、折扣碼、品牌數字都正確。</p>
-      <p><strong>② 上架後當天檢查：</strong>#廣告 / 付費合作揭露有沒有真的出現、折扣碼有沒有寫對、YouTube 說明欄第一行是否放折扣碼與連結（LLM / 搜尋都抓得到）。</p>
-      <p><strong>❌ 沒標揭露：</strong>立刻要求補標。依<a href="https://www.ftc.gov.tw/" target="_blank" rel="noopener">公平交易委員會</a>「薦證廣告」規範、業配未揭露品牌與 KOL 都可能挨罰。</p>
-    </div>
-
-    <div class="scard green"><h4>Step 6 · 對帳算 ROI（用折扣碼實付數字、不看曝光）</h4>
-      <p><strong>① 對帳來源：</strong>從學務 / 金流系統撈出<strong>該折扣碼實際付款筆數與金額</strong>（不是「使用次數」、要看付款成功）。</p>
-      <p><strong>② ROI 公式：</strong><code>ROI = 該折扣碼帶進的營業額 ÷ 該 KOL 合作總花費</code>。Miula 案例＝547,940 ÷ 39,850 ≈ 13.8x。</p>
-      <p><strong>③ 決策：</strong>ROI ≥ 5x → 續約 / 加碼；ROI 差 → 結案封存、記錄原因、<strong>不再合作</strong>。每一檔都建一列進追蹤表、累積成自家名單資產。</p>
-    </div>
-  </div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>步驟</th><th>組員可做</th><th>需要 Posh 確認</th></tr>
+    <tr><td>建候選清單</td><td>整理姓名、平台、官方連結、受眾、近 30 天互動</td><td>是否列入測試名單</td></tr>
+    <tr><td>查資料</td><td>截圖粉絲數、觀看、互動率、留言客群</td><td>是否符合家長客群</td></tr>
+    <tr><td>合作條件草稿</td><td>整理可能合作形式、授權需求、揭露要求與問題清單</td><td>不得自行詢價或寄出</td></tr>
+    <tr><td>合約</td><td>檢查是否包含揭露、授權、保留期限、付款條件</td><td>條款與付款必須由 Posh 核准</td></tr>
+    <tr><td>上稿追蹤</td><td>整理 #廣告 / 付費合作標示、追蹤連結、截圖欄位</td><td>正式上稿需核准</td></tr>
+  </table></div>
 </section>
 
 <section class="sec accent-hope">
-  <div class="sec-h"><span class="sec-emoji">🎟️</span><h2>折扣碼追蹤：怎麼設定、怎麼看實付</h2></div>
-  <div class="hint-box" style="margin-bottom:14px;">這是整個任務<strong>唯一能驗證業績的機制</strong>。沒有折扣碼 = 只能看曝光、無法算 ROI = 等於白花錢。</div>
-
-  <div class="scards">
-    <div class="scard"><h4>① 一 KOL 一碼（絕不共用）</h4>
-      <p>每位 KOL 給<strong>專屬且好記</strong>的折扣碼、命名建議 <code>KOL代號+月份</code>、例如 <code>MIULA0726</code>、<code>ANCHOR0726</code>。共用一個碼 = 無法區分是誰帶來的、就白追蹤了。</p>
-    </div>
-    <div class="scard"><h4>② 設配額與期限</h4>
-      <p>比照 Miula 案例：<strong>面額（例 500 元）× 配額（例 100 組）× 有效期限</strong>。配額 = 天花板、避免超發；期限 = 讓成效集中、方便對帳。</p>
-    </div>
-    <div class="scard"><h4>③ 折扣碼放哪</h4>
-      <p><strong>YouTube 說明欄第一行</strong>（連結 + 折扣碼）、影片中口播、IG 限動貼連結 / 精選、部落格文末。放愈前面、被點與被 LLM / 搜尋抓到的機率愈高。</p>
-    </div>
-    <div class="scard green"><h4>④ 怎麼看「實付」</h4>
-      <p>對帳只認<strong>付款成功</strong>的筆數、不認「使用次數」。Miula 案例：用 22 次、但<strong>付款 21 次</strong>——要以 21 為準。從金流 / 學務系統依折扣碼撈付款成功清單。</p>
-    </div>
-    <div class="scard"><h4>⑤ 追蹤連結（Threads / 無折扣碼情境）</h4>
-      <p>短文平台不方便用折扣碼時、改用<strong>帶 UTM 的追蹤連結</strong>（例 <code>?utm_source=threads&utm_campaign=kol名</code>）、用 <a href="https://analytics.google.com/" target="_blank" rel="noopener">GA4</a> 看各連結帶進的流量與轉換。</p>
-    </div>
-    <div class="scard"><h4>⑥ 建一張追蹤表</h4>
-      <p>Google Sheet 欄位：KOL / 平台 / 折扣碼 / 花費 / 曝光 / 折扣碼付款數 / 營業額 / ROI / 續約否。每檔一列、季度回顧、成為自家 KOL 名單資產。</p>
-    </div>
-  </div>
+  <div class="sec-h"><span class="sec-emoji">✅</span><h2>候選名單欄位</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>欄位</th><th>填寫方式</th><th>備註</th></tr>
+    <tr><td>KOL / 頻道名稱</td><td>用公開顯示名稱</td><td>同名帳號要截圖確認</td></tr>
+    <tr><td>平台</td><td>YouTube / IG / Podcast / Blog / Threads</td><td>每個平台分開列</td></tr>
+    <tr><td>官方連結</td><td>只貼官方頻道或本人帳號</td><td>找不到標「連結待補」</td></tr>
+    <tr><td>受眾推估</td><td>家長、教育、商業、科普、自我成長等</td><td>寫推估理由，不要只寫感覺</td></tr>
+    <tr><td>近 30 天互動</td><td>觀看、讚、留言、互動率</td><td>不要只看總粉絲數</td></tr>
+    <tr><td>合作型態</td><td>口播、專題、圖文、短影音、部落格</td><td>先填建議，等審核</td></tr>
+    <tr><td>揭露方式</td><td>#廣告、付費合作標籤、YouTube 付費宣傳</td><td>缺揭露不可合作</td></tr>
+    <tr><td>追蹤方式</td><td>專屬折扣碼或 UTM 連結</td><td>無追蹤不可啟動</td></tr>
+  </table></div>
 </section>
 
 <section class="sec accent-warn">
-  <div class="sec-h"><span class="sec-emoji">📢</span><h2>#廣告 揭露：正確標法（法規紅線）</h2></div>
-  <div class="hint-box" style="margin-bottom:14px;">依<a href="https://www.ftc.gov.tw/" target="_blank" rel="noopener">公平交易委員會</a>「薦證廣告」與消保規範、<strong>收錢的業配一定要揭露</strong>。未揭露屬不實 / 隱匿、品牌方（橘蘋）與 KOL 都可能被開罰。這一條沒有模糊空間。</div>
-
-  <div class="scards">
-    <div class="scard green"><h4>✅ 正確標法</h4>
-      <p>清楚可見的字樣：<code>#廣告</code>、<code>#業配</code>、<code>與橘子蘋果合作</code>、<code>付費合作 Paid partnership</code>。放在<strong>貼文 / 說明欄開頭</strong>、不是藏在第 20 個 hashtag 裡。</p>
-    </div>
-    <div class="scard green"><h4>✅ 用平台官方標籤</h4>
-      <p>IG / FB 開<strong>「付費合作夥伴」標籤</strong>（Paid partnership label）、YouTube 勾選<strong>「內容含付費宣傳」</strong>、系統會顯示「內含付費促銷內容」。這是最保險的。</p>
-    </div>
-    <div class="scard warn"><h4>❌ 不合規做法</h4>
-      <p>只寫「感謝廠商提供」「合作邀約」這種模糊詞、或把 #廣告 混在一堆 hashtag 最後、字太小 / 顏色太淡看不到、口播完全不提——都算揭露不足。</p>
-    </div>
-    <div class="scard"><h4>寫進合約</h4>
-      <p>Step 3 合約就要寫死：<strong>「內容須依公平會薦證廣告規範明確揭露付費合作、未揭露視同違約」</strong>。把責任前置、事後才不用追著改。</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec accent-magic">
-  <div class="sec-h"><span class="sec-emoji">🧬</span><h2>Miula 模式：為何有效、怎麼複製</h2></div>
-  <p style="margin-bottom:12px;">2023 M 觀點 Miula 是公司最強紀錄（ROI 13.8x）。它不是運氣、而是 4 個可複製的條件同時成立。找新 KOL 時、<strong>逐條對照</strong>即可判斷會不會複製成功。</p>
-  <div class="tbl-wrap"><table class="tbl">
-    <tr><th>成功要素</th><th>Miula 為何符合</th><th>怎麼複製到新 KOL</th></tr>
-    <tr><td><strong>① 頻道性質＝知識 / 思考型</strong></td><td>M 觀點是商業財經頻道、不是親子娛樂</td><td>優先找商業 / 思考 / 教育 / 科普型（見候選名單）、避開純娛樂親子</td></tr>
-    <tr><td><strong>② 觀眾＝會為教育付費的中產爸媽</strong></td><td>觀眾 30-50 歲、有決策力與預算</td><td>Step 1 查觀眾輪廓、確認是家長客群而非學生 / 低齡</td></tr>
-    <tr><td><strong>③ 論述對位（不是硬塞廣告）</strong></td><td>Miula 用「教育投資 / 面對未來」論述帶出橘蘋、觀眾不反感</td><td>給 KOL 論述角度而非制式話術、讓他用自己的觀點包裝（AI 時代能力、思維訓練）</td></tr>
-    <tr><td><strong>④ 折扣碼追蹤實付</strong></td><td>500 元 × 100 配額、付款 21 筆可精準對帳</td><td>100% 業配都設專屬折扣碼、對帳只認付款成功（見折扣碼 section）</td></tr>
-  </table></div>
-  <div class="hint-box"><strong>一句話複製法則：</strong>找一個「<strong>觀眾是中產爸媽的知識型頻道</strong>」、給他「<strong>論述角度＋專屬折扣碼</strong>」、最後「<strong>用實付對帳決定續不續約</strong>」。四個條件缺一、就要下修 ROI 期待。</div>
+  <div class="sec-h"><span class="sec-emoji">📢</span><h2>揭露與法規紅線</h2></div>
+  <div class="hint-box warn">依公平交易委員會薦證廣告規範，收費、免費體驗、贈品、抽獎、折扣、分潤或其他利益交換，都要清楚揭露。揭露不清楚時，品牌與 KOL 都有風險。</div>
+  <ul>
+    <li>貼文或說明欄開頭要有清楚標示，例如 #廣告、#業配、與橘子蘋果合作、付費合作。</li>
+    <li>IG / FB 優先使用平台的「付費合作夥伴」標籤。</li>
+    <li>YouTube 須勾選「內容含付費宣傳」。</li>
+    <li>不能把揭露藏在一長串 hashtag 最後，也不能只寫「感謝邀請」這種模糊詞。</li>
+    <li>Google 評論不得用任何對價交換，KOL 合作也不得引導不實評論。</li>
+  </ul>
 </section>
 
 <section class="sec accent-trust">
-  <div class="sec-h"><span class="sec-emoji">📝</span><h2>2026 Miula 級候選名單</h2></div>
-  <div class="hint-box" style="margin-bottom:12px;">下表<strong>藍字為官方頻道連結</strong>、Step 1 直接點開查數據。標「（連結待補）」的是尚未確認官方帳號、接洽時補上、勿臨時杜撰網址。</div>
-  <!-- ✏️ 可改：接洽狀態 -->
-  <div class="tbl-wrap"><table class="tbl">
-    <tr><th>候選</th><th>性質</th><th>匹配度</th><th>官方連結</th><th>接洽狀態</th></tr>
-    <tr><td>M 觀點 Miula</td><td>商業財經</td><td>✅✅✅ 已驗證、可重啟</td><td><a href="https://www.youtube.com/channel/UCT3uWFvKLVpRnEealmRwvrw" target="_blank" rel="noopener">YouTube</a></td><td>未啟動</td></tr>
-    <tr><td>志祺七七</td><td>議題分析</td><td>✅✅</td><td><a href="https://www.youtube.com/@shasha77" target="_blank" rel="noopener">YouTube</a></td><td>未接洽</td></tr>
-    <tr><td>雷蒙三十</td><td>自我成長 / 思考</td><td>✅✅</td><td><a href="https://www.youtube.com/@yuiraymond" target="_blank" rel="noopener">YouTube</a> / <a href="https://www.instagram.com/raymond_houn/" target="_blank" rel="noopener">IG</a></td><td>未接洽</td></tr>
-    <tr><td>Spencer 思考客</td><td>思考方法</td><td>✅✅</td><td>（連結待補）</td><td>未接洽</td></tr>
-    <tr><td>歐陽立中</td><td>教育 / 學習</td><td>✅✅</td><td><a href="https://www.facebook.com/ohyoung129/" target="_blank" rel="noopener">FB</a>（無 YT 頻道、主經營 FB/Podcast）/ <a href="https://www.instagram.com/ouyang_lizhong/" target="_blank" rel="noopener">IG</a></td><td>未接洽</td></tr>
-    <tr><td>解婕翎</td><td>知識型</td><td>✅</td><td><a href="https://www.instagram.com/carol_1017/" target="_blank" rel="noopener">IG</a></td><td>未接洽</td></tr>
-    <tr><td>林安鑫地球解碼</td><td>科普</td><td>✅</td><td>（連結待補）</td><td>未接洽</td></tr>
-    <tr><td>何則文 / 紀錄職場</td><td>職場 / 育兒</td><td>✅✅</td><td><a href="https://www.instagram.com/wenzheho/" target="_blank" rel="noopener">IG</a></td><td>未接洽</td></tr>
-    <tr><td>啾啾鞋 / Hank</td><td>科普 / 教育</td><td>✅</td><td><a href="https://www.youtube.com/@chuchushoe" target="_blank" rel="noopener">YouTube</a></td><td>未接洽</td></tr>
-    <tr><td>Anchor 安可</td><td>親子 + 教育論述</td><td>✅✅</td><td>（連結待補）</td><td>未接洽</td></tr>
-  </table></div>
-  <p style="font-size:13px;color:var(--mute);margin:6px 0 0;">⚠️ 連結為公開官方頻道、接洽前請再次確認帳號無誤（同名帳號可能多個）。商業合作 email 多在 YouTube「關於」分頁或 IG 簡介。</p>
+  <div class="sec-h"><span class="sec-emoji">🎟</span><h2>追蹤方式</h2></div>
+  <div class="scards">
+    <div class="scard green"><h4>專屬折扣碼</h4><p>一位 KOL 一組碼，不共用。對帳只看付款成功，不看使用次數。</p></div>
+    <div class="scard blue"><h4>UTM 追蹤連結</h4><p>短文或限動可用 UTM 連結，來源、活動、KOL 名稱要一致。</p></div>
+    <div class="scard"><h4>素材授權</h4><p>合約要寫明能否二次投放、能放多久、能否截圖放官網或簡報。</p></div>
+    <div class="scard warn"><h4>不可只看曝光</h4><p>曝光可以參考，但不能單獨作為續約或加碼依據。</p></div>
+  </div>
 </section>
 
 <section class="sec accent-magic">
-  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算分配（50 萬）</h2></div>
+  <div class="sec-h"><span class="sec-emoji">📝</span><h2>候選名單初版</h2></div>
+  <p>下表只保留公開官方連結與接洽狀態，不在協作版公開內部成效、精準報價或負面評價。</p>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>類型</th><th>預算</th><th>數量</th><th>必備</th></tr>
-    <tr><td>🥇 知識型 YT（Miula 級）</td><td class="num">25 萬（50%）</td><td>4-6 位 × 4-30K</td><td>折扣碼追蹤</td></tr>
-    <tr><td>🥈 高黏著小網紅 IG / YT</td><td class="num">12 萬（24%）</td><td>8-12 位 × 5-15K</td><td>折扣碼</td></tr>
-    <tr><td>🥉 微網紅快速試</td><td class="num">5 萬（10%）</td><td>5-8 位 × 5-8K</td><td>折扣碼</td></tr>
-    <tr><td>Threads 試水溫（短文倡議）</td><td class="num">3 萬（6%）</td><td>5-8 位 × 3-5K</td><td>追蹤連結</td></tr>
-    <tr><td>配套（折扣碼系統 + 廣告素材二次運用）</td><td class="num">5 萬（10%）</td><td>—</td><td>—</td></tr>
-    <tr><th>合計</th><th class="num">50 萬</th><th>22-34 位</th><th></th></tr>
+    <tr><th>候選</th><th>性質</th><th>官方連結</th><th>接洽狀態</th></tr>
+    <tr><td>M 觀點 Miula</td><td>商業財經 / 知識型</td><td><a href="https://www.youtube.com/channel/UCT3uWFvKLVpRnEealmRwvrw" target="_blank" rel="noopener">YouTube</a></td><td>待審核</td></tr>
+    <tr><td>志祺七七</td><td>議題分析</td><td><a href="https://www.youtube.com/@shasha77" target="_blank" rel="noopener">YouTube</a></td><td>待審核</td></tr>
+    <tr><td>雷蒙三十</td><td>自我成長 / 思考</td><td><a href="https://www.youtube.com/@yuiraymond" target="_blank" rel="noopener">YouTube</a> / <a href="https://www.instagram.com/raymond_houn/" target="_blank" rel="noopener">IG</a></td><td>待審核</td></tr>
+    <tr><td>Spencer 思考客</td><td>思考方法</td><td>（連結待補）</td><td>待補連結</td></tr>
+    <tr><td>歐陽立中</td><td>教育 / 學習</td><td><a href="https://www.facebook.com/ohyoung129/" target="_blank" rel="noopener">FB</a> / <a href="https://www.instagram.com/ouyang_lizhong/" target="_blank" rel="noopener">IG</a></td><td>待審核</td></tr>
+    <tr><td>解婕翎</td><td>知識型</td><td><a href="https://www.instagram.com/carol_1017/" target="_blank" rel="noopener">IG</a></td><td>待審核</td></tr>
+    <tr><td>林安鑫地球解碼</td><td>科普</td><td>（連結待補）</td><td>待補連結</td></tr>
+    <tr><td>何則文 / 紀錄職場</td><td>職場 / 育兒</td><td><a href="https://www.instagram.com/wenzheho/" target="_blank" rel="noopener">IG</a></td><td>待審核</td></tr>
+    <tr><td>啾啾鞋 / Hank</td><td>科普 / 教育</td><td><a href="https://www.youtube.com/@chuchushoe" target="_blank" rel="noopener">YouTube</a></td><td>待審核</td></tr>
+    <tr><td>Anchor 安可</td><td>親子 + 教育論述</td><td>（連結待補）</td><td>待補連結</td></tr>
   </table></div>
 </section>
 
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算處理原則</h2></div>
+  <p>協作版不公開精準預算分配與內部成效估算。組員只需整理候選、合作條件草稿、授權、揭露與追蹤方式；實際預算與對外接洽由 Posh 在決策版確認。</p>
+  <div class="hint-box"><strong>最低啟動條件：</strong>候選名單審核完成、揭露條款確認、追蹤方式確認、預算上限確認、合約紅線確認。</div>
+</section>
+
 <section class="sec accent-warn">
-  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI + 揭露原則</h2></div>
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI + 結案原則</h2></div>
   <ul>
-    <li>✅ 年度 22-34 位 KOL（4 平台分散）</li>
-    <li>✅ 目標 ROI 保守 5 倍以上（Miula 模式為 13.8x）</li>
-    <li>✅ 100% 業配加折扣碼或追蹤連結</li>
-    <li>✅ 100% 標 #廣告 / #業配 合規揭露</li>
-    <li>✅ 不再合作大型親子網紅 10 萬+ 粉</li>
+    <li>100% 合作內容需明確揭露業配或付費合作。</li>
+    <li>100% 合作需有折扣碼、UTM 或其他可對帳追蹤方式。</li>
+    <li>每一檔合作都要記錄平台、素材、上稿連結、授權期限、追蹤結果。</li>
+    <li>結案只寫「續測 / 暫停 / 待觀察」，不在協作版留下負面黑名單。</li>
+  </ul>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📚</span><h2>政策來源 / 最後確認日</h2></div>
+  <ul>
+    <li>最後確認：2026-07-06。</li>
+    <li>Google 地圖政策：KOL 合作不得引導不實評論，也不得用金錢、折扣、免費商品或服務交換評論。來源：<a href="https://support.google.com/contributionpolicy/answer/7400114?hl=zh-Hant" target="_blank" rel="noopener">Google 地圖使用者提供內容政策</a>。</li>
+    <li>台灣《公平交易法》第 21 條：廣告、薦證與體驗分享不得有虛偽不實或引人錯誤表示。來源：<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150002" target="_blank" rel="noopener">全國法規資料庫 · 公平交易法</a>。</li>
+    <li>FTC influencer disclosure guide 可作為揭露位置與清楚程度參考；正式合作仍需台灣法規與合約審核。來源：<a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" target="_blank" rel="noopener">FTC Disclosures 101</a>。</li>
   </ul>
 </section>
 
@@ -273,6 +175,7 @@ flowchart LR
   <textarea>2026-06-27 · 任務頁初版建立 · Claude / Posh
 2026-07-01 · SOP 操作化 + 來源附連結 · Claude / Posh
 2026-07-01 · 移除執行指派角色名（改用進度追蹤指派）· Claude / Posh
+2026-07-06 · 拆成組員協作版，移除公開網址上的精準合作金額、內部 ROI、成交數與負面黑名單 · Codex
 </textarea>
 </div>
 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>決策紀錄 · 橘子蘋果 GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="index.html">總覽</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="evidence.html">證據登錄</a>
+  <a href="handoff-checklist.html">交辦檢查</a>
+  <a href="decision-log.html" class="active">決策紀錄</a>
+  <a href="guide.html">編輯說明</a>
+</div>
+
+<div class="wrap">
+
+<div class="task-hero">
+  <div class="crumb"><a href="index.html">總覽</a> › 決策紀錄</div>
+  <h1><span class="num">§</span>版本決策紀錄 · 為什麼現在這樣做</h1>
+  <p class="task-tagline">這頁只記錄真正會影響策略、預算、風險、交辦方式的決策。目的不是寫流水帳，而是避免兩週後忘記某個方案為什麼被保留、降級或放棄。</p>
+</div>
+
+<div class="handoff-status ready">
+  <span class="status-mark">✓</span>
+  <div>
+    <strong>使用規則：改策略就記，改錯字不用記</strong>
+    <p>如果改動會影響任務優先級、預算、對外話術、合規風險、分享對象或部署方式，就新增一筆。純排版、錯字、死連結修正可記在 SYNC.md，不必塞進這頁。</p>
+  </div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🧾</span><h2>新增決策格式</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>欄位</th><th>填寫方式</th></tr>
+    <tr><td>日期</td><td>YYYY-MM-DD</td></tr>
+    <tr><td>議題</td><td>一句話描述決策題目</td></tr>
+    <tr><td>原方案</td><td>原本打算怎麼做</td></tr>
+    <tr><td>新決定</td><td>現在採用什麼做法</td></tr>
+    <tr><td>原因</td><td>成本、風險、證據、ROI、組織可執行性</td></tr>
+    <tr><td>影響任務</td><td>列任務編號或頁面</td></tr>
+    <tr><td>是否需重新確認</td><td>是 / 否；若是，寫觸發條件</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-hope">
+  <div class="sec-h"><span class="sec-emoji">📌</span><h2>已定案決策</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>日期</th><th>議題</th><th>原方案</th><th>新決定</th><th>原因</th><th>影響任務</th><th>需重新確認</th></tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>全案預算重估</td>
+      <td>完整預算模型放在決策版</td>
+      <td>協作版不公開精準預算</td>
+      <td>避免組員版外流後暴露預算底線；協作版只控管是否需審核</td>
+      <td>全任務、首頁預算控管</td>
+      <td>由 Posh 在完整內部版維護</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>頁面主責顯示方式</td>
+      <td>HTML 預寫具體角色</td>
+      <td>改由每頁進度追蹤欄設定主責</td>
+      <td>避免組員誤認已正式派工，也避免版本討論中先入為主</td>
+      <td>全任務、Dashboard、Guide</td>
+      <td>正式交辦時由 Posh 設定</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>affiliates.one</td>
+      <td>考慮導入外部聯盟分潤工具</td>
+      <td>協作版只保留「先做追蹤表與候選資料」</td>
+      <td>工具簽約、成本與分潤屬管理層決策，不放組員版</td>
+      <td>3、8</td>
+      <td>3-6 個月後看自建追蹤成效</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>酷課雲現況</td>
+      <td>斷言仍在上架</td>
+      <td>改為「現況待登入確認」</td>
+      <td>公開搜尋未找到穩定結果，登入牆後內容也不適合直接算 GEO 資產</td>
+      <td>5、證據登錄</td>
+      <td>登入確認或教育局回覆後更新</td>
+    </tr>
+    <tr>
+      <td>2026-07-06</td>
+      <td>內部作戰室定位</td>
+      <td>可能往公開 SEO 頁優化</td>
+      <td>維持 noindex，不做公開 meta / canonical / OG / 公開 schema</td>
+      <td>此站用途是內部戰略控管；公開 SEO / AEO / GEO 資產應搬到 orangeapple.co</td>
+      <td>全站</td>
+      <td>若未來要改公開資產，需另開官網版本</td>
+    </tr>
+    <tr>
+      <td>2026-07-06</td>
+      <td>Google 評論取得方式</td>
+      <td>曾出現以優惠引導評論的風險寫法</td>
+      <td>只提供自願評論入口與提示，不用任何對價交換</td>
+      <td>降低 Google 評論政策與公平揭露風險</td>
+      <td>3、6、7</td>
+      <td>若設計 UGC 活動，需再審一次</td>
+    </tr>
+    <tr>
+      <td>2026-07-06</td>
+      <td>FAQPage Schema 定位</td>
+      <td>把 FAQPage 當 GEO / SEO 主力槓桿</td>
+      <td>FAQ 內容保留給家長理解，Schema 只作輔助結構</td>
+      <td>避免過度承諾技術效果，回到內容可讀性與搜尋理解</td>
+      <td>7、9、首頁策略紅線</td>
+      <td>Google 文件或官網技術策略改變時再看</td>
+    </tr>
+  </table></div>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">⚠️</span><h2>待決策項目</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>議題</th><th>目前狀態</th><th>為什麼不能自動決定</th><th>建議判斷點</th></tr>
+    <tr>
+      <td>拆成完整內部版 / 組員協作版</td>
+      <td>已決定並執行</td>
+      <td>GitHub Pages 即使 noindex，知道網址仍可進入</td>
+      <td>完整內部版保留在本機備份；repo 內改為組員協作版</td>
+    </tr>
+    <tr>
+      <td>任務 8 KOL 是否啟動</td>
+      <td>不直接交辦</td>
+      <td>涉及現金支出、合約、授權、成效門檻</td>
+      <td>先補候選名單、揭露條款與追蹤方式，再由 Posh 決定</td>
+    </tr>
+    <tr>
+      <td>任務 5 高敏感合作範圍</td>
+      <td>協作版只保留資料整理</td>
+      <td>涉及高層出面與外部合作，不適合組員自行啟動</td>
+      <td>先做一頁提案，由 Posh 決定是否進入完整內部版流程</td>
+    </tr>
+  </table></div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">✍️</span><h2>下一筆紀錄區</h2></div>
+  <div class="hint-box">
+    <strong>複製格式：</strong><br>
+    日期：<br>
+    議題：<br>
+    原方案：<br>
+    新決定：<br>
+    原因：<br>
+    影響任務：<br>
+    是否需重新確認：
+  </div>
+</section>
+
+<div class="task-bottom-nav">
+  <a href="handoff-checklist.html" class="prev">交辦檢查</a>
+  <a href="guide.html" class="next">編輯說明</a>
+</div>
+
+<div class="footer">
+  <p>橘子蘋果 GEO 100 戰略 · v6.7<br>內部作戰室｜決策紀錄，不作為公開 SEO 資產。</p>
+</div>
+
+</div>
+</body>
+</html>

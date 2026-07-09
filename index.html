@@ -384,7 +384,7 @@ section{margin-bottom:80px;position:relative;}
 }
 .budget-tasks{font-size:13px;color:var(--ink-soft);line-height:2;}
 
-/* CEO Pitch */
+/* Management Summary */
 .pitch{
   background:linear-gradient(135deg,#fff,var(--paper-soft));
   border-radius:var(--radius-lg);padding:44px;
@@ -533,7 +533,7 @@ section{margin-bottom:80px;position:relative;}
 @keyframes fill-target{to{width:32%;opacity:1;}}
 @keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(200%);}}
 
-/* 標記點：現況 60 + 目標 88-95 */
+/* 標記點：策略成熟度示意 */
 .geo-marker{
   position:absolute;top:-32px;transform:translateX(-50%);
   font-size:11px;color:var(--ink);font-weight:800;
@@ -597,6 +597,9 @@ section{margin-bottom:80px;position:relative;}
   <span class="nav-logo">橘子蘋果 GEO v6.7</span>
   <a href="index.html" class="active">總覽</a>
   <a href="dashboard.html">📊 Dashboard</a>
+  <a href="evidence.html">證據登錄</a>
+  <a href="handoff-checklist.html">交辦檢查</a>
+  <a href="decision-log.html">決策紀錄</a>
   <a href="guide.html">📖 編輯說明</a>
   <a href="#tasks">11 任務</a>
   <a href="#budget">預算</a>
@@ -607,17 +610,17 @@ section{margin-bottom:80px;position:relative;}
 
 <!-- HERO -->
 <section class="hero">
-  <span class="hero-eyebrow">✨ v6.7 終極定案 · 2026/06/27</span>
-  <h1>橘子蘋果 GEO 100 分<br>業界第一話語權戰略</h1>
+  <span class="hero-eyebrow">✨ v6.7 組員協作版 · 2026/07/06</span>
+  <h1>橘子蘋果 GEO 100 分<br>交辦作戰室</h1>
   <p class="hero-sub">
-    11 任務 × 24 個月 × 預算 ~150-170 萬/年（2026-07-01 效率重估後、砍除 AI／內部可取代與重複計算）。基於 14 年品牌資產、HolonIQ 2023 Taiwan EdTech 50（跟 BenQ / AVer 同級）、iLink 通訊翟本瑞獨立深度報導、5 篇學術論文真實引用、2,244 條 4.9★ GBP 評論、CEO 自身台師大碩士論文等真實數據規劃。避開論壇口碑年約、週末租場 GBP、純業配稿 3 大陷阱。
+    本頁是可分享給組員協作的內部作戰室：保留 11 任務 SOP、證據補鏈、交辦檢查、進度追蹤與合規紅線；完整人脈策略、精準 ROI、預算底線與談判話術已移到本機完整內部版。公開 SEO / AEO / GEO 資產仍應搬到 orangeapple.co 官網，本作戰室維持 noindex。
   </p>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">+67~107</div><div class="stat-label">GEO 加分區間</div></div>
-    <div class="stat"><div class="stat-num">~150-170萬</div><div class="stat-label">效率重估後 NT$/年</div></div>
+    <div class="stat"><div class="stat-num">高</div><div class="stat-label">整體影響層級</div></div>
+    <div class="stat"><div class="stat-num">待核</div><div class="stat-label">預算上限由 Posh 確認</div></div>
     <div class="stat"><div class="stat-num">11</div><div class="stat-label">任務數</div></div>
     <div class="stat"><div class="stat-num">24</div><div class="stat-label">月時程</div></div>
-    <div class="stat"><div class="stat-num">88-95</div><div class="stat-label">預期 GEO 終分</div></div>
+    <div class="stat"><div class="stat-num">待審</div><div class="stat-label">成效估算留完整內部版</div></div>
   </div>
 </section>
 
@@ -625,21 +628,21 @@ section{margin-bottom:80px;position:relative;}
 <section class="reveal">
   <div class="geo-bar">
     <div class="geo-bar-title">
-      <span>📊 GEO 進度視覺化</span>
-      <small>14 年累積基準 ~60 → v6.7 衝刺 88-95</small>
+      <span>📊 GEO 策略成熟度</span>
+      <small>協作版只顯示方向，不公開精準分數公式</small>
     </div>
     <div class="geo-progress">
-      <div class="geo-achieved">14 年累積 60</div>
-      <div class="geo-target">+28~35 衝刺區</div>
-      <div class="geo-marker current" style="left:60%;">📍 現況 ~60</div>
-      <div class="geo-marker target" style="left:92%;">🎯 目標 88-95</div>
+      <div class="geo-achieved">既有品牌基礎</div>
+      <div class="geo-target">證據補強區</div>
+      <div class="geo-marker current" style="left:60%;">📍 目前盤點</div>
+      <div class="geo-marker target" style="left:92%;">🎯 目標狀態</div>
     </div>
     <div class="geo-marks">
-      <span>0</span><span>25</span><span>50</span><span class="current">60 現況</span><span class="highlight">88-95 目標</span><span>100</span>
+      <span>低</span><span>基礎</span><span>中</span><span class="current">待補證據</span><span class="highlight">高信任</span><span>完整</span>
     </div>
     <div class="geo-legend">
-      <span><i style="background:linear-gradient(90deg,#8B8BA7,#A370F7);"></i> 14 年累積基準（已達成）</span>
-      <span><i style="background:linear-gradient(90deg,var(--oa-orange),var(--oa-yellow),var(--hope));"></i> v6.7 衝刺區（24 個月內）</span>
+      <span><i style="background:linear-gradient(90deg,#8B8BA7,#A370F7);"></i> 既有品牌、課程與家長信任基礎</span>
+      <span><i style="background:linear-gradient(90deg,var(--oa-orange),var(--oa-yellow),var(--hope));"></i> v6.7 證據、引用與權威補強區</span>
       <span><i style="background:rgba(232,232,240,0.6);border:1px solid rgba(0,0,0,0.05);"></i> 未達成空間</span>
     </div>
   </div>
@@ -652,7 +655,7 @@ section{margin-bottom:80px;position:relative;}
     <h2>11 任務全圖</h2>
     <span class="tag">v6.7 修正後</span>
   </div>
-  <p class="section-intro">🥇 = 80/20 關鍵任務、🥈 = 高 CP 支援、🥉 = 加碼補位。<strong style="color:var(--oa-orange);">點任務卡片進入細節頁</strong> — 含完整流程圖、SOP、KPI、可調主責 / 進度 / 備註。</p>
+  <p class="section-intro">🥇 = 高影響、🥈 = 中高影響、🥉 = 補強任務。<strong style="color:var(--oa-orange);">點任務卡片進入細節頁</strong> — 協作版以證據、缺口、連結與待審材料為主。正式交辦前一律視為草稿，實際主責與權限以 Dashboard 與任務頁追蹤欄為準。</p>
 
   <div class="cards">
 
@@ -662,9 +665,9 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥇 Wikipedia 條目建立</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +8~13</span>
-        <span class="badge b-budget">$0</span>
-        <span class="badge b-owner">組員 DIY</span>
+        <span class="badge b-geo">影響 高</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
       <div class="task-desc">補 3-6 篇獨立深度報導後 AfC 投稿。雙模板揭露合規（2026/1/13 政策升級後）。可用來源：今周刊 2015、T 客邦 2016、iLink 翟本瑞 2023、5 篇學術引用、HolonIQ 2023、北市教育局 MOU、NTU CSIE。</div>
       <div class="task-meta">時程：6-12 月、悲觀 6 個月補 2-3 篇來源後通過</div>
@@ -676,11 +679,11 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥇 PR 子 B：記者主動採訪</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +5~8</span>
-        <span class="badge b-budget">≈1 萬</span>
-        <span class="badge b-owner">數位廣告投手</span>
+        <span class="badge b-geo">影響 中高</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">不簽 PR 公司年約。4 主題 pitch 給今周刊 / 親子天下 / 遠見 / Cheers / INSIDE 編輯：① 賴岳林矽谷故事 ② 綠茶老師 APCS 戰績 ③ 14 年沿革 ④ 馬來西亞分校國際擴張。</div>
+      <div class="task-desc">不簽 PR 公司年約。4 主題 pitch 給今周刊 / 親子天下 / 遠見 / Cheers / INSIDE 編輯：① 創辦人教育創業故事 ② 綠茶老師 APCS 戰績 ③ 14 年沿革 ④ 馬來西亞分校國際擴張。</div>
       <div class="task-meta">目標：年 3-6 篇真實獨立深度報導、補 Wiki 缺口</div>
     </a>
 
@@ -690,12 +693,12 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥈 真實家長社群 + 親子部落格</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +5~8</span>
-        <span class="badge b-budget">~42 萬</span>
-        <span class="badge b-owner">數位投手 + 多媒體</span>
+        <span class="badge b-geo">影響 中高</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">3A：家長平台 UGC 引擎（5 個自動觸發點：升階段 / 認證通過 / 老師上傳作品 / 下載證書 / 季作品集）+ 線上化季度活動（數位徽章 / 跨班大賽 / 年度頒獎）+ 6 大鼓勵評論工具包。3B：13 位親子 KOL 接洽 + 試媒體簽 + 強制揭露。</div>
-      <div class="task-meta">第一年試水溫 15 萬、滾動全年 40 萬 + 3A 10 萬</div>
+      <div class="task-desc">3A：家長分享觸發點、授權文案、Google 評論自願入口與不可交換對價紅線。3B：親子 KOL 候選盤點、官方連結、受眾推估、揭露方式與追蹤欄位；不自行私訊、詢價或承諾體驗。</div>
+      <div class="task-meta">交付物：UGC 流程稿、KOL 候選表、合規紅線檢查</div>
     </a>
 
     <a class="task-card priority-2" href="tasks/04-paid-reports.html" style="text-decoration:none;color:inherit;">
@@ -704,12 +707,12 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥈 PR 子 A：付費深度報導</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +3~5</span>
-        <span class="badge b-budget">35 萬</span>
-        <span class="badge b-owner">數位廣告投手</span>
+        <span class="badge b-geo">影響 中</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">不純做業配（LLM 降權）、改付費深度報導。4 季主題輪播：Q1 AI 時代家長必修、Q2 APCS 真實影響、Q3 馬來西亞分校國際擴張、Q4 選手班訓練紀實。教育垂直 50% + 科技 30% + 商業財經 15% + 新聞稿 5%。</div>
-      <div class="task-meta">年 17 篇分散發稿、主題可由組員調整</div>
+      <div class="task-desc">媒體條件研究：整理候選媒體、過往報導、內容對口、合作標示方式、素材缺口與待確認條件。正式寄信、詢價、談費用與上稿需 Posh 核准。</div>
+      <div class="task-meta">交付物：媒體候選表、開場信草稿、素材缺口表</div>
     </a>
 
     <a class="task-card priority-1" href="tasks/05-authority.html" style="text-decoration:none;color:inherit;">
@@ -718,12 +721,12 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥇 話語權工程</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +25~40</span>
-        <span class="badge b-budget">~15 萬</span>
-        <span class="badge b-owner">COO 對外 + Posh 推</span>
+        <span class="badge b-geo">影響 高</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">避開 CEO「學校合作 = 低毛利」雷區。4 Tier：① 北市酷課雲確認 + iLink 二次運用 + 政府背書專區 ② iLink 深化 + 翟本瑞 AI 示範基地 + 數發部倡議（董事長提案）③ 顧問北商北科 / CEO 台師大教研所 / COO 台大 EiMBA ④ 跨縣市 MOU（電銷組長漸進、不開發新校用課程）。</div>
-      <div class="task-meta">24 個月時程、董事長 / CEO / 顧問人脈協調</div>
+      <div class="task-desc">組員協作版只做政府、學術、產業、公益素材的公開來源盤點與一頁提案準備。任何需高層出面、外部窗口接洽或合作承諾的事項，都必須先由 Posh 確認。</div>
+      <div class="task-meta">24 個月時程、高敏感任務、不可自行對外接洽</div>
     </a>
 
     <a class="task-card priority-2" href="tasks/06-gbp.html" style="text-decoration:none;color:inherit;">
@@ -732,11 +735,11 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥈 GBP 11 直營完整化</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +4</span>
-        <span class="badge b-budget">~2 萬</span>
-        <span class="badge b-owner">多媒體 + 各區主任</span>
+        <span class="badge b-geo">影響 中</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">⚠️ 週末租場「絕對不能建獨立 GBP」（補習班法 5-25 萬罰 + Google 政策下架雙重風險）。6 立案教室全推 4 動作：① Services 欄位填 9 大課程 ② Owner Posts 週 1-2 篇 ③ Q&A 主動經營 ④ 教室實照（非 AI）。第一年免代操工具。</div>
+      <div class="task-desc">重要注意：週末租場不得自行建立獨立 GBP。協作版先盤點立案教室商家權限、Services 缺口、最近貼文日期、Q&A 缺題與教室實照授權；實際登入與更新需指定管理者執行。</div>
       <div class="task-meta">守 2,244 評論 / 4.9★ 護城河、6 立案：古亭 / 板橋 / 新店 / 竹北 / 北屯 / 東寧西</div>
     </a>
 
@@ -746,9 +749,9 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥉 Local Citation 品保協會曝光</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +3~5</span>
-        <span class="badge b-budget">~1 萬</span>
-        <span class="badge b-owner">數位廣告投手</span>
+        <span class="badge b-geo">影響 中</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
       <div class="task-desc">不加地方協會（網站陽春無會員列表 CP 低）。聚焦：① 已有的「補教業品保協會」（古亭 + 竹北）官網徽章曝光 + 業務話術 + FAQ ② 補齊立案教室加入（由實體推、Posh 不主導）③ 8-12 個免費目錄補列（教育 / 親子 / 本地）。</div>
       <div class="task-meta">關鍵：「家長履約保證」是已有沒被善用的資產</div>
@@ -760,12 +763,12 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥈 合規 KOL 業配 Miula 模式</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +6~10</span>
-        <span class="badge b-budget">50 萬</span>
-        <span class="badge b-owner">數位廣告投手</span>
+        <span class="badge b-geo">影響 中高</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">已驗證：2023 Miula ROI 13.8x、2021 KOL Radar 大親子網紅 0 成交。✅ 主推：知識型 KOL（Miula 級）50% + 高黏著小網紅 IG 30% + Threads 試水溫 10% + 配套 10%。❌ 避：大型親子網紅 10 萬+、FB 圖文、無折扣碼追蹤。</div>
-      <div class="task-meta">必加折扣碼追蹤、必標 #廣告 #業配 揭露</div>
+      <div class="task-desc">組員協作版先做候選 KOL 盤點、官方連結、受眾推估、揭露方式與追蹤欄位。精準報價、內部 ROI、負面名單與預算分配不放公開網址。</div>
+      <div class="task-meta">接洽前需確認合約紅線、預算上限與追蹤方式</div>
     </a>
 
     <a class="task-card priority-2" href="tasks/09-video.html" style="text-decoration:none;color:inherit;">
@@ -774,11 +777,11 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥈 影片 4 軌 + Medium 重啟</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +4~6</span>
-        <span class="badge b-budget">~10 萬</span>
-        <span class="badge b-owner">多媒體 + 外包剪輯</span>
+        <span class="badge b-geo">影響 中</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">基於 280 支影片實證（89% 廣告 / 11% 自然）：🥇 自然 GEO 軌（議題反差 + 操作指南）月 2 支 🥈 搜尋長尾軌 月 1 支 🥉 廣告投放軌（教養心理 + 招生）月 1-2 支 4 Shorts 軌 週 1-2 支。組員拍攝 + 外包剪輯產能 3-5x。Medium 重啟（CEO 文章被學術引用）。</div>
+      <div class="task-desc">盤點既有影片、自然觸及主題、搜尋長尾題、廣告素材與 Shorts 題庫。協作版先整理 URL、標題、可轉文章方向、授權狀態與素材缺口；拍攝、外包剪輯與官網上架需核准。</div>
       <div class="task-meta">廢除家庭專訪、爆款公式 = 議題反差 / 操作指南 / 科普 / 趣味</div>
     </a>
 
@@ -788,9 +791,9 @@ section{margin-bottom:80px;position:relative;}
         <div class="task-title">🥉 產業獎項 HolonIQ 全曝光</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +1~3</span>
-        <span class="badge b-budget">5-6 萬</span>
-        <span class="badge b-owner">COO 申請</span>
+        <span class="badge b-geo">影響 補強</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
       <div class="task-desc">🚨 重大發現：HolonIQ 2023 Taiwan EdTech 50 已確認入選（獎盃為證）、跟 BenQ / AVer / ViewSonic 同級、但完全沒被善用。+ 未來教育（遠見天下）+ 教育新創 20+（親子天下）+ 拾穗 + 金舶 + 金塾 + 2018 華人資訊論壇共 7-8 項。重點：全面曝光現有 + 衝 2026 HolonIQ + 未來教育 100。</div>
       <div class="task-meta">不再參金舶 / 金塾、聚焦教育類權威獎</div>
@@ -799,15 +802,15 @@ section{margin-bottom:80px;position:relative;}
     <a class="task-card priority-3" href="tasks/11-academic.html" style="text-decoration:none;color:inherit;">
       <div class="task-head">
         <div class="task-num">11</div>
-        <div class="task-title">🥉 學術引用 5 篇 + CEO 論文</div>
+        <div class="task-title">🥉 學術引用 5 篇 + 創辦人研究</div>
       </div>
       <div class="task-badges">
-        <span class="badge b-geo">GEO +3~5</span>
-        <span class="badge b-budget">1-3 萬</span>
-        <span class="badge b-owner">數位投手 + Posh</span>
+        <span class="badge b-geo">影響 中</span>
+        <span class="badge b-budget">預算待核</span>
+        <span class="badge b-owner">⚪ 待指派</span>
       </div>
-      <div class="task-desc">2026/06/27 驗證後升級。5 篇第三方真實引用（陳雅萍臺中教大最強雙重引用 / 湯惠美臺東 / 蔡崇華台師大 EMBA / 吳弘譯雲科 / 鄭婷云嘉義）。🤯 CEO 束凱文 2023 台師大碩士論文用 205 名橘蘋學員寫動機研究。橘蘋 Medium 帳號是沉睡的學術引用資產。</div>
-      <div class="task-meta">官網設「學術引用」專區 + Wiki 學術區段 + CEO 學術權威定位</div>
+      <div class="task-desc">2026/06/27 驗證後升級。5 篇第三方真實引用（陳雅萍臺中教大最強雙重引用 / 湯惠美臺東 / 蔡崇華台師大 EMBA / 吳弘譯雲科 / 鄭婷云嘉義）。🤯 創辦人 2023 台師大碩士論文用 205 名橘蘋學員寫動機研究。橘蘋 Medium 帳號是沉睡的學術引用資產。</div>
+      <div class="task-meta">官網設「學術引用」專區 + Wiki 學術區段 + 創辦人學術研究素材</div>
     </a>
 
   </div>
@@ -881,56 +884,53 @@ section{margin-bottom:80px;position:relative;}
 <section id="budget" class="reveal">
   <div class="section-h">
     <span class="section-emoji">💰</span>
-    <h2>預算明細加總</h2>
-    <span class="tag">可輸入 · 即時計算</span>
+    <h2>預算控管</h2>
+    <span class="tag">協作版不公開精準數字</span>
   </div>
-  <p class="section-intro">每個任務的預算上下限可直接修改、合計自動更新。GEO 終分根據總預算自動推估。修改後存在瀏覽器、要分享請按上方「💾 下載狀態」。</p>
+  <p class="section-intro">完整預算模型保留在本機完整內部版。協作版只標示哪些任務可以直接做資料整理、哪些需要 Posh 先核預算、合約或高層權限。</p>
 
   <div id="budget-table-dynamic"></div>
 </section>
 
-<!-- CEO PITCH -->
+<!-- MANAGEMENT SUMMARY -->
 <section id="pitch" class="reveal">
   <div class="section-h">
     <span class="section-emoji">📣</span>
-    <h2>CEO 提案總綱</h2>
-    <span class="tag">業績框架</span>
+    <h2>管理層摘要</h2>
+    <span class="tag">協作版</span>
   </div>
-  <p class="section-intro">不從 GEO 角度提、從「招生轉換率 + 業績槓桿」角度。CEO 業績導向、必須讓他聽到 ROI。</p>
+  <p class="section-intro">這裡只保留組員可讀的方向摘要。完整提案話術、預算底線、精準 ROI 與高層人脈策略放在本機完整內部版，不在可分享網址呈現。</p>
 
   <div class="pitch">
-    <h3>🎯 一頁簡報 · 給 CEO</h3>
+    <h3>🎯 一頁摘要 · 給組員理解方向</h3>
     <div class="pitch-body">
 
-      <p><strong>核心論述：</strong>橘子蘋果 14 年累積已有大量被低估的權威資產（HolonIQ 2023 EdTech 50 跟 BenQ 同級、iLink 通訊翟本瑞獨立深度報導、5 篇學術論文真實引用、品保協會履保會員、2,244 條 4.9★ GBP 評論），但 <strong>90% 都沒拿出來用</strong>。提案不是「做新東西」、是 <strong>「把已有的變成招生轉換率工具」+「補強會直接影響家長選擇的 3 個槓桿」</strong>。</p>
+      <p><strong>核心論述：</strong>橘子蘋果已有多組可公開查證的權威資產與教學成果，但目前分散在媒體、學術、政府、獎項、GBP、影片與官網各處。協作版的目的，是先把這些素材整理成可查證、可引用、可交辦的證據包。</p>
 
-      <p style="margin-top:20px;"><strong>3 個業績槓桿（直接影響家長報名）：</strong></p>
+      <p style="margin-top:20px;"><strong>3 個協作方向：</strong></p>
       <ul>
-        <li><strong>權威信任分</strong>：政府 / 國際 / 學術背書放官網 + 業務話術 → 家長從「比較中」選橘蘋（任務 5+10+11、預算 ~20-25 萬）</li>
-        <li><strong>真實口碑放大</strong>：家長 LINE 群 UGC 自動化 + 親子部落格體驗（合規揭露）+ Miula 模式知識型 KOL（ROI 13.8x 已驗證）→ 家長「猶豫中」被推一把（任務 3+8、預算 ~90 萬）</li>
-        <li><strong>內容資產 SEO/GEO</strong>：影片 4 軌制 + Medium 重啟（已有文章被學術引用）+ Wiki 條目 + PR 深度報導 → 家長「主動搜尋」找得到橘蘋（任務 1+2+4+9、預算 ~46-52 萬）</li>
+        <li><strong>權威信任</strong>：政府 / 國際 / 學術 / 獎項證據整理成官網可用素材。</li>
+        <li><strong>真實口碑</strong>：家長故事、KOL 候選、評論入口與揭露規範都先合規化。</li>
+        <li><strong>內容資產</strong>：影片、文章、Wiki 候選來源與 PR 素材先整理成可搜尋的結構。</li>
       </ul>
 
       <div class="pitch-quote">
-        為什麼現在做？因為 LLM / Google 搜尋持續吞食家長注意力、ChatGPT 推薦哪家補習班會決定 30% 的家長選擇、權威背書是 LLM 引用率的關鍵。HolonIQ 證明我們已是業界前 50、但這個資產在我們官網完全不見、業務不講、Wiki 沒寫 — 對手只要把這個拿走、我們就輸了。
+        為什麼現在做？因為 LLM / Google 搜尋正在改變家長蒐集補習班資訊的路徑；公開、可查證、可信任的來源會越來越重要。組員先把資料整理乾淨，管理層才能決定哪些搬到官網、哪些拿來提案、哪些暫時保留。
       </div>
 
-      <p><strong>3 個避雷（已 deep-research 驗證）：</strong></p>
+      <p><strong>3 個不可踩的紅線：</strong></p>
       <ul>
-        <li>不簽論壇口碑年約（三星寫手門 1,000 萬罰款先例、戰國策 / 貳肆加全踩線）</li>
-        <li>不在週末租場建獨立 GBP（補習班法 5-25 萬罰 + Google 政策下架）</li>
-        <li>不純做業配稿（LLM 對純業配降權、改深度報導）</li>
+        <li>不做假口碑、假帳號或任何難以揭露的推薦。</li>
+        <li>不把未立案或不符合平台規則的地址做成獨立 GBP。</li>
+        <li>不把登入牆、內部文件或口頭記憶寫成公開可查證事實。</li>
       </ul>
 
-      <p style="margin-top:20px;"><strong>3 件不開發、3 件全推：</strong></p>
+      <p style="margin-top:20px;"><strong>組員先做：</strong></p>
       <ul>
-        <li><strong>不開發</strong>新校用課程、新人力（用既有 5 角色）、新代操工具（第一年）</li>
-        <li><strong>全推</strong>權威曝光（任務 5+10+11）、UGC 自動化（任務 3）、內容資產（任務 9）</li>
+        <li>補公開連結、截圖、來源日期、可引用段落。</li>
+        <li>把待高層確認、待法規確認、待預算確認的事項標清楚。</li>
+        <li>每週只回報「已補證據、卡住原因、下一步」。</li>
       </ul>
-
-      <p style="margin-top:20px;"><strong>第一季可見成果：</strong>HolonIQ 徽章 + 5 篇學術 + iLink + 北市酷課雲 + 拾穗 = 3 個月內官網信任區轉換率拉抬可測量（A/B test）、業務話術升級 + 招生轉換率提升 X%。</p>
-
-      <p style="margin-top:20px;"><strong>預算建議：效率重估後 ~150-170 萬/年</strong>、第一季先投 25%（~38-43 萬）驗證、Q2 起根據招生轉換率數據加碼。</p>
     </div>
   </div>
 </section>
@@ -959,74 +959,74 @@ section{margin-bottom:80px;position:relative;}
 <section id="quickwins" class="reveal">
   <div class="section-h">
     <span class="section-emoji">⚡</span>
-    <h2>90 天快速勝利</h2>
-    <span class="tag">第一季可見</span>
+    <h2>90 天優先交付</h2>
+    <span class="tag">組員協作版</span>
   </div>
-  <p class="section-intro">用最少資源換最大可見度、累積信任後再加碼。</p>
+  <p class="section-intro">這裡只列組員可以先做的資料型、整理型、低風險工作。對外接洽、預算承諾、高層出面與合作談判都不在協作版交辦。</p>
 
   <div class="qw-grid">
 
     <div class="qw">
       <span class="qw-when">Week 1-2</span>
-      <div class="qw-title">官網信任區大改版</div>
-      <div class="qw-detail">放上 HolonIQ + iLink + STEM.org + ITS + 北市 MOU + 拾穗 + 品保協會 + 5 篇學術引用 + CEO 台師大碩士。</div>
-      <div class="qw-cost">💰 0</div>
+      <div class="qw-title">官網信任區證據候選</div>
+      <div class="qw-detail">整理獎項、認證、學術、政府、品保與媒體來源，標出公開可爬 / 登入牆 / 內部文件 / 待補。</div>
+      <div class="qw-cost">資料整理</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 1-2</span>
-      <div class="qw-title">業務話術升級</div>
-      <div class="qw-detail">7 大背書 + 履保 + CEO 學術 + 業界第 50 強 EdTech、整套寫成 5 頁手冊、給所有顧問。</div>
-      <div class="qw-cost">💰 1 萬印製</div>
+      <div class="qw-title">信任素材卡整理</div>
+      <div class="qw-detail">把每個背書改成一句中性事實、一個來源連結、一張可截圖證據；先不寫銷售話術。</div>
+      <div class="qw-cost">待審核</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 2-4</span>
       <div class="qw-title">FAQ 補品保 + 學術 Q&A</div>
-      <div class="qw-detail">首頁 + 9 大課程 + 結帳頁全補。範本在記憶系統。</div>
-      <div class="qw-cost">💰 0</div>
+      <div class="qw-detail">整理品保、履約保證、學術引用與常見疑慮，先做文字稿，等官網端確認頁面位置。</div>
+      <div class="qw-cost">文字稿</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 2-4</span>
-      <div class="qw-title">GBP 古亭 Services 補全</div>
-      <div class="qw-detail">從目前「線上 + 門市」2 項補到 9 大課程、其他立案教室同步。月度 Owner Posts 排程啟動。</div>
-      <div class="qw-cost">💰 0</div>
+      <div class="qw-title">GBP Services 缺口表</div>
+      <div class="qw-detail">盤點各立案教室 GBP 欄位、照片、服務、Q&A、貼文狀態，先產出缺口表。</div>
+      <div class="qw-cost">缺口表</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 3-6</span>
-      <div class="qw-title">家長平台 UGC 自動化</div>
-      <div class="qw-detail">Posh 跟工程師口頭討論 5 個自動觸發點。家長平台「結業證書下載頁」內嵌「分享你的故事」CTA。</div>
-      <div class="qw-cost">💰 0 工程內部</div>
+      <div class="qw-title">家長分享觸發點盤點</div>
+      <div class="qw-detail">整理可觸發家長分享的時機、授權文案、Google 評論自願入口與不可交換對價紅線。</div>
+      <div class="qw-cost">流程稿</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 4-8</span>
-      <div class="qw-title">Wiki 草稿 + 帳號準備</div>
-      <div class="qw-detail">真實帳號編 10 次他條目 + 雙模板 COI 揭露。草稿同時跑 4 主題記者 pitch。</div>
-      <div class="qw-cost">💰 0</div>
+      <div class="qw-title">Wiki 來源表 + 本機草稿</div>
+      <div class="qw-detail">整理第三方來源分級表、可引用段落與維基利益衝突注意事項；正式上稿需 Posh 審核。</div>
+      <div class="qw-cost">來源表</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 4-8</span>
-      <div class="qw-title">影片 4 軌啟動</div>
-      <div class="qw-detail">議題反差長片 2 支 + 搜尋長尾長片 1 支 + 廣告投放短片 1 支、外包剪輯廠評選。</div>
-      <div class="qw-cost">💰 5 萬</div>
+      <div class="qw-title">影片 4 軌素材盤點</div>
+      <div class="qw-detail">盤點既有影片 URL、標題、主題、可轉文章方向、對應官網課程頁與待補素材。</div>
+      <div class="qw-cost">影片表</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 6-12</span>
-      <div class="qw-title">KOL 試水溫</div>
-      <div class="qw-detail">第 1 梯隊 5 位（卡氏一家 + 別讓一姐 + 豆芽媽 + 焦糖綠玫瑰 + Amber 媽咪愛）+ Miula 重啟。必加折扣碼。</div>
-      <div class="qw-cost">💰 15 萬</div>
+      <div class="qw-title">KOL 候選盤點</div>
+      <div class="qw-detail">整理候選名單、官方連結、受眾推估、互動截圖、揭露方式與追蹤欄位；不自行詢價。</div>
+      <div class="qw-cost">候選表</div>
     </div>
 
     <div class="qw">
       <span class="qw-when">Week 8-12</span>
-      <div class="qw-title">話語權工程啟動</div>
-      <div class="qw-detail">COO 提案董事長動用 iLink / 翟本瑞 / 數發部人脈、申請逢甲 AI 示範基地、CEO 母校台師大教研所合作。</div>
-      <div class="qw-cost">💰 3 萬</div>
+      <div class="qw-title">話語權工程資料包</div>
+      <div class="qw-detail">整理政府、學術、產業與公益來源，做一頁提案摘要；不寫具體人脈或外部窗口。</div>
+      <div class="qw-cost">提案摘要</div>
     </div>
 
   </div>
@@ -1042,20 +1042,20 @@ section{margin-bottom:80px;position:relative;}
 
   <div class="limits-grid">
     <div class="limits-col dont">
-      <h4>🚫 絕對不能做（已驗證地雷）</h4>
+      <h4>🚫 絕對不能做（協作版紅線）</h4>
       <ul>
-        <li>論壇口碑年約（三星寫手門 1,000 萬先例）</li>
+        <li>假帳號、假口碑、未揭露推薦或難以查證的口碑操作</li>
         <li>週末租場建獨立 GBP（補習班法 + Google 雙觸法）</li>
-        <li>純業配稿（LLM 降權）</li>
-        <li>新校用課程設計（CEO 守門紅線）</li>
+        <li>純業配稿當成第三方權威來源</li>
+        <li>未經管理層確認就承諾新課程、新合作或新預算</li>
         <li>AI 生成橘蘋 logo / 學員照片</li>
         <li>Roblox AI 課寫 Lua 入門（不是真實內容）</li>
         <li>AI 思維課寫具體工具名稱（ChatGPT / Midjourney）</li>
         <li>「跟不上免費再上一次」承諾（虛構）</li>
-        <li>大型親子網紅 10 萬+ 業配（ROI 已驗證低）</li>
-        <li>地方補教協會（網站陽春 CP 太低）</li>
-        <li>家庭專訪（CP 差 + 時間衝突）</li>
-        <li>記者會、假帳號運營</li>
+        <li>只用粉絲數或曝光量決定 KOL 合作</li>
+        <li>沒有公開會員列表或無法被查證的目錄當作 GEO 資產</li>
+        <li>未取得授權就使用學員、家長、教師影像或故事</li>
+        <li>記者會、假帳號運營、未揭露業配</li>
       </ul>
     </div>
 
@@ -1063,17 +1063,16 @@ section{margin-bottom:80px;position:relative;}
       <h4>🌟 必須做（無條件原則）</h4>
       <ul>
         <li>所有業配 / 邀稿 / 評論獎勵必須揭露利益關係</li>
-        <li>每次改網頁 Claude 主動提醒信任元素清單</li>
+        <li>每次改網頁需同步檢查信任元素清單</li>
         <li>HolonIQ + 品保 + 學術引用 + iLink 必出現官網</li>
-        <li>KOL 業配必加折扣碼追蹤實付業績</li>
+        <li>KOL 業配必加折扣碼或 UTM 追蹤</li>
         <li>影片字幕必須人工精校（不依賴自動）</li>
         <li>影片轉文字稿同步放官網 blog</li>
-        <li>VideoObject + Article + FAQPage Schema 標記</li>
+        <li>VideoObject + Article + Course / Organization Schema 標記；FAQ 內容保留給家長理解，不再當主力 SEO 槓桿</li>
         <li>跨教室 NAP 一致性季度檢查</li>
-        <li>Posh 不接洽 KOL / 不執行對外、只大腦 + 推動</li>
-        <li>對外接洽以 COO 為主、Posh 後勤</li>
-        <li>政府 / 教育合作不要求新校用課程設計</li>
-        <li>用 Claude deep-research 取代組員打電話洽詢</li>
+        <li>對外接洽、預算承諾、高層出面須先由 Posh 確認</li>
+        <li>政府 / 教育合作不得自行承諾新課程設計</li>
+        <li>組員先補公開資料與問題清單，不自行打電話承諾合作</li>
       </ul>
     </div>
   </div>
@@ -1083,7 +1082,7 @@ section{margin-bottom:80px;position:relative;}
 <div class="footer">
   <h4>🍊 橘子蘋果程式學苑 · GEO 100 分戰略 v6.7</h4>
   <p>整合自 11 任務深度討論 + 2 輪 deep-research + 5 篇學術論文驗證 + YT 280 支影片實證 + HolonIQ 獎盃確認 + iLink 通訊翟本瑞專文 + 6 個 Citation 平台確認<br>
-  產生於 2026/06/27 · 林保旭（Posh Lin）· 線上事業部 + 行銷部總監<br>
+  更新於 2026/07/06 · 林保旭（Posh Lin）· 線上事業部 + 行銷部總監<br>
   <strong style="color:var(--oa-orange);">如需修改任何段落 → 告訴 Claude 哪個 section 改什麼、即時更新</strong></p>
 </div>
 

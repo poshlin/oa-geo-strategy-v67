@@ -19,6 +19,9 @@
   <span class="nav-logo">GEO v6.7</span>
   <a href="../index.html">總覽</a>
   <a href="../dashboard.html">Dashboard</a>
+  <a href="../evidence.html">證據登錄</a>
+  <a href="../handoff-checklist.html">交辦檢查</a>
+  <a href="../decision-log.html">決策紀錄</a>
   <a href="../guide.html">編輯說明</a>
 </div>
 
@@ -29,11 +32,19 @@
   <h1><span class="num">7</span>Local Citation 品保協會曝光</h1>
   <div class="task-meta-row">
     <span class="badge b-priority">🥉 加碼補位</span>
-    <span class="badge b-geo">GEO +3~5</span>
-    <span class="badge b-budget">~1 萬/年</span>
+    <span class="badge b-geo">影響 中</span>
+    <span class="badge b-budget">預算待核</span>
     <span class="badge b-time">第一季 + 持續維護</span>
   </div>
   <p class="task-tagline">不加地方協會（網站陽春無會員列表 CP 低）。聚焦：① 已有的「補教業品保協會」（古亭 + 竹北 2018/2022 已加入）官網徽章曝光 + 業務話術 + FAQ ② 補齊立案教室加入（由實體教室自行推動、行銷部不主導）③ 8-12 個免費目錄補列。</p>
+</div>
+
+<div class="handoff-status blocked">
+  <span class="status-mark">0</span>
+  <div>
+    <strong>交辦狀態：草稿中，待 NAP 主檔建立</strong>
+    <p>開始補目錄前，必須先建立每間立案教室的 Name / Address / Phone 主檔，避免不同平台資料不一致。</p>
+  </div>
 </div>
 
 <div class="state-track">
@@ -51,11 +62,11 @@
 <section class="sec accent-orange">
   <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
   <p>橘蘋已是「中華民國補教業品保協會」會員（古亭會員編號 020589 / 2018、竹北 060329 / 2022）、官網有公開會員列表可查、家長履保協會徽章可直接放官網。<strong>這是已有但沒被善用的招生轉換工具</strong>。</p>
-  <p>用戶質疑（成立）：地方協會（北市 nacet、新北 tcea 等）網站陽春、無會員列表、加入零 GEO 加分、CEO 不會買單。<strong>結論：不加地方協會、只加全國級</strong>。</p>
+  <p>協作版判斷：沒有公開會員列表或無法被搜尋引擎穩定讀取的目錄，不優先列入 GEO 資產。<strong>先整理全國級、可查證、可公開引用的來源</strong>。</p>
 </section>
 
 <section class="sec accent-gold">
-  <div class="sec-h"><span class="sec-emoji">🚀</span><h2>P1 · 零成本、業績影響最大（必做）</h2></div>
+  <div class="sec-h"><span class="sec-emoji">🚀</span><h2>P1 · 低成本、家長信任影響高（必做）</h2></div>
 
   <div class="hint-box" style="margin-bottom:14px;">下面每一步都寫清楚「<strong>放哪裡、怎麼查證、文字怎麼複製</strong>」。第一次做的組員照著貼即可。藍字都是可直接點的官方連結。<strong>先自己去官網查證橘蘋是會員</strong>：<a href="https://www.eqaa.org.tw/memberRegister/SearchMemberList" target="_blank" rel="noopener">中華民國補教業品保協會 · 會員查詢</a>（輸入「橘子蘋果」或會員編號 <code>020589</code>／<code>060329</code> 即可查到）。</div>
 
@@ -84,9 +95,9 @@
       <p style="font-size:13px;color:var(--mute);margin:6px 0 0;">⚠️ 只有「已加入品保協會」的立案教室（目前古亭、竹北）可在該教室頁掛「本教室為品保會員」；未加入教室只能用總公司層級文案，不可宣稱該教室已履保。</p>
     </div>
 
-    <div class="scard"><h4>Step 3 · Q&A 同步做成 FAQPage Schema</h4>
-      <p><strong>為什麼：</strong>FAQPage JSON-LD 讓 Google / LLM 直接讀到品保 Q&A，GEO 加分。把上面 3 組 Q&A 包進頁面既有的 <code>FAQPage</code> Schema（純技術、可交數位長）。</p>
-      <p><strong>怎麼查證有沒有生效：</strong>用 <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google 複合式搜尋結果測試</a> 貼上網址，確認 FAQ 有被抓到。</p>
+    <div class="scard"><h4>Step 3 · Q&A 做成家長看得懂的內容區塊</h4>
+      <p><strong>為什麼：</strong>品保 Q&A 的價值在於解除家長對預付學費與退費的疑慮。先把上面 3 組 Q&A 放進教室頁或 FAQ 區，用清楚標題與內文讓搜尋引擎理解，不把 FAQPage Schema 當主力 SEO 槓桿。</p>
+      <p><strong>怎麼查證有沒有生效：</strong>用 <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google 複合式搜尋結果測試</a> 或 Search Console 檢查頁面是否能正常讀取結構化資料與主要內容。</p>
     </div>
 
     <div class="scard"><h4>Step 4 · GBP + 社群 + 業務話術加品保</h4>
@@ -96,7 +107,7 @@
     </div>
   </div>
 
-  <div class="hint-box"><strong>業績影響：</strong>家長最怕「補習班倒了預付學費沒了」。加入<strong>履保 / 品保協會</strong>後、官網可放「品保協會會員、學費履約保證」徽章 → 直接拉抬轉換率。</div>
+  <div class="hint-box"><strong>家長信任影響：</strong>家長在意預付學費與退費安全。加入<strong>履保 / 品保協會</strong>後、官網可放「品保協會會員、學費履約保證」徽章，可作為信任輔助。</div>
 </section>
 
 <section class="sec accent-hope">
@@ -130,47 +141,46 @@
     <tr><td>政府二次彙整</td><td>teach.datagove.com 台灣補習班名錄</td><td>由政府資料自動彙整，核對即可（連結待補）</td></tr>
   </table></div>
 
-  <h3 style="font-size:15px;margin:14px 0 6px;">🔵 待補目錄 · 逐一「怎麼註冊」</h3>
+  <h3 style="font-size:15px;margin:14px 0 6px;">🔵 待補目錄 · 註冊前資料盤點</h3>
   <div class="scards">
     <div class="scard"><h4>1 · Niceday 玩體驗（體驗預訂）</h4>
       <p><strong>現況：</strong>古亭 + 竹北已列，補其他立案教室的體驗課。</p>
-      <p><strong>怎麼做：</strong>到 <a href="https://niceday.tw/" target="_blank" rel="noopener">niceday.tw</a> 找「我要開課 / 供應商合作」，用既有帳號新增教室 + 體驗課品項；照 NAP 主檔填。</p>
+      <p><strong>先盤點：</strong>到 <a href="https://niceday.tw/" target="_blank" rel="noopener">niceday.tw</a> 確認是否有供應商合作入口、需哪些官方帳號與教室授權；不要自行新增品項。</p>
     </div>
     <div class="scard"><h4>2 · 104 教育網（教育類）</h4>
-      <p><strong>怎麼做：</strong>到 <a href="https://www.104learn.com.tw/" target="_blank" rel="noopener">104 教育網</a> 找「機構刊登 / 補習班登錄」，建立機構檔、填課程與各教室 NAP。</p>
+      <p><strong>先盤點：</strong>到 <a href="https://www.104learn.com.tw/" target="_blank" rel="noopener">104 教育網</a> 確認是否有「機構刊登 / 補習班登錄」、需哪些資料、是否會對外公開；不要自行建立機構檔。</p>
     </div>
     <div class="scard"><h4>3 · 亞洲教育網 / 全國教育網（教育類）</h4>
-      <p><strong>怎麼做：</strong>各自站內找「補習班登錄 / 加入我們」建檔。（連結待補·先搜尋官網確認為現行站）</p>
+      <p><strong>先盤點：</strong>各自站內找「補習班登錄 / 加入我們」與現行官網，記錄需官方帳號、公開欄位與送出前審核人。</p>
     </div>
     <div class="scard"><h4>4 · BabyHome（親子 / 兒童）</h4>
-      <p><strong>怎麼做：</strong>到 <a href="https://www.babyhome.com.tw/" target="_blank" rel="noopener">BabyHome</a> 的「才藝 / 教育黃頁」登錄機構，附官網與各教室 NAP。</p>
+      <p><strong>先盤點：</strong>到 <a href="https://www.babyhome.com.tw/" target="_blank" rel="noopener">BabyHome</a> 確認是否有才藝 / 教育黃頁、公開欄位與授權需求；不要自行送出。</p>
     </div>
     <div class="scard"><h4>5 · MamiBuy 媽咪拜（親子 / 兒童）</h4>
-      <p><strong>怎麼做：</strong>到 <a href="https://www.mamibuy.com.tw/" target="_blank" rel="noopener">MamiBuy</a> 找店家 / 品牌合作或才藝專區登錄。</p>
+      <p><strong>先盤點：</strong>到 <a href="https://www.mamibuy.com.tw/" target="_blank" rel="noopener">MamiBuy</a> 確認店家 / 品牌合作或才藝專區入口，列出需審核資料。</p>
     </div>
     <div class="scard"><h4>6 · 媽媽寶寶黃頁（親子 / 兒童）</h4>
-      <p><strong>怎麼做：</strong>到 <a href="https://www.mombaby.com.tw/" target="_blank" rel="noopener">媽媽寶寶</a> 找廠商 / 黃頁登錄。（黃頁專區連結待補）</p>
+      <p><strong>先盤點：</strong>到 <a href="https://www.mombaby.com.tw/" target="_blank" rel="noopener">媽媽寶寶</a> 查是否仍有廠商 / 黃頁入口，補上現行連結與公開欄位。</p>
     </div>
     <div class="scard"><h4>7 · iyp 台灣黃頁 / 518 商家（本地商家）</h4>
-      <p><strong>怎麼做：</strong><a href="https://www.iyp.com.tw/" target="_blank" rel="noopener">iyp 黃頁</a> 免費登錄商家；<a href="https://www.518.com.tw/" target="_blank" rel="noopener">518</a> 建立公司 / 商家檔。每間教室各建一筆，NAP 一致。</p>
+      <p><strong>先盤點：</strong>確認 <a href="https://www.iyp.com.tw/" target="_blank" rel="noopener">iyp 黃頁</a> 與 <a href="https://www.518.com.tw/" target="_blank" rel="noopener">518</a> 是否仍可登錄商家、是否需官方帳號、是否會公開電話地址；送出前需審核。</p>
     </div>
     <div class="scard"><h4>8 · OpenStreetMap / Maps.me（地圖）</h4>
-      <p><strong>怎麼做：</strong>在 <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> 註冊帳號、把各立案教室新增為 POI（名稱 / 地址 / 電話 / 官網）。Maps.me 讀 OSM 資料，改一處即同步。</p>
+      <p><strong>先盤點：</strong>確認 <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> 現有 POI、缺哪些立案教室與欄位；不得自行註冊帳號或新增 POI。</p>
     </div>
   </div>
 
-  <div class="hint-box" style="margin-top:14px;"><strong>NAP 一致性檢查（做完目錄必做）：</strong>6 立案教室 × 所有目錄的 Name / Address / Phone 要完全一致；不可混用品牌寫法，不可電話格式不一（例：<code>02 7709 8229</code> vs <code>02-7709-8229</code> 擇一）。主責：依進度追蹤指派，季度檢查、年度一致性 95%+。</div>
+  <div class="hint-box" style="margin-top:14px;"><strong>NAP 一致性檢查：</strong>先建立 6 立案教室的 Name / Address / Phone 主檔；任何外部目錄送出前都必須對主檔，不可混用品牌寫法或電話格式。正式註冊需 Posh 或指定審核者核准。</div>
 </section>
 
 <section class="sec accent-magic">
-  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算 + KPI</h2></div>
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算處理 + KPI</h2></div>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>項目</th><th>NT$/年</th></tr>
-    <tr><td>P1 官網 / GBP / FB / 業務曝光</td><td class="num">0</td></tr>
-    <tr><td>P2 補齊品保協會 4-5 教室</td><td class="num">由實體出、不在此預算</td></tr>
-    <tr><td>8-12 個免費目錄補列</td><td class="num">0（組員工時）</td></tr>
-    <tr><td>NAP 一致性檢查</td><td class="num">0</td></tr>
-    <tr><th>合計（行銷部實際現金）</th><th class="num">~1 萬</th></tr>
+    <tr><th>項目</th><th>協作版交付物</th><th>預算狀態</th></tr>
+    <tr><td>P1 官網 / GBP / FB / 業務曝光</td><td>現況連結與缺口表</td><td>資料整理</td></tr>
+    <tr><td>P2 品保協會教室資料</td><td>待補教室、會員資訊、公開頁截圖</td><td>需內部確認</td></tr>
+    <tr><td>外部目錄候選</td><td>官方入口、公開欄位、帳號需求、審核人</td><td>送出前核准</td></tr>
+    <tr><td>NAP 一致性檢查</td><td>主檔 + 差異表</td><td>資料整理</td></tr>
   </table></div>
   <h3 style="font-size:15px;margin:14px 0 6px;">KPI</h3>
   <ul>

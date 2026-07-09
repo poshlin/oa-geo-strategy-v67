@@ -19,6 +19,9 @@
   <span class="nav-logo">GEO v6.7</span>
   <a href="../index.html">總覽</a>
   <a href="../dashboard.html">Dashboard</a>
+  <a href="../evidence.html">證據登錄</a>
+  <a href="../handoff-checklist.html">交辦檢查</a>
+  <a href="../decision-log.html">決策紀錄</a>
   <a href="../guide.html">編輯說明</a>
 </div>
 
@@ -29,11 +32,19 @@
   <h1><span class="num">6</span>GBP 11 直營完整化</h1>
   <div class="task-meta-row">
     <span class="badge b-priority">🥈 高 CP 支援</span>
-    <span class="badge b-geo">GEO +4</span>
-    <span class="badge b-budget">~2 萬/年</span>
+    <span class="badge b-geo">影響 中</span>
+    <span class="badge b-budget">預算待核</span>
     <span class="badge b-time">第一季衝刺、後續維護</span>
   </div>
-  <p class="task-tagline">⚠️ 重大法律確認：週末租場「絕對不能建獨立 GBP」（補習班法 5-25 萬罰 + Google 政策下架雙重風險）。6 立案教室全推 4 動作、守 2,244 評論 / 4.9★ 護城河。</p>
+  <p class="task-tagline">⚠️ 重要注意：週末租場不得自行建立獨立 GBP（補習班法與 Google 政策雙重風險）。協作版先做立案教室缺口盤點，實際登入與更新需商家權限確認。</p>
+</div>
+
+<div class="handoff-status blocked">
+  <span class="status-mark">0</span>
+  <div>
+    <strong>交辦狀態：草稿中，待立案與商家權限確認</strong>
+    <p>正式執行前，先確認每間教室立案狀態、GBP 管理權限與是否可合法代表該地點。週末租場不得建立獨立 GBP。</p>
+  </div>
 </div>
 
 <div class="state-track">
@@ -54,13 +65,13 @@
   <h3 style="font-size:15px;margin:10px 0 6px;">週末租場建獨立 GBP — 絕對不能</h3>
   <div class="tbl-wrap"><table class="tbl">
     <tr><th>法規 / 政策</th><th>罰則</th></tr>
-    <tr><td>補習及進修教育法第 24 條</td><td>5-25 萬罰鍰 + 命令停辦 + 沒入器材</td></tr>
+    <tr><td>補習及進修教育法相關規範</td><td>可能涉及裁罰、命令停辦或其他行政處分；正式判斷需查主管機關最新規定</td></tr>
     <tr><td>短期補習班設立及管理準則第 13 條</td><td>增設班舍須先核准</td></tr>
     <tr><td>短期補習班設立及管理準則第 10 條</td><td>立案證書必須登記班舍地址</td></tr>
     <tr><td>Google 商家檔案政策：<a href="https://support.google.com/business/answer/13762416?hl=zh-Hant" target="_blank" rel="noopener">代表商家的規範（answer/13762416）</a></td><td>「未擁有 / 未授權代表地點提供持續性服務」= 不合格商家、暫停或永久下架</td></tr>
   </table></div>
 
-  <p>實際案例：新北市 2 年查獲 90 家未立案、永和區語文班遭罰 25 萬。</p>
+  <p>協作版只保留風險紅線：非立案、非持續營業或未授權地點，不自行建立獨立 GBP。</p>
 
   <h3 style="font-size:15px;margin:14px 0 6px;">GBP 換地址 — 可遷移、評論保留、但有代價</h3>
   <ul>
@@ -107,16 +118,16 @@ flowchart TB
 </section>
 
 <section class="sec accent-hope">
-  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>4 動作完整化 SOP（拿了就能做）</h2></div>
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>GBP 缺口盤點 SOP（實際登入需授權）</h2></div>
 
   <div class="mermaid-wrap">
     <div class="mermaid">
 flowchart LR
-  S["登入 Google<br/>商家檔案"] --> A1["① Services<br/>填 9 大課程"]
-  A1 --> A2["② Owner Posts<br/>週 1-2 篇"]
-  A2 --> A3["③ Q&A<br/>主動自問自答"]
-  A3 --> A4["④ 教室實照<br/>各 8-15 張"]
-  A4 --> DONE["每教室<br/>4 動作全綠"]
+  S["盤點商家檔案<br/>權限與現況"] --> A1["① Services<br/>缺口表"]
+  A1 --> A2["② Owner Posts<br/>最近日期"]
+  A2 --> A3["③ Q&A<br/>缺題清單"]
+  A3 --> A4["④ 教室實照<br/>照片數與授權"]
+  A4 --> DONE["每教室<br/>缺口表完成"]
   style S fill:#FFB627,color:#fff,stroke:#FF6B35
   style A1 fill:#FF6B35,color:#fff,stroke:#E63946
   style A2 fill:#FF6B35,color:#fff,stroke:#E63946
@@ -126,64 +137,71 @@ flowchart LR
     </div>
   </div>
 
-  <div class="hint-box" style="margin-bottom:14px;">下面每個動作都寫清楚「<strong>去哪裡點、名詞是什麼意思、實際怎麼填</strong>」。藍字都是可直接點的 Google 官方說明。<br><strong>共同前置：</strong>先用橘蘋 Google 帳號登入 <a href="https://business.google.com/" target="_blank" rel="noopener">Google 商家檔案（business.google.com）</a>，或直接在 Google 搜尋「橘子蘋果 古亭」，商家管理者會看到「你的商家檔案」管理列。手機也可裝 Google 地圖 App，用同一帳號在「商家」分頁切換 11 間教室。第一次操作 Google 商家檔案，照著做即可。（<a href="https://support.google.com/business/answer/3039617?hl=zh-Hant" target="_blank" rel="noopener">如何登入 / 驗證商家</a>）</div>
+  <div class="hint-box" style="margin-bottom:14px;">協作版先做「<strong>欄位缺口、貼文日期、Q&amp;A 缺題、照片數量、授權狀態</strong>」盤點。實際登入、發文、改服務、上傳照片、回覆 Q&amp;A，需確認商家管理權限並由指定管理者執行。官方說明只作為盤點參考。（<a href="https://support.google.com/business/answer/3039617?hl=zh-Hant" target="_blank" rel="noopener">如何登入 / 驗證商家</a>）</div>
 
   <div class="scards">
-    <div class="scard"><h4>動作 ① · Services（服務項目）填滿 9 大課程</h4>
+    <div class="scard"><h4>盤點 ① · Services（服務項目）缺口表</h4>
       <p><strong>① 「Services」是什麼、為什麼重要：</strong>Services 是商家檔案裡列出「你提供哪些服務」的欄位。ChatGPT / Gemini 抓地圖資料判斷「這家教什麼」時，這欄是<strong>最直接的關鍵字來源</strong>。古亭目前只填「線上 + 門市」，等於告訴 AI「我們沒課程」。</p>
-      <p><strong>② 去哪填：</strong>登入後 → 商家管理列點「<strong>編輯商家檔案</strong>」→ 找「<strong>服務</strong>（Services）」分頁 → 「新增服務」。若看不到，先確認商家類別設為「兒童程式教育 / 補習班 / 電腦訓練學校」之類，Services 欄位才會出現。（<a href="https://support.google.com/business/answer/9455399?hl=zh-Hant" target="_blank" rel="noopener">新增或編輯服務項目官方說明</a>）</p>
-      <p><strong>③ 填哪 9 個（逐項新增，一項一列）：</strong>玩創程式、麥塊 Minecraft 程式、Roblox 遊戲程式、Scratch 程式設計、Python 程式設計、JavaScript 網頁程式、H5 互動網頁、AI 人工智慧課程、APCS 大學程式先修檢定。每項可加 1-2 句中性說明（適用年齡、上課形式），<strong>不要寫價格、優惠、電話</strong>（違反 Google 商家內容政策）。</p>
-      <p><strong>④ 全 6 立案教室都要做</strong>，內容一致即可，不必每間重寫。</p>
+      <p><strong>② 盤點什麼：</strong>每間教室是否有服務欄位、目前列了哪些課程、缺哪些核心課程、是否有價格或優惠等不宜內容。（<a href="https://support.google.com/business/answer/9455399?hl=zh-Hant" target="_blank" rel="noopener">新增或編輯服務項目官方說明</a>）</p>
+      <p><strong>③ 建議欄位：</strong>教室、目前服務項目、缺口、需補文案、是否需管理者登入、審核人。</p>
+      <p><strong>④ 實際新增服務</strong>需商家管理權限確認後，由指定管理者執行。</p>
     </div>
 
-    <div class="scard"><h4>動作 ② · Owner Posts（商家貼文）週 1-2 篇</h4>
+    <div class="scard"><h4>盤點 ② · Owner Posts（商家貼文）最近日期</h4>
       <p><strong>① 「Owner Posts」是什麼：</strong>就是商家檔案裡商家自己發的「<strong>最新動態</strong>」貼文（顯示在搜尋 / 地圖的商家卡片下方）。持續發文＝Google 眼中的「活躍商家」信號，實測互動率 +21%。</p>
-      <p><strong>② 去哪發：</strong>商家管理列 → 「<strong>新增最新動態 / 促銷 / 活動</strong>」（Add update）→ 選貼文類型 → 上傳 1 張圖 + 寫 100-300 字 + 可加一個按鈕（例：「進一步瞭解」連到官網課程頁）。（<a href="https://support.google.com/business/answer/7342169?hl=zh-Hant" target="_blank" rel="noopener">建立商家貼文官方說明</a>）</p>
-      <p><strong>③ 發什麼（月排程、每月備 4-8 則）：</strong>學員作品成果、課堂花絮照、營隊 / 說明會活動預告、得獎與媒體報導、課程小知識。<strong>一則一主題、一定配實照</strong>（勿用 AI 生成圖）。</p>
-      <p><strong>④ 多久一篇：</strong>每教室每週 1-2 篇（年 50-100 篇）。素材統一供稿、各教室套用即可，不必每間各拍。</p>
+      <p><strong>② 盤點什麼：</strong>每間教室最近貼文日期、貼文類型、是否有真實照片、是否有連到官網課程頁。（<a href="https://support.google.com/business/answer/7342169?hl=zh-Hant" target="_blank" rel="noopener">建立商家貼文官方說明</a>）</p>
+      <p><strong>③ 先整理素材：</strong>學員作品成果、課堂花絮照、營隊 / 說明會活動預告、得獎與媒體報導、課程小知識。實際發文需管理者核准。</p>
+      <p><strong>④ 交付物：</strong>貼文缺口表與素材清單，不是發文排程承諾。</p>
     </div>
 
-    <div class="scard"><h4>動作 ③ · Q&amp;A（問題與答案）主動經營</h4>
-      <p><strong>① 「Q&amp;A」是什麼：</strong>商家卡片上任何人都能發問的「<strong>問題與答案</strong>」區。重點：<strong>商家可以自己提問、自己回答</strong>——這不是作弊，是 Google 官方允許的「預先放上常見問題」做法，能搶先填滿正確資訊、避免路人亂回或競品洗負評。</p>
-      <p><strong>② 怎麼主動經營：</strong>用<strong>另一個個人 Google 帳號</strong>（非商家管理帳號）在商家卡片「提出問題」，再用商家身分回答並按讚，讓正解置頂。（<a href="https://support.google.com/business/?hl=zh-Hant" target="_blank" rel="noopener">Google 商家檔案說明中心（搜「問與答」）</a>）</p>
-      <p><strong>③ 放什麼（統一寫 30 題 FAQ、全教室共用）：</strong>幾歲可以上、要不要程式基礎、實體 / 線上怎麼選、補課規則、設備需求、師資與師生比、是否有品保協會認證、學員得獎 / 學術引用實績等。答案<strong>用中性事實</strong>，可附官網 FAQ 頁連結。</p>
-      <p><strong>④ 每週巡一次：</strong>看有沒有家長新提問或不實回答，24-48 小時內用商家身分回覆更正。</p>
+    <div class="scard"><h4>盤點 ③ · Q&amp;A（問題與答案）缺題清單</h4>
+      <p><strong>① 「Q&amp;A」是什麼：</strong>商家卡片上任何人都能發問的「<strong>問題與答案</strong>」區。協作版先整理家長常見問題與正確答案草稿，實際發布方式需依 Google 商家政策與管理者權限確認。</p>
+      <p><strong>② 組員現在做什麼：</strong>只整理常見問題候選與現有 Q&amp;A 缺口，不使用個人帳號提問，也不自行用商家身分回答。（<a href="https://support.google.com/business/?hl=zh-Hant" target="_blank" rel="noopener">Google 商家檔案說明中心（搜「問與答」）</a>）</p>
+      <p><strong>③ 可整理題目：</strong>幾歲可以上、要不要程式基礎、實體 / 線上怎麼選、補課規則、設備需求、師資與師生比、是否有品保協會認證、學員得獎 / 學術引用實績等。答案用中性事實，可附官網 FAQ 頁連結。</p>
+      <p><strong>④ 實際 Q&amp;A 操作：</strong>需商家權限與政策確認後，由指定管理者執行。</p>
     </div>
 
-    <div class="scard"><h4>動作 ④ · 教室實照（真實拍攝、嚴禁 AI 生成）</h4>
+    <div class="scard"><h4>盤點 ④ · 教室實照（真實拍攝、嚴禁 AI 生成）</h4>
       <p><strong>① 為什麼要實照：</strong>真實店面 / 教室 / 上課照，是 Google 判斷「這是真實存在的實體商家」的信號，也直接影響家長點閱信任。<strong>禁用 AI 生成圖</strong>（違反真實性、且與品牌鐵則衝突）。</p>
       <p><strong>② 拍什麼（每教室 8-15 張）：</strong>門面招牌、教室內部、上課實況、學員作品牆 / 得獎牆、品保協會認證 / 立案證書、老師教學特寫。橫幅為主、光線充足、避免拍到可辨識未成年臉部（或先取得家長同意）。</p>
-      <p><strong>③ 去哪上傳：</strong>商家管理列 → 「<strong>新增相片</strong>」→ 分「封面 / 標誌 / 團隊 / 內部 / 外觀」類別分別上傳。手機用 Google 地圖 App 的「商家 → 相片 → 新增」也可。（<a href="https://support.google.com/business/answer/6103862?hl=zh-Hant" target="_blank" rel="noopener">新增商家相片官方說明</a>）</p>
-      <p><strong>④ 頻率：</strong>初次建檔補齊、之後每年至少更新一次（新活動 / 新裝潢隨時補）。11 教室 + 馬來西亞依進度追蹤指派排程拍攝。</p>
+      <p><strong>③ 先盤點：</strong>每間教室現有照片數、照片類型、是否過舊、是否有未成年肖像授權問題。（<a href="https://support.google.com/business/answer/6103862?hl=zh-Hant" target="_blank" rel="noopener">新增商家相片官方說明</a>）</p>
+      <p><strong>④ 實際拍攝 / 上傳：</strong>需排程、肖像授權與商家權限確認後才執行。</p>
     </div>
   </div>
 
-  <div class="hint-box"><strong>做完自檢：</strong>每間立案教室在自家商家檔案上，Services 9 項齊、近 30 天有 Owner Posts、Q&amp;A 有置頂常見問題、相片 ≥ 8 張＝該教室 4 動作完成。</div>
+  <div class="hint-box"><strong>做完自檢：</strong>每間立案教室都有缺口表：Services 缺口、最近貼文日期、Q&amp;A 缺題、照片數量與授權狀態。實際補齊不在協作版自行執行範圍。</div>
 </section>
 
 <section class="sec accent-trust">
-  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算明細（5 萬/年）</h2></div>
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算處理原則</h2></div>
   <div class="tbl-wrap"><table class="tbl">
-    <tr><th>動作</th><th>工具</th><th>NT$/年</th></tr>
-    <tr><td>11 教室 dashboard 統管</td><td>Google 商家檔案 app（多店切換內建）</td><td class="num">0</td></tr>
-    <tr><td>評論回覆 AI 草稿</td><td>Claude / ChatGPT（已有）</td><td class="num">0</td></tr>
-    <tr><td>Owner Posts 排程</td><td>Google 自家排程</td><td class="num">0</td></tr>
-    <tr><td>評論邀請</td><td>任務 3 家長平台自動觸發</td><td class="num">0</td></tr>
-    <tr><td>實照拍攝 11 教室</td><td>內部自拍（含薪資），僅交通雜支</td><td class="num">1-2 萬</td></tr>
-    <tr><td>Q&A 內容撰寫</td><td>AI 統一寫 30 題</td><td class="num">0</td></tr>
-    <tr><th>合計</th><th></th><th class="num">~2 萬</th></tr>
+    <tr><th>動作</th><th>協作版交付物</th><th>預算狀態</th></tr>
+    <tr><td>商家檔案統管</td><td>帳號 / 權限 / 教室清單盤點</td><td>需 Posh 確認</td></tr>
+    <tr><td>評論回覆草稿</td><td>中性回覆範本與政策紅線</td><td>資料整理</td></tr>
+    <tr><td>Owner Posts</td><td>素材清單與缺口表</td><td>需管理者核准</td></tr>
+    <tr><td>實照拍攝</td><td>照片缺口與授權問題清單</td><td>需排程核准</td></tr>
+    <tr><td>Q&amp;A 內容</td><td>FAQ 候選題與答案草稿</td><td>需政策確認</td></tr>
   </table></div>
-  <div class="hint-box"><strong>第二年升級條件：</strong>評論成長 &lt; 月 30 篇、完全沒在發 Posts、或想開始競品 GBP 自動監控 → 升級工具 10-15 萬/年（Whitespark / 台灣 CooKai）</div>
+  <div class="hint-box"><strong>工具升級：</strong>若未來需要多店監控、排程或競品追蹤，先列需求與候選工具；不得自行採購或開通付費方案。</div>
 </section>
 
 <section class="sec accent-magic">
   <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI</h2></div>
   <ul>
-    <li>✅ 年度 6+1 立案教室 100% 完成 4 項動作</li>
-    <li>✅ Owner Posts 週 1-2 篇（年 50-100 篇）</li>
-    <li>✅ 評論數成長 30-50% / 年（從 2,244 → 3,000-3,400）</li>
-    <li>✅ 4.9★ 維持</li>
-    <li>✅ 古亭 Services 從 2 項補到 9 項</li>
+    <li>✅ 立案教室 100% 完成 GBP 權限與欄位缺口表</li>
+    <li>✅ 每間教室完成最近貼文日期、照片數量、Q&amp;A 缺題盤點</li>
+    <li>✅ 評論政策紅線與自願評論入口文案完成審核</li>
+    <li>✅ 照片授權問題清單完成</li>
+    <li>✅ 古亭 Services 缺口與建議文案完成審核</li>
+  </ul>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📚</span><h2>政策來源 / 最後確認日</h2></div>
+  <ul>
+    <li>最後確認：2026-07-06。</li>
+    <li>Google 地圖使用者提供內容政策：禁止不實互動、以金錢 / 折扣 / 免費商品或服務交換評論，也禁止選擇性募集好評。來源：<a href="https://support.google.com/contributionpolicy/answer/7400114?hl=zh-Hant" target="_blank" rel="noopener">Google 地圖使用者提供內容政策</a>。</li>
+    <li>Google 商家檔案規範與地址 / 商家資格政策需在正式更新前再確認一次。來源：<a href="https://support.google.com/business/answer/13762416?hl=zh-Hant" target="_blank" rel="noopener">Google 商家檔案代表商家規範</a>。</li>
   </ul>
 </section>
 
