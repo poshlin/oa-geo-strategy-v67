@@ -55,6 +55,7 @@
 - `shared/state.js` 改成協作版：角色泛化、預算表不輸出精準數字。
 - （Claude 2026-07-09）`guide.html` 頂部狀態列下方新增一個 hint-box：「協作前先讀 SYNC.md」。原因：讓組員/Claude/Codex 接手前先對齊事實來源。影響：僅新增一段 hint-box（純內容、無 JS/CSS/邏輯變動）、保留 noindex。
 - （Claude 2026-07-09）`shared/state.js` 的 `ROLES` 主責選項改為實際人員：待定 / Posh / Trance / Jinjin / Albert（取代原泛化角色）。原因：Posh 要用真實成員指派。影響：進度追蹤與 Dashboard 的主責下拉選項；各任務預設 owner 仍為「待定」、無資料遺失。
+- （Claude 2026-07-09）全站 17 個 HTML 的 `shared/styles.css` 與 `shared/state.js` 引用加 `?v=20260709` 快取破壞。原因：改 JS/CSS 後瀏覽器/CDN 常快取舊版（今日已遇到一次 Pages 建置卡住 + 快取誤判「沒推上去」）。影響：純前端引用字串；**日後每次改 styles.css / state.js，要把所有 HTML 的 `?v=` 版本號一起 bump**（否則團隊成員可能看到舊版）。
 
 ---
 
