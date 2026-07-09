@@ -13,6 +13,8 @@
 - repo 內版本不放：完整人脈策略、私人關係、精準 ROI、成交數、預算底線、談判話術、負面黑名單。
 - 完整內部版備份位置：`/Users/posh.lin/Documents/OA_GEO_internal_archives/oa-geo-strategy-v6.7-full-internal-20260706/`。
 - 改 HTML / JS / CSS 後，要回本檔記錄「改什麼 + 原因 + 影響範圍」。
+- **部署**：`git push origin main` → GitHub Pages 自動建置（repo `poshlin/oa-geo-strategy-v67`、分支 `main`）。
+- **建置檢查紀律（Codex 訂、Claude 與 Codex 共同遵守）**：**禁止高頻自動重試觸發 build**。流程：①`git ls-remote origin refs/heads/main` 取 HEAD ②`gh api repos/poshlin/oa-geo-strategy-v67/pages/builds/latest --jq '{status,commit,created_at,updated_at,error}'` ③只有 latest build commit ≠ HEAD 才手動 `gh api -X POST .../pages/builds` 一次 ④`status=building` 且 GitHub Actions 官方異常 → 等 2-5 分鐘再查、不連續重觸發 ⑤只有 `errored` 或 commit 非最新才重觸發一次 ⑥成功後 `curl -L '…github.io/…?v=COMMIT'` grep 最新文字驗證。
 
 ---
 
