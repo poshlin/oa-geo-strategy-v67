@@ -23,6 +23,7 @@
 - **GEO 分數不在協作版公開**：首頁、任務卡與 `shared/state.js` 已從精準加分改為「影響高 / 中高 / 中 / 補強」。
 - **交辦權限獨立於進度**：`shared/state.js` 新增 `handoffStatus`，Dashboard 顯示「僅可資料整理 / 待 Posh 核准 / 可交辦」等權限狀態。
 - **主責＝實際人員**（2026-07-09 Posh 指示，取代原「角色泛化」）：進度追蹤主責下拉改為 **待定 / Posh / Trance / Jinjin / Albert**。（原泛化角色「主管/審核者、內容整理、影音整理、資料補鏈、高層待確認、其他」已淘汰。）
+- **任務 3 拆分為 3A / 3B**（2026-07-09 Posh 指示）：3A＝家長社群 UGC（原任務 3 保留、`tasks/03-parents-bloggers.html`）、3B＝親子部落格邀稿（獨立新頁 `tasks/03b-parents-bloggers-3b.html`、state.js key `03b`）。**全站任務數 11 → 12。**
 - **協作版統一原則**：組員現在只做資料整理、截圖、連結、缺口表、候選表、待審文案；對外寄信、私訊、詢價、登入後台、發文、送件、上架官網、談預算都需 Posh 核准。
 - **任務 5 高敏感合作**：協作版只保留資料整理、證據補齊、一頁提案，不放人脈圖、具體窗口、談判路線。
 - **任務 8 KOL**：協作版只保留候選盤點、揭露規範、追蹤方式、合約紅線；不放精準內部 ROI、成交數、報價分配或負面名單。
@@ -55,7 +56,8 @@
 - `shared/state.js` 改成協作版：角色泛化、預算表不輸出精準數字。
 - （Claude 2026-07-09）`guide.html` 頂部狀態列下方新增一個 hint-box：「協作前先讀 SYNC.md」。原因：讓組員/Claude/Codex 接手前先對齊事實來源。影響：僅新增一段 hint-box（純內容、無 JS/CSS/邏輯變動）、保留 noindex。
 - （Claude 2026-07-09）`shared/state.js` 的 `ROLES` 主責選項改為實際人員：待定 / Posh / Trance / Jinjin / Albert（取代原泛化角色）。原因：Posh 要用真實成員指派。影響：進度追蹤與 Dashboard 的主責下拉選項；各任務預設 owner 仍為「待定」、無資料遺失。
-- （Claude 2026-07-09）全站 17 個 HTML 的 `shared/styles.css` 與 `shared/state.js` 引用加 `?v=20260709` 快取破壞。原因：改 JS/CSS 後瀏覽器/CDN 常快取舊版（今日已遇到一次 Pages 建置卡住 + 快取誤判「沒推上去」）。影響：純前端引用字串；**日後每次改 styles.css / state.js，要把所有 HTML 的 `?v=` 版本號一起 bump**（否則團隊成員可能看到舊版）。
+- （Claude 2026-07-09）全站 HTML 的 `shared/styles.css` 與 `shared/state.js` 引用加 `?v=` 快取破壞。原因：改 JS/CSS 後瀏覽器/CDN 常快取舊版（今日已遇到一次 Pages 建置卡住 + 快取誤判「沒推上去」）。影響：純前端引用字串；**日後每次改 styles.css / state.js，要把所有 HTML 的 `?v=` 版本號一起 bump**（否則團隊成員可能看到舊版）。**目前版本號＝`20260709b`。**
+- （Claude 2026-07-09）**任務 3 拆分**：`state.js` 加 `03b` 任務 + slug/短標/卡片 regex（`/(\d{2}[a-z]?)-/`）；新建 `tasks/03b-parents-bloggers-3b.html`（3B：KOL 候選、邀稿 SOP、揭露規範）；`tasks/03-parents-bloggers.html` 重寫為 3A（保留 UGC 引擎 + 季度活動 + 家長評論合規）；`index.html` 加 3B 卡片、「11 任務」→「12 任務」；`dashboard.html`/`guide.html` 任務數更新；`tasks/04` 上一任務導覽改指 03b。影響：dashboard 動態渲染會自動多出 #03b 卡；任務數 12。因改了 state.js，`?v=` bump 為 `20260709b`。
 
 ---
 

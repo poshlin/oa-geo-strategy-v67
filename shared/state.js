@@ -18,7 +18,8 @@ const HANDOFF_STATUSES = {
 const TASK_DEFAULTS = {
   "01": {title:"Wikipedia 條目建立", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響高", budget:"待核", budgetMin:0, budgetMax:0},
   "02": {title:"PR 子 B 記者主動採訪", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
-  "03": {title:"真實家長社群 + 親子部落格", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
+  "03": {title:"真實家長社群 UGC（3A）", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
+  "03b": {title:"親子部落格邀稿（3B）", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
   "04": {title:"PR 子 A 付費深度報導", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
   "05": {title:"話語權工程", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:1, geo:"影響高", budget:"待核", budgetMin:0, budgetMax:0},
   "06": {title:"GBP 11 直營完整化", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
@@ -229,7 +230,7 @@ function initDashboard(){
 
 function getTaskSlug(id){
   const slugs = {
-    "01":"wikipedia", "02":"pr-records", "03":"parents-bloggers", "04":"paid-reports",
+    "01":"wikipedia", "02":"pr-records", "03":"parents-bloggers", "03b":"parents-bloggers-3b", "04":"paid-reports",
     "05":"authority", "06":"gbp", "07":"citation", "08":"kol",
     "09":"video", "10":"awards", "11":"academic"
   };
@@ -240,7 +241,8 @@ function getTaskShortTitle(title){
   const map = {
     "Wikipedia 條目建立":"Wiki",
     "PR 子 B 記者主動採訪":"PR-B 記者",
-    "真實家長社群 + 親子部落格":"家長社群",
+    "真實家長社群 UGC（3A）":"家長社群 3A",
+    "親子部落格邀稿（3B）":"部落格邀稿 3B",
     "PR 子 A 付費深度報導":"PR-A 深度",
     "話語權工程":"話語權",
     "GBP 11 直營完整化":"GBP",
@@ -260,7 +262,7 @@ function updateTaskCardOwners(){
   const state = loadState();
   document.querySelectorAll('a.task-card').forEach(card => {
     const href = card.getAttribute('href') || '';
-    const m = href.match(/(\d{2})-/);
+    const m = href.match(/(\d{2}[a-z]?)-/);
     if(!m) return;
     const id = m[1];
     const t = state.tasks[id];

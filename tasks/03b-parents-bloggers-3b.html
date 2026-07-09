@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>任務 3B · 親子部落格邀稿 · GEO v6.7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/styles.css?v=20260709b">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+</head>
+<body>
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+
+<div class="nav">
+  <span class="nav-logo">GEO v6.7</span>
+  <a href="../index.html">總覽</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../evidence.html">證據登錄</a>
+  <a href="../handoff-checklist.html">交辦檢查</a>
+  <a href="../decision-log.html">決策紀錄</a>
+  <a href="../guide.html">編輯說明</a>
+</div>
+
+<div class="wrap-narrow">
+
+<div class="task-hero">
+  <div class="crumb"><a href="../index.html">總覽</a> › <a href="../dashboard.html">Dashboard</a> › 任務 3B</div>
+  <h1><span class="num">3B</span>親子部落格邀稿</h1>
+  <div class="task-meta-row">
+    <span class="badge b-priority">🥈 高 CP 支援</span>
+    <span class="badge b-geo">影響 中高</span>
+    <span class="badge b-budget">預算待核</span>
+    <span class="badge b-time">全年滾動</span>
+  </div>
+  <p class="task-tagline">從 <a href="03-parents-bloggers.html">任務 3A 家長社群 UGC</a> 獨立出來的部落格邀稿線。協作版只做：親子 KOL 候選盤點、官方連結、受眾推估、揭露方式與素材授權整理；不自行私訊、詢價或承諾體驗。</p>
+</div>
+
+<div class="handoff-status blocked">
+  <span class="status-mark">0</span>
+  <div>
+    <strong>交辦狀態：草稿中，待 KOL 揭露與授權確認</strong>
+    <p>正式對外邀稿前，需先確認揭露方式、素材授權、體驗名額與費用；體驗名額、篇數、報價與合作承諾需 Posh 核准。</p>
+  </div>
+</div>
+
+<div class="state-track">
+  <h2>📍 進度追蹤</h2>
+  <div class="state-grid">
+    <div class="state-field"><label>主責</label><select id="task-owner"></select></div>
+    <div class="state-field"><label>狀態</label><select id="task-status"></select></div>
+    <div class="state-field"><label>進度 <span id="progress-display">0%</span></label><input type="range" id="task-progress" min="0" max="100" step="5"></div>
+    <div class="state-field"><label>最後更新</label><div class="display" id="task-last-update">尚未更新</div></div>
+  </div>
+  <textarea id="task-note" placeholder="備註 / 卡住原因（例如：KOL 官方連結待補、揭露方式待審）"></textarea>
+  <div class="state-actions" id="state-actions"></div>
+</div>
+
+<section class="sec accent-orange">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>為什麼做這個</h2></div>
+  <p>親子部落格深度體驗文對 GEO 特別有價值：部落格 / YouTube 是<strong>可被 Google 收錄、可被 LLM 抓取</strong>的公開內容，比 FB / IG 封閉貼文更容易被 AI 引用。這條線的重點不是衝一次性轉換、而是<strong>累積可查證、可揭露的第三方口碑內容</strong>。</p>
+  <p>協作版明確不採用任何假帳號、未揭露推薦或難以查證的口碑操作。所有 KOL 體驗、部落格文章都必須可揭露、可授權、可追蹤。</p>
+</section>
+
+<section class="sec accent-trust">
+  <div class="sec-h"><span class="sec-emoji">📝</span><h2>親子 KOL 候選盤點表</h2></div>
+  <div class="hint-box" style="margin-bottom:12px;">名單僅供<strong>候選資料整理</strong>。可以補官方連結、受眾、內容風格、近期業配密度與揭露方式；不得自行私訊、詢價、承諾體驗名額或談合作。</div>
+
+  <h3 style="margin:10px 0 8px;font-size:15px;">第一批候選（待審核）</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>KOL</th><th>平台連結</th><th>受眾 / 子女</th><th>為什麼匹配</th><th>待補資料</th><th>建議下一步</th></tr>
+    <tr><td>卡氏一家</td><td><a href="https://www.instagram.com/kandcfamily/" target="_blank" rel="noopener">IG @kandcfamily</a> · <a href="https://mamibuy.com.tw/home/269900" target="_blank" rel="noopener">媽咪拜 269900</a></td><td>女 10 / 男 8</td><td>教育教養型、年齡對位、爸爸視角</td><td>近期業配密度、揭露方式、互動截圖</td><td>送 Posh 審核</td></tr>
+    <tr><td>別讓一姐不開心</td><td>媽咪拜駐站（連結待補）</td><td>女 9 / 男 6</td><td>教養專家、爸爸視角、女兒國小</td><td>官方連結、近期內容、揭露方式</td><td>送 Posh 審核</td></tr>
+    <tr><td>豆芽媽（幼教碩士）</td><td>媽咪拜駐站 / 痞客邦（連結待補）</td><td>女 11 / 男 6</td><td><strong>幼教碩士</strong>、教育權威</td><td>官方連結、內容調性、合作案例</td><td>送 Posh 審核</td></tr>
+    <tr><td>焦糖綠玫瑰</td><td>媽咪拜駐站（連結待補）</td><td>女 12</td><td>專欄作家、兒童社會議題、高年級</td><td>官方連結、近三個月貼文截圖</td><td>送 Posh 審核</td></tr>
+    <tr><td>Amber 媽咪愛</td><td>FB / IG（連結待補）</td><td>不詳</td><td>親子共讀 + 手作、shinekol 2025 排行</td><td>官方連結、受眾年齡、揭露方式</td><td>送 Posh 審核</td></tr>
+  </table></div>
+
+  <h3 style="margin:14px 0 8px;font-size:15px;">第二批候選（待補資料）</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>KOL</th><th>平台連結</th><th>強項</th><th>待補資料</th><th>建議下一步</th></tr>
+    <tr><td>豆豆媽咪（吳霈蓁）</td><td>（連結待補）</td><td>醫藥記者 / 健康節目 /《跟著醫師養小孩》</td><td>官方連結、內容調性、合作揭露案例</td><td>送 Posh 審核</td></tr>
+    <tr><td>晴媽咪</td><td>（連結待補）</td><td>教養專家、著作背景</td><td>官方連結、受眾年齡、近期業配密度</td><td>送 Posh 審核</td></tr>
+    <tr><td>彭凱莉</td><td>（連結待補）</td><td>食育講師、媒體工作者、親子內容</td><td>官方連結、互動截圖、揭露方式</td><td>送 Posh 審核</td></tr>
+    <tr><td>Yun Chou</td><td>（連結待補）</td><td>互動表現待查證</td><td>官方連結、互動截圖、受眾輪廓</td><td>送 Posh 審核</td></tr>
+    <tr><td>婷婷（Tiffany）</td><td>痞客邦（連結待補）</td><td>親子類內容、三寶媽</td><td>官方連結、合作案例、揭露方式</td><td>送 Posh 審核</td></tr>
+  </table></div>
+
+  <h3 style="margin:14px 0 8px;font-size:15px;">補位候選（待補資料）</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>KOL</th><th>平台連結</th><th>備註</th><th>待補資料</th><th>建議下一步</th></tr>
+    <tr><td>三明治爸爸</td><td><a href="https://sandwichfather.pixnet.net/" target="_blank" rel="noopener">痞客邦 sandwichfather</a></td><td><strong>已寫過橘蘋</strong> 2024/7、可評估是否需更新案例</td><td>授權狀態、原文連結、可否二次運用</td><td>送 Posh 審核</td></tr>
+    <tr><td>荳迪媽</td><td>媽咪拜 / 痞客邦（連結待補）</td><td>親子與手作內容</td><td>官方連結、近期內容、揭露方式</td><td>送 Posh 審核</td></tr>
+    <tr><td>朱李一家</td><td>IG（連結待補）</td><td>互動表現待查證</td><td>官方連結、互動截圖、受眾輪廓</td><td>送 Posh 審核</td></tr>
+  </table></div>
+
+  <h3 style="margin:14px 0 8px;font-size:15px;">🔗 接洽平台 / 管道</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>管道</th><th>連結</th><th>用途</th></tr>
+    <tr><td>媽咪拜駐站部落客</td><td><a href="https://mamibuy.com.tw/talk/master/?t=blogger" target="_blank" rel="noopener">mamibuy.com.tw/talk/master</a></td><td>可批量找駐站部落客、第一梯隊多數在此</td></tr>
+    <tr><td>試媒體部落客學院</td><td><a href="https://blogger-trymedia.tw/" target="_blank" rel="noopener">blogger-trymedia.tw</a></td><td>候選平台；合約、年費與合作條件需 Posh 另行核准</td></tr>
+    <tr><td>IG / FB 官方頁</td><td>各 KOL 主頁（見上表）</td><td>只整理官方頁與公開聯絡方式；不得自行私訊</td></tr>
+    <tr><td>痞客邦親子分類</td><td><a href="https://www.pixnet.net/" target="_blank" rel="noopener">痞客邦首頁</a>（站內搜「親子」找部落客）</td><td>海量素人 / 微網紅補位來源</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📋</span><h2>邀稿 SOP（6 步）</h2></div>
+  <div class="hint-box" style="margin-bottom:12px;">從「挑對人」到「二次運用」的完整流程。每一步都寫清楚要做什麼、避開什麼。</div>
+  <div class="scards">
+    <div class="scard"><h4>Step 1 · 確認 KOL 類型適配</h4><p><strong>知識 / 才藝分享型優先</strong>（繪本、英文啟蒙、教育）＝適配最高；專業權威型（幼教、治療師）次之。避開純「崩潰育兒日常型」與「高端童裝質感型」。</p></div>
+    <div class="scard"><h4>Step 2 · 評估過往案例</h4><p>翻該 KOL 近期貼文、<strong>避免常接低品質業配</strong>的（一週三篇不同品牌＝讀者信任低）。看有沒有真的帶孩子做、而非純念稿。</p></div>
+    <div class="scard"><h4>Step 3 · 整理合作 brief 草稿</h4><p>只整理候選合作形式、揭露要求、素材需求與授權問題清單。體驗名額、篇數、報價與合作承諾需 Posh 核准後才可對外提出。</p></div>
+    <div class="scard"><h4>Step 4 · 拍攝腳本</h4><p>核心：<strong>孩子真實上課 + 家長真實感受 + 不照念劇本</strong>。只給主題方向與必提重點、不給整段台詞（照念＝假、觸法又沒說服力）。</p></div>
+    <div class="scard warn"><h4>Step 5 · 強制揭露</h4><p>成品<strong>必須</strong>寫明「本文為橘子蘋果程式學苑邀稿體驗」（正確寫法範本見下）。上稿前逐篇檢查揭露字樣、缺一篇都不放行。</p></div>
+    <div class="scard green"><h4>Step 6 · 二次運用</h4><p>取得授權後<strong>官網轉載 + 收進年度案例</strong>、放大單篇邀稿的長尾價值。</p></div>
+  </div>
+
+  <h3 style="margin:16px 0 8px;font-size:15px;">✍️ 強制揭露的正確寫法範本（直接給 KOL）</h3>
+  <div class="scard"><h4>可直接貼給 KOL 的揭露句型</h4>
+    <p>✅ 文章開頭或結尾明顯處擇一標示：</p>
+    <p><code>本文為與橘子蘋果程式學苑的邀稿體驗合作、實際上課心得由本人撰寫。</code></p>
+    <p><code>#橘子蘋果程式學苑 #邀稿體驗 #廠商合作</code></p>
+    <p style="margin-top:6px;">✅ 短影音 / IG 限動：口播或字卡標「<strong>#廣告</strong>」或「<strong>與橘子蘋果合作</strong>」、不可只放在留言區小字。</p>
+    <p style="font-size:13px;color:var(--mute);margin-top:6px;">❌ 錯誤示範：把揭露藏在文末 hashtag 海、或只寫「感謝廠商」不具名——公平會實務認定為<strong>揭露不足</strong>。</p>
+  </div>
+
+  <h3 style="margin:16px 0 8px;font-size:15px;">⚖️ 揭露合規界線表（哪些要標、哪些不用）</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>情境</th><th>要揭露？</th><th>為什麼</th></tr>
+    <tr><td>廠商付錢 / 提供免費課程體驗</td><td>✅ 強制揭露</td><td>涉及公平交易法廣告與薦證責任，正式文案需審核</td></tr>
+    <tr><td>GBP 評論用對價交換</td><td>❌ 不做</td><td>Google 評論不得用優惠、贈品、折扣、抽獎或任何對價交換；只提供自願分享入口與靈感提示（家長評論屬 <a href="03-parents-bloggers.html">任務 3A</a>）</td></tr>
+    <tr><td>家長自費自願寫</td><td>❌ 不需</td><td>無利益關係</td></tr>
+    <tr><td>橘蘋自製學員家庭專訪</td><td>❌ 不需</td><td>廠商自製內容、非第三方推薦</td></tr>
+  </table></div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">⚖️</span><h2>揭露合規鐵則（KOL 邀稿）</h2></div>
+  <ul>
+    <li>✅ 廠商付錢 / 提供免費課程體驗 → <strong>強制揭露</strong>（涉及公平交易法廣告與薦證責任，正式文案需審核）</li>
+    <li>✅ KOL 寫文必加「#廠商贊助」或「#體驗合作」</li>
+    <li>✅ 不可偽裝為一般家長</li>
+    <li>❌ 不可用假帳號、代發口碑或未揭露推薦</li>
+  </ul>
+</section>
+
+<section class="sec accent-warn">
+  <div class="sec-h"><span class="sec-emoji">💰</span><h2>預算處理原則</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>項目</th><th>協作版處理</th></tr>
+    <tr><td>親子 KOL / 部落格邀稿</td><td>先整理候選名單、官方連結、揭露方式與素材授權</td></tr>
+    <tr><td>課程體驗</td><td>需確認揭露、授權、名額與成本，不由組員自行承諾</td></tr>
+    <tr><td>全年滾動</td><td>預算由 Posh 另行核准，協作版不公開精準數字</td></tr>
+  </table></div>
+  <div class="hint-box">💡 先整理候選與流程，不自行詢價、承諾體驗名額或談報價。</div>
+</section>
+
+<section class="sec accent-magic">
+  <div class="sec-h"><span class="sec-emoji">🎯</span><h2>KPI</h2></div>
+  <ul>
+    <li>✅ 年 10-15 篇 KOL 邀稿、其中 3-5 篇為知識/才藝分享型</li>
+    <li>✅ KOL 候選名單、官方連結、揭露方式與追蹤欄位補齊</li>
+    <li>✅ 所有業配 100% 標 #廣告 / #業配 合規揭露</li>
+    <li>✅ 邀稿文優先落在部落格 / YouTube（可被搜尋、可被 LLM 引用）</li>
+  </ul>
+</section>
+
+<section class="sec accent-gold">
+  <div class="sec-h"><span class="sec-emoji">📚</span><h2>政策來源 / 最後確認日</h2></div>
+  <ul>
+    <li>最後確認：2026-07-06。</li>
+    <li>台灣《公平交易法》第 21 條：廣告不得有虛偽不實或引人錯誤表示，廣告薦證者也可能涉及責任。來源：<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150002" target="_blank" rel="noopener">全國法規資料庫 · 公平交易法</a>。</li>
+    <li>FTC influencer disclosure guide 可作為跨平台揭露參考；台灣正式對外文案仍以台灣法規與 Posh 審核為準。來源：<a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" target="_blank" rel="noopener">FTC Disclosures 101</a>。</li>
+  </ul>
+</section>
+
+<div class="changelog">
+  <h3>📝 修改記錄</h3>
+  <p class="hint">每次修改任務細節後、在此記一行：日期 · 改了什麼 · 誰改的</p>
+  <textarea>2026-07-09 · 從任務 3 拆分獨立（3B 親子部落格邀稿）· Claude / Posh
+</textarea>
+</div>
+
+<nav class="task-bottom-nav">
+  <a href="03-parents-bloggers.html" class="prev">上一任務：3A 家長社群 UGC</a>
+  <a href="04-paid-reports.html" class="next">下一任務：PR 子 A 付費深度報導</a>
+</nav>
+
+</div>
+
+<script src="../shared/state.js?v=20260709b"></script>
+<script>
+  initTaskPage('03b');
+  renderStateActions();
+  if(window.mermaid){window.mermaid.initialize({startOnLoad:true, theme:'default', fontFamily:'Noto Sans TC'});}
+</script>
+</body>
+</html>
