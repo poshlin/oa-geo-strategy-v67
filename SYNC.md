@@ -65,6 +65,7 @@
 
 ## 3. 尚未完成
 
+- 🔴 **急件（時效）：HolonIQ 2026 Taiwan EdTech 50 送件，截止 2026/7/31 23:50**（蘋果芽數位科技符合資格、2023 已入選；報名窗口 Google「HolonIQ 2026 Taiwan EdTech 50 徵件」或問 COO 前次管道）。這就是 2026 的獎項主戰場；未來教育・臺灣 100 兩年一屆、下屆 2027。
 - 補任務 3、8、9、10、7 的待補公開連結與截圖。
 - 將 Scratch、兒童程式 pillar、APCS、Python、ITS JavaScript 等內容層搬到 `orangeapple.co` 官網規劃。
 - 登入確認酷課雲現況。
