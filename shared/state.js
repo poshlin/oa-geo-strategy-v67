@@ -27,7 +27,7 @@ const TASK_DEFAULTS = {
   "08": {title:"合規 KOL 業配", owner:"待定", status:"未開始", handoffStatus:"review", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中高", budget:"待核", budgetMin:0, budgetMax:0},
   "09": {title:"影片 4 軌 + Medium 重啟", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:2, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0},
   "10": {title:"產業獎項 HolonIQ 全曝光", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響補強", budget:"待核", budgetMin:0, budgetMax:0},
-  "11": {title:"學術引用 5 篇 + 創辦人研究", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0}
+  "11": {title:"學術引用 5 篇 + CEO 研究", owner:"待定", status:"未開始", handoffStatus:"research", progress:0, lastUpdate:"", note:"", priority:3, geo:"影響中", budget:"待核", budgetMin:0, budgetMax:0}
 };
 
 function loadState(){
@@ -250,7 +250,7 @@ function getTaskShortTitle(title){
     "合規 KOL 業配 Miula 模式":"KOL",
     "影片 4 軌 + Medium 重啟":"影片 4 軌",
     "產業獎項 HolonIQ 全曝光":"獎項",
-    "學術引用 5 篇 + 創辦人研究":"學術"
+    "學術引用 5 篇 + CEO 研究":"學術"
   };
   return map[title] || title;
 }
