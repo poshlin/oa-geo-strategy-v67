@@ -6,6 +6,17 @@
 const STORAGE_KEY = 'oa-geo-v67-state';
 
 const ROLES = ['待定', 'Posh', 'Trance', 'Jinjin', 'Albert'];
+
+/* 每位主責一種顏色（總覽卡片徽章 + 任務頁「目前實際指派」共用）*/
+const OWNER_COLORS = {
+  'Posh':   {bg:'linear-gradient(135deg,#FF6B35,#E63946)', bd:'#E85D2C', soft:'rgba(255,107,53,0.12)'},
+  'Trance': {bg:'linear-gradient(135deg,#3B82F6,#1D4ED8)', bd:'#2563EB', soft:'rgba(59,130,246,0.12)'},
+  'Jinjin': {bg:'linear-gradient(135deg,#A855F7,#7C3AED)', bd:'#8B3EEA', soft:'rgba(168,85,247,0.12)'},
+  'Albert': {bg:'linear-gradient(135deg,#14B8A6,#0D9488)', bd:'#0E9E90', soft:'rgba(20,184,166,0.12)'}
+};
+function ownerColor(name){
+  return OWNER_COLORS[name] || {bg:'linear-gradient(135deg,#FF6B35,#E63946)', bd:'#E85D2C', soft:'rgba(255,107,53,0.12)'};
+}
 const STATUSES = ['未開始', '進行中', '卡住', '完成'];
 const HANDOFF_STATUSES = {
   draft: '草稿中',
@@ -157,9 +168,10 @@ function initTaskPage(taskId){
       box.style.borderLeftColor = '#8B8BA7';
       box.style.background = 'linear-gradient(135deg,rgba(139,139,167,0.10),rgba(255,255,255,0.5))';
     } else {
-      box.innerHTML = `<strong>📍 目前實際指派：</strong><span style="color:#FF6B35;font-weight:900;font-size:15px;">✦ ${task.owner}</span>`;
-      box.style.borderLeftColor = '#FF6B35';
-      box.style.background = 'linear-gradient(135deg,rgba(255,107,53,0.10),rgba(255,255,255,0.5))';
+      const oc = ownerColor(task.owner);
+      box.innerHTML = `<strong>📍 目前實際指派：</strong><span style="color:${oc.bd};font-weight:900;font-size:15px;">✦ ${task.owner}</span>`;
+      box.style.borderLeftColor = oc.bd;
+      box.style.background = `linear-gradient(135deg,${oc.soft},rgba(255,255,255,0.5))`;
     }
   }
   refreshOwnerDisplay();
@@ -275,7 +287,7 @@ function updateTaskCardOwners(){
       ownerBadge.style.color = '#6e7681';
     } else {
       ownerBadge.textContent = '✦ ' + t.owner;
-      ownerBadge.style.background = 'linear-gradient(135deg,#FF6B35,#E63946)';
+      ownerBadge.style.background = ownerColor(t.owner).bg;
       ownerBadge.style.color = '#fff';
     }
   });
