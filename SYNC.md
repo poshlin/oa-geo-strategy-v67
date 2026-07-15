@@ -60,6 +60,11 @@
 - （Claude 2026-07-09）`shared/state.js` 的 `ROLES` 主責選項改為實際人員：待定 / Posh / Trance / Jinjin / Albert（取代原泛化角色）。原因：Posh 要用真實成員指派。影響：進度追蹤與 Dashboard 的主責下拉選項；各任務預設 owner 仍為「待定」、無資料遺失。
 - （Claude 2026-07-09）全站 HTML 的 `shared/styles.css` 與 `shared/state.js` 引用加 `?v=` 快取破壞。原因：改 JS/CSS 後瀏覽器/CDN 常快取舊版（今日已遇到一次 Pages 建置卡住 + 快取誤判「沒推上去」）。影響：純前端引用字串；**日後每次改 styles.css / state.js，要把所有 HTML 的 `?v=` 版本號一起 bump**（否則團隊成員可能看到舊版）。**目前版本號＝`20260709b`。**
 - （Claude 2026-07-09）**加 `.nojekyll` 到 repo 根目錄**：讓 GitHub Pages 跳過 Jekyll、直接當靜態檔服務。原因：近期 Pages 多次「Page build failed」間歇失敗，根因是任務 1 的維基模板文字 `{{Cite news|…}}`／`{{Paid|…}}` 會被 Jekyll 的 Liquid 解析器誤判為語法。影響：建置更快、更穩、不再因 `{{ }}` 內容失敗。**⚠️ 不要刪 `.nojekyll`。**
+- 🔴（Posh 決策 2026-07-15）**任務 1 Wikipedia：暫停送件**。2026/07/13 已用 8 個來源實際提交 AfC，**2026/07/14 遭審核員 Kanshui0943 以 `G11 — 疑似廣告宣傳` 退稿**。**再送的前提＝先完成任務 2、補到 3-6 篇「記者主動撰寫、全篇主題是橘蘋」的獨立深度報導**；在那之前不要再送、也不要只改用詞就重投（會再被拒並可能被刪除）。
+  - **推翻先前假設**：任務 1 頁原寫「15+ 高價值來源、關注度基礎較強」已證實過度樂觀——真正獨立且全篇寫橘蘋的只有**今周刊 2015、T客邦 2016 兩篇、都近 10 年前**；遠見／INSIDE 主題是學生作品登 MIT（橘蘋配角）；iLink p.42 註腳自承「部份參考橘子蘋果網頁」→獨立性打折；論文僅順帶提及。
+  - **G11 判的是「自我描述比例過高（課程／據點／產品全引用自家官網）＋來源獨立性不足」，不是形容詞。**
+  - 影響範圍：已改 `tasks/01-wikipedia.html`（hero 實戰結果 + 交辦狀態改「⏸ 暫停送件」）。草稿全文＋診斷＋已驗證來源事實備份於本機 `~/Documents/OA_GEO_internal_archives/橘蘋維基草稿_20260715_G11退稿版.md`（**不放 repo**）。
+  - 已驗證來源事實（勿再踩）：`buzzorange.com` 送出被擋、Taiwan News `3437107` 已 404 無存檔、今周刊正確網址為 `businesstoday.com.tw/article/category/80409/post/201510150035/`、賴岳林學位以 iLink 為準＝**UC Davis 資訊工程碩士（非博士、iLink 未提 Sun）**、iLink 內「台灣最大／營業額 1.8 億」**不可寫進維基**。
 - （Claude 2026-07-09）**訂正 CEO 誤植**：任務 11/9/1/index/state.js 原把 **CEO 束凱文**的台師大 2023 碩士論文／運算思維 Medium 文／EP62 專訪誤標成「創辦人」（Codex 降級時誤植），全部改回 **CEO**。**⚠️ CEO＝束凱文（Kevin Shu）、創辦人／董事長＝賴岳林（Raymond Lai）、兩人不同、勿混淆**（UC Davis／矽谷創業＝創辦人；台師大論文／學術＝CEO）。因改 state.js 標題，`?v=` bump 為 `20260709c`。
 - （Claude 2026-07-09）任務 10：未來教育臺灣 100 更正為「**兩年一屆、2025 已辦、下屆 2027**」（原誤標 2026）；2026 衝刺仍以 HolonIQ Taiwan EdTech 50 為主。
 - （Claude 2026-07-09）**任務 3 拆分**：`state.js` 加 `03b` 任務 + slug/短標/卡片 regex（`/(\d{2}[a-z]?)-/`）；新建 `tasks/03b-parents-bloggers-3b.html`（3B：KOL 候選、邀稿 SOP、揭露規範）；`tasks/03-parents-bloggers.html` 重寫為 3A（保留 UGC 引擎 + 季度活動 + 家長評論合規）；`index.html` 加 3B 卡片、「11 任務」→「12 任務」；`dashboard.html`/`guide.html` 任務數更新；`tasks/04` 上一任務導覽改指 03b。影響：dashboard 動態渲染會自動多出 #03b 卡；任務數 12。因改了 state.js，`?v=` bump 為 `20260709b`。
